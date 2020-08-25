@@ -27,7 +27,7 @@ player = mc.gen().random # generates a random character sheet
 # leave dimensions as empty strings when not passed
 
 player = mc.gen(
-  class='warrior',
+  cls='warrior',
   attributes={
     'str': 5,
     'con': 3,
