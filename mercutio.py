@@ -1,5 +1,6 @@
 import pandas as pd
 import defaults # this is where we store the default dimensions
+import pickle
 
 # add support for default, graphical, and random generation
 
