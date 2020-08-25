@@ -50,6 +50,10 @@ class Mercutio:
         if name: self.name = name
         else: self.name = ''
 
+        if isinstance(level, (int)):
+            self.level = level
+        else: self.level = 1
+
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass:\
             {self.player_class}\nattributes: {self.attributes}\nrace:\
             {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')

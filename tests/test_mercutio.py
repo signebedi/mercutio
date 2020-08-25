@@ -1,23 +1,15 @@
-from mercutio import Mercutio as mc
+import pytest
+from mercutio.mercutio import Mercutio as mc
 
 def test_gen():
-    assert True
+    player = mc()
+    player.gen()
 
-def test_load():
-    assert True
+    assert isinstance(player.player_class, (str))
+    assert isinstance(player.race, (str))
+    assert isinstance(player.religion, (str))
+    assert isinstance(player.language, (str))
+    assert isinstance(player.name, (str))
+    assert isinstance(player.level, (int))
 
-def test_to_csv():
-    assert True
-
-def test_from_csv():
-    assert True
-
-def test_default():
-    assert True
-
-def test_graphical():
-    assert True
-
-def test_random():
-    assert True
 
