@@ -14,4 +14,5 @@ install:
 
 # command to run tests
 script:
-  - pytest tests/test_mercutio.py
+  # - pytest tests/test_mercutio.py
+  - pytest
