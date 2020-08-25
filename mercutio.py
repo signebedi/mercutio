@@ -1,4 +1,3 @@
-import pandas as pd
 import defaults # this is where we store the default dimensions
 import pickle
 
@@ -8,7 +7,7 @@ import pickle
 class Mercutio:
     def __init__(self):
         self.player_class_options = defaults.player_class_options
-        self.attribute_options = defaults.attribute_options
+        self.attributes_options = defaults.attributes_options
         self.race_options = defaults.race_options
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
@@ -21,10 +20,12 @@ class Mercutio:
                 self.player_class = player_class
         else: self.player_class = ''
 
-        if attributes:
-            if attributes in self.attributes_options:
-                self.attributes = attributes
-        else: self.attributes = ''
+        if isinstance(attributes, (dict)):
+            self.attributes = {}
+            for key in attributes:
+                if key in self.attributes_options:
+                    self.attributes[key] = attributes[key]
+        else: self.attributes = {}
 
         if race:
             if player_race in self.race_options:

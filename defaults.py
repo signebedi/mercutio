@@ -5,7 +5,7 @@ player_class_options = [
     'ranger',    
 ]
 
-attribute_options = [
+attributes_options = [
     'strength', 
     'constitution', 
     'intelligence', 

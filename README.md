@@ -21,27 +21,45 @@ from mercutio import Mercutio as mc
 
 player = mc()
 
-player.default # generates an empty character sheet, an alias for mercutio.gen() without passing args
-player.graphical # starts the graphical, CLI character creation interface
-player.random # generates a random character sheet
-
 # you can also pass the values for each dimension you'd like to pass to the gen() method, which will
 # leave dimensions as empty strings when not passed
 
 player.gen(
   player_class='warrior',
-  # attributes={
-  #   'str': 5,
-  #   'con': 3,
-  #   'int': 2,
-  #   'wis': 3,
-  #   'dex': 2,
-  #   'agi': 3,
-  # },
+  attributes={
+    'strength': 5,
+    'constitution': 3,
+    'intelligence': 2,
+    'wisdom': 3,
+    'dexterity': 2,
+    'agility': 3,
+  },
   name='balthor batwing, earl of pentham',
 )
 
-# you can also load your own dimensions in a python dictionary, using two methods
+# you can write your character details to a pickle file using the save() method
+
+player.save()
+
+# you can also load your character details from a pickle file using the load_player() method
+
+player.load_player(filename='balthor batwing, earl of pentham.pickle')
+```
+
+## next steps
+* **DONE 8.25.20** build architecture above
+* **DONE 8.25.20** replace to_csv/read_csv with pickle
+* **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
+* add pytest unit tests
+* finish configuring support for travis ci
+* add the following methods
+```python
+player.default # generates an empty character sheet, an alias for mercutio.gen() without passing args
+player.graphical # starts the graphical, CLI character creation interface
+player.random # generates a random character sheet
+
+
+# you can also load custom dimensions in a python dictionary, using two methods
 
 # method one: overwrite default dimensions
 
@@ -52,23 +70,7 @@ player.gen(dimensions=dimensions).default
 
 dimensions = mc.load(data = DICT, how='append') # appending
 player.gen(dimensions=dimensions).default
-
-# you can write your character details to a pickle file using the save() method
-
-player.save()
-
-# you can also load your character details from a pickle file using the load_player() method
-
-player.load_player(filename='balthor batwing, earl of pentham.pickle')
-
-
 ```
-## next steps
-* **DONE** build architecture above
-* **DONE** replace to_csv/read_csv with pickle
-* fix player attributes -- it's broken right now, doesn't allow the user to pass values for each of their attributes
-* add pytest unit tests
-* finish configuring support for travis ci
 
 ---
 Copyright (c) 2020 Signe Janoska-Bedi
