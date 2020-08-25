@@ -50,8 +50,8 @@ player.load_player(filename='balthor batwing, earl of pentham.pickle')
 * **DONE 8.25.20** build architecture above
 * **DONE 8.25.20** replace to_csv/read_csv with pickle
 * **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
-* add pytest unit tests
-* finish configuring support for travis ci
+* **DONE 8.25.20, but needs more** add pytest unit tests
+* **DONE 8.25.20** finish configuring support for travis ci
 * add the following methods
 ```python
 player.default # generates empty character, alias for mercutio.gen() without args
