@@ -50,6 +50,10 @@ class Mercutio:
         if name: self.name = name
         else: self.name = ''
 
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass:\
+            {self.player_class}\nattributes: {self.attributes}\nrace:\
+            {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
+
 
     def load_dimensions(self, how='append', cls=None, attributes=None, race=None, religion=None, language=None, specials=None):
         pass
