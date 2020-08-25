@@ -1,4 +1,4 @@
-class_options = [
+player_class_options = [
     'warrior',    
     'mage',    
     'rogue',    

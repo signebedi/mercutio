@@ -14,7 +14,7 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] 
 * **language**: [optional]
-* **specials**: [optional] 
+* **special**: [optional] 
 
 ```python
 from mercutio import Mercutio as mc
@@ -27,7 +27,7 @@ player = mc.gen().random # generates a random character sheet
 # leave dimensions as empty strings when not passed
 
 player = mc.gen(
-  cls='warrior',
+  player_class='warrior',
   attributes={
     'str': 5,
     'con': 3,
@@ -59,6 +59,7 @@ player.to_csv(filename='player.csv')
 * build architecture above
 * add pytest unit tests
 * finish configuring support for travis ci
+* replace to_csv/read_csv with pickle
 
 ---
 Copyright (c) 2020 Signe Janoska-Bedi
