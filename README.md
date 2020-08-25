@@ -21,8 +21,8 @@ from mercutio import Mercutio as mc
 
 player = mc()
 
-# you can also pass the values for each dimension you'd like to pass to the gen() method, which will
-# leave dimensions as empty strings when not passed
+# you can also pass the values for each dimension you'd like to pass to the gen() method, 
+# which will leave dimensions as empty strings when not passed
 
 player.gen(
   player_class='warrior',
@@ -54,7 +54,7 @@ player.load_player(filename='balthor batwing, earl of pentham.pickle')
 * finish configuring support for travis ci
 * add the following methods
 ```python
-player.default # generates an empty character sheet, an alias for mercutio.gen() without passing args
+player.default # generates empty character, alias for mercutio.gen() without args
 player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
 
