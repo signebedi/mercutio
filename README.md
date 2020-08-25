@@ -59,16 +59,14 @@ player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
 
 
-# you can also load custom dimensions in a python dictionary, using two methods
+# you can also load custom dimensions from a python dictionary, using two methods
 
 # method one: overwrite default dimensions
-
-dimensions = mc.load(data = DICT, how='overwrite') # overwriting
+dimensions = mc.load_dimensions(how='overwrite', ...) # overwriting
 player.gen(dimensions=dimensions).default
 
 # method two: append to default dimensions
-
-dimensions = mc.load(data = DICT, how='append') # appending
+dimensions = mc.load_dimensions(how='append', ...) # appending
 player.gen(dimensions=dimensions).default
 ```
 
