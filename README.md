@@ -16,7 +16,7 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 * **language**: [optional]
 * **specials**: [optional] 
 
-```
+```python
 from mercutio import mercutio
 
 player = mercutio.gen().default # generates an empty character sheet, an alias for mercutio.gen() without passing args
