@@ -1,2 +1,2 @@
 # mercutio
-another character creation engine
+yet another character creation engine
