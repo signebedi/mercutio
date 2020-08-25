@@ -19,24 +19,26 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 ```python
 from mercutio import Mercutio as mc
 
-player = mc.gen().default # generates an empty character sheet, an alias for mercutio.gen() without passing args
-player = mc.gen().graphical # starts the graphical, CLI character creation interface
-player = mc.gen().random # generates a random character sheet
+player = mc()
+
+player.default # generates an empty character sheet, an alias for mercutio.gen() without passing args
+player.graphical # starts the graphical, CLI character creation interface
+player.random # generates a random character sheet
 
 # you can also pass the values for each dimension you'd like to pass to the gen() method, which will
 # leave dimensions as empty strings when not passed
 
-player = mc.gen(
+player.gen(
   player_class='warrior',
-  attributes={
-    'str': 5,
-    'con': 3,
-    'int': 2,
-    'wis': 3,
-    'dex': 2,
-    'agi': 3,
-  },
-  'name': 'balthor batwing, earl of pentham',
+  # attributes={
+  #   'str': 5,
+  #   'con': 3,
+  #   'int': 2,
+  #   'wis': 3,
+  #   'dex': 2,
+  #   'agi': 3,
+  # },
+  name='balthor batwing, earl of pentham',
 )
 
 # you can also load your own dimensions in a python dictionary, using two methods
@@ -51,15 +53,22 @@ player.gen(dimensions=dimensions).default
 dimensions = mc.load(data = DICT, how='append') # appending
 player.gen(dimensions=dimensions).default
 
-# finally, you can write your character details to a CSV file using the to_csv() method
+# you can write your character details to a pickle file using the save() method
 
-player.to_csv(filename='player.csv')
+player.save()
+
+# you can also load your character details from a pickle file using the load_player() method
+
+player.load_player(filename='balthor batwing, earl of pentham.pickle')
+
+
 ```
 ## next steps
-* build architecture above
+* **DONE** build architecture above
+* **DONE** replace to_csv/read_csv with pickle
+* fix player attributes -- it's broken right now, doesn't allow the user to pass values for each of their attributes
 * add pytest unit tests
 * finish configuring support for travis ci
-* replace to_csv/read_csv with pickle
 
 ---
 Copyright (c) 2020 Signe Janoska-Bedi

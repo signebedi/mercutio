@@ -14,7 +14,7 @@ class Mercutio:
         self.language_options = defaults.language_options
         self.special_options = defaults.special_options
         
-    def gen(self, player_class=None, attributes=None, race=None, religion=None, language=None, specials=None):
+    def gen(self, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
         
         if player_class:
             if player_class in self.player_class_options:
@@ -46,14 +46,32 @@ class Mercutio:
                 self.special = special
         else: self.special = ''
 
+        if name: self.name = name
+        else: self.name = ''
 
 
-    def load(self, how='append', cls=None, attributes=None, race=None, religion=None, language=None, specials=None):
+    def load_dimensions(self, how='append', cls=None, attributes=None, race=None, religion=None, language=None, specials=None):
         pass
 
-    def to_csv(self):
-        pass
+    def save(self):
+        filename = f'{self.name}.pickle'
+        with open(filename, 'wb') as f:
+            pickle.dump(vars(self), f)
+        print(f'\nSuccessfully saved player data to {filename}\n')
 
-    def read_csv(self):
-        pass
+    def load_player(self, filename):
+        try: 
+            loaded_file = pickle.load(open(filename, "rb"))
 
+            self.player_class = loaded_file['player_class']
+            self.attributes = loaded_file['attributes']
+            self.race = loaded_file['race']
+            self.religion = loaded_file['religion']
+            self.language = loaded_file['language']
+            self.special = loaded_file['special']
+            self.name = loaded_file['name']
+            self.level = loaded_file['level']
+
+            print(f'\nSuccessfully loaded {filename} player data\n')
+
+        except: print(f'\nNo player data found at {filename}\n')
