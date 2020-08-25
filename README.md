@@ -17,16 +17,16 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 * **specials**: [optional] 
 
 ```python
-from mercutio import mercutio
+from mercutio import Mercutio as mc
 
-player = mercutio.gen().default # generates an empty character sheet, an alias for mercutio.gen() without passing args
-player = mercutio.gen().graphical # starts the graphical, CLI character creation interface
-player = mercutio.gen().random # generates a random character sheet
+player = mc.gen().default # generates an empty character sheet, an alias for mercutio.gen() without passing args
+player = mc.gen().graphical # starts the graphical, CLI character creation interface
+player = mc.gen().random # generates a random character sheet
 
 # you can also pass the values for each dimension you'd like to pass to the gen() method, which will
 # leave dimensions as empty strings when not passed
 
-player = mercutio.gen(
+player = mc.gen(
   class='warrior',
   attributes={
     'str': 5,
@@ -43,16 +43,17 @@ player = mercutio.gen(
 
 # method one: overwrite default dimensions
 
-dimensions = mercutio.load(data = DICT, how='overwrite') # overwriting
+dimensions = mc.load(data = DICT, how='overwrite') # overwriting
 player.gen(dimensions=dimensions).default
 
 # method two: append to default dimensions
 
-dimensions = mercutio.load(data = DICT, how='append') # appending
+dimensions = mc.load(data = DICT, how='append') # appending
 player.gen(dimensions=dimensions).default
 
 # finally, you can write your character details to a CSV file using the to_csv() method
 
 player.to_csv(filename='player.csv')
 ```
+
 Copyright (c) 2020 Signe Janoska-Bedi
