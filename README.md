@@ -55,5 +55,10 @@ player.gen(dimensions=dimensions).default
 
 player.to_csv(filename='player.csv')
 ```
+## next steps
+* build architecture above
+* add pytest unit tests
+* finish configuring support for travis ci
+
 
 Copyright (c) 2020 Signe Janoska-Bedi
