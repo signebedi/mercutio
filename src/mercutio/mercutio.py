@@ -1,4 +1,4 @@
-import defaults # this is where we store the default dimensions
+import mercutio.defaults as defaults # this is where we store the default dimensions
 import pickle
 
 # add support for default, graphical, and random generation

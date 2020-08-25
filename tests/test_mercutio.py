@@ -1,8 +1,8 @@
 import pytest
-from mercutio.mercutio import Mercutio as mc
+import mercutio.mercutio as mc
 
 def test_gen():
-    player = mc()
+    player = mc.Mercutio()
     player.gen()
 
     assert isinstance(player.player_class, (str))
