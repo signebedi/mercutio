@@ -60,5 +60,5 @@ player.to_csv(filename='player.csv')
 * add pytest unit tests
 * finish configuring support for travis ci
 
-
+---
 Copyright (c) 2020 Signe Janoska-Bedi
