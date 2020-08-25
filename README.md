@@ -16,7 +16,8 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 * **language**: [optional]
 * **specials**: [optional] 
 
-```from mercutio import mercutio
+```
+from mercutio import mercutio
 
 player = mercutio.gen().default # generates an empty character sheet, an alias for mercutio.gen() without passing args
 player = mercutio.gen().graphical # starts the graphical, CLI character creation interface
@@ -53,6 +54,5 @@ player.gen(dimensions=dimensions).default
 # finally, you can write your character details to a CSV file using the to_csv() method
 
 player.to_csv(filename='player.csv')
-
 ```
 Copyright (c) 2020 Signe Janoska-Bedi
