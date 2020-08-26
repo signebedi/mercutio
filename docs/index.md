@@ -2,16 +2,91 @@
 
 See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signebedi/mercutio).
 
-## Commands
+## Getting Started
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+mercutio provides a straightforward API for creating RPG characters. By default, if provides two default and four optional character dimensions, along with vanilla options for each dimension:
 
-## Project layout
+* **class**: [default] warrior, mage, rogue, ranger
+* **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
+* **skills**: [optional]
+* **race**: [optional] human, elf, dwarf, orc, halfling
+* **religion**: [optional] 
+* **language**: [optional]
+* **special**: [optional] 
+* **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Usage
+
+```python
+import mercutio.mercutio as mc
+
+player = mc.Mercutio()
+
+# you can also pass the values for each dimension you'd like to pass to the gen() method, 
+# which will leave dimensions as empty strings when not passed
+
+player.gen()
+  player_class='warrior',
+  attributes={
+    'strength': 5,
+    'constitution': 3,
+    'intelligence': 2,
+    'wisdom': 3,
+    'dexterity': 2,
+    'charisma': 3,
+  },
+  name='balthor batwing, earl of pentham',
+)
+
+# you can write your character details to a pickle file using the save() method
+
+player.save()
+
+# you can also load your character details from a pickle file using the load_player() method
+
+player.load_player(filename='balthor batwing, earl of pentham.pickle')
+
+# you can also load custom dimensions from python lists, using two methods
+
+# method one: overwrite default dimensions
+import mercutio.mercutio as mc
+player = mc.Mercutio()
+player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
+player.gen(player_class='wizard', ...)
+
+# method two: append to default dimensions
+import mercutio.mercutio as mc
+player = mc.Mercutio()
+player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
+player.gen(player_class='wizard', ...)
+```
+
+## Checklist
+
+* **DONE 8.25.20** build architecture above
+* **DONE 8.25.20** replace to_csv/read_csv with pickle
+* **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
+* **DONE 8.25.20, but needs more** add pytest unit tests
+* **DONE 8.25.20** finish configuring support for travis ci
+* add graphical and random character creation methods
+```python
+player.graphical # starts the graphical, CLI character creation interface
+player.random # generates a random character sheet
+```
+* add docs and transfer this readme
+* add support for exp, hp, spells, attacks, and equipment
+* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
+```python
+buff_options = [
+  {
+    'name':'mage',
+    'dimension': 'class',
+    'buff':{'intelligence':3,'wisdom':1,'strength':-1},
+  },
+  {
+    'name':'',
+    'dimension': '',
+    'buff':{},
+  },
+]
+```
