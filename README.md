@@ -71,6 +71,20 @@ player.gen(player_class='wizard', ...)
 player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
 ```
+* add docs and transfer this readme
+* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary)
+```python
+buff_options = [
+  {
+    'type':'mage',
+    'buff':{'intelligence':3,'wisdom':1,'strength':-1}
+  },
+  {
+    'type':'',
+    'buff':{}
+  },
+]
 
+```
 ---
 Copyright (c) 2020 Signe Janoska-Bedi
