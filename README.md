@@ -32,7 +32,7 @@ player.gen(
     'intelligence': 2,
     'wisdom': 3,
     'dexterity': 2,
-    'agility': 3,
+    'charisma': 3,
   },
   name='balthor batwing, earl of pentham',
 )
