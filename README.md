@@ -11,10 +11,12 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 
 * **class**: [default] warrior, mage, rogue, ranger
 * **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
+* **skills**: [optional]
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] 
 * **language**: [optional]
 * **special**: [optional] 
+* **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
 ```python
 import mercutio.mercutio as mc
