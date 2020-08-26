@@ -19,13 +19,16 @@ class Mercutio:
             if player_class in self.player_class_options:
                 self.player_class = player_class
         else: self.player_class = ''
-
+        
+        self.attributes = {}
         if isinstance(attributes, (dict)):
-            self.attributes = {}
             for key in attributes:
                 if key in self.attributes_options:
                     self.attributes[key] = attributes[key]
-        else: self.attributes = {}
+        # in the absence of designated attributes, default to 3
+        else: 
+            for x in self.attributes_options:
+                self.attributes[x] = 3
 
         if race:
             if race in self.race_options:
