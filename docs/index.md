@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Mercutio: yet another character creation engine
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signebedi/mercutio).
 
 ## Commands
 

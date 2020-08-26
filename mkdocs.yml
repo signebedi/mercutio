@@ -1,1 +1,8 @@
 site_name: Mercutio
+
+theme:
+    name: alabaster
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - python
