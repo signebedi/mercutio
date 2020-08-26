@@ -8,7 +8,6 @@ livereload==2.6.3
 lunr==0.5.8
 Markdown==3.2.2
 MarkupSafe==1.1.1
--e git+https://github.com/signebedi/mercutio.git@b0a023638fb46e08b5d5d16b7e0eb4fb4052a844#egg=Mercutio
 mkdocs==1.1.2
 more-itertools==8.4.0
 nltk==3.5
