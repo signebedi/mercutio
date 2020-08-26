@@ -10,7 +10,7 @@ yet another character creation engine
 mercutio provides a straightforward API for creating RPG characters. By default, if provides two default and four optional character dimensions, along with vanilla options for each dimension:
 
 * **class**: [default] warrior, mage, rogue, ranger
-* **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, agility
+* **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] 
 * **language**: [optional]
@@ -81,7 +81,7 @@ buff_options = [
     'buff':{'intelligence':3,'wisdom':1,'strength':-1},
   },
   {
-    'type':'',
+    'name':'',
     'dimension': '',
     'buff':{},
   },
