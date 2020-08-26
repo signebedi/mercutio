@@ -1,4 +1,4 @@
-![mercutio gif](docs/mercutio2.gif)
+![mercutio gif](docs/mercutio.gif)
 
 # mercutio
 
