@@ -1,3 +1,5 @@
+![mercutio gif](docs/mercutio.gif)
+
 # mercutio
 
 yet another character creation engine
@@ -26,7 +28,7 @@ player = mc.Mercutio()
 # you can also pass the values for each dimension you'd like to pass to the gen() method, 
 # which will leave dimensions as empty strings when not passed
 
-player.gen(
+player.gen()
   player_class='warrior',
   attributes={
     'strength': 5,
@@ -74,6 +76,7 @@ player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
 ```
 * add docs and transfer this readme
+* add support for exp, hp, spells, attacks, and equipment
 * add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
 ```python
 buff_options = [
