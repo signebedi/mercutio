@@ -28,7 +28,7 @@ class Mercutio:
         else: self.attributes = {}
 
         if race:
-            if player_race in self.race_options:
+            if race in self.race_options:
                 self.race = race
         else: self.race = ''
 
@@ -54,13 +54,36 @@ class Mercutio:
             self.level = level
         else: self.level = 1
 
-        print(f'\nSuccessfully created player: \nname: {self.name}\nclass:\
-            {self.player_class}\nattributes: {self.attributes}\nrace:\
-            {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
 
 
-    def load_dimensions(self, how='append', cls=None, attributes=None, race=None, religion=None, language=None, specials=None):
-        pass
+    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, special=None):
+        if how == 'overwrite':
+            if isinstance(player_class, (list)):
+                self.player_class_options = player_class
+            if isinstance(attributes, (list)):
+                self.attributes_options = attributes
+            if isinstance(race, (list)):
+                self.race_options = race
+            if isinstance(religion, (list)):
+                self.religion_options = religion
+            if isinstance(language, (list)):
+                self.language_options = language
+            if isinstance(special, (list)):
+                self.special_options = special
+        elif how == 'append': 
+            if isinstance(player_class, (list)):
+                [self.player_class_options.append(x) for x in player_class]
+            if isinstance(attributes, (list)):
+                [self.attributes_options.append(x) for x in attributes]
+            if isinstance(race, (list)):
+                [self.race_options.append(x) for x in race]
+            if isinstance(religion, (list)):
+                [self.religion_options.append(x) for x in religion]
+            if isinstance(language, (list)):
+                [self.language_options.append(x) for x in language]
+            if isinstance(special, (list)):
+                [self.special_class_options.append(x) for x in special]
 
     def save(self):
         filename = f'{self.name}.pickle'

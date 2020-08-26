@@ -17,9 +17,9 @@ mercutio provides a straightforward API for creating RPG characters. By default,
 * **special**: [optional] 
 
 ```python
-from mercutio import Mercutio as mc
+import mercutio.mercutio as mc
 
-player = mc()
+player = mc.Mercutio()
 
 # you can also pass the values for each dimension you'd like to pass to the gen() method, 
 # which will leave dimensions as empty strings when not passed
@@ -44,6 +44,20 @@ player.save()
 # you can also load your character details from a pickle file using the load_player() method
 
 player.load_player(filename='balthor batwing, earl of pentham.pickle')
+
+# you can also load custom dimensions from python lists, using two methods
+
+# method one: overwrite default dimensions
+import mercutio.mercutio as mc
+player = mc.Mercutio()
+player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
+player.gen(player_class='wizard', ...)
+
+# method two: append to default dimensions
+import mercutio.mercutio as mc
+player = mc.Mercutio()
+player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
+player.gen(player_class='wizard', ...)
 ```
 
 ## next steps
@@ -52,22 +66,10 @@ player.load_player(filename='balthor batwing, earl of pentham.pickle')
 * **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
 * **DONE 8.25.20, but needs more** add pytest unit tests
 * **DONE 8.25.20** finish configuring support for travis ci
-* add the following methods
+* add graphical and random character creation methods
 ```python
-player.default # generates empty character, alias for mercutio.gen() without args
 player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
-
-
-# you can also load custom dimensions from a python dictionary, using two methods
-
-# method one: overwrite default dimensions
-dimensions = mc.load_dimensions(how='overwrite', ...) # overwriting
-player.gen(dimensions=dimensions).default
-
-# method two: append to default dimensions
-dimensions = mc.load_dimensions(how='append', ...) # appending
-player.gen(dimensions=dimensions).default
 ```
 
 ---
