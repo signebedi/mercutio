@@ -72,16 +72,18 @@ player.graphical # starts the graphical, CLI character creation interface
 player.random # generates a random character sheet
 ```
 * add docs and transfer this readme
-* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary)
+* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
 ```python
 buff_options = [
   {
-    'type':'mage',
-    'buff':{'intelligence':3,'wisdom':1,'strength':-1}
+    'name':'mage',
+    'dimension': 'class',
+    'buff':{'intelligence':3,'wisdom':1,'strength':-1},
   },
   {
     'type':'',
-    'buff':{}
+    'dimension': '',
+    'buff':{},
   },
 ]
 
