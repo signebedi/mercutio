@@ -11,7 +11,7 @@ attributes_options = [
     'intelligence', 
     'wisdom', 
     'dexterity', 
-    'agility',
+    'charisma',
 ]
 
 race_options = [
