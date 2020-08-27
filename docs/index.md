@@ -99,7 +99,7 @@ player.random # generates a random character sheet
 ```
 * add support for exp, hp, spells, attacks, and equipment
 * add support for dice rolls/random attributes
-* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
+* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving; underlying question: should attributes then be handled separately to avoid potential concurrency/ordering problems?
 ```python
 default_options = [
   {
@@ -113,10 +113,10 @@ default_options = [
     'buff':{'intelligence':3,'wisdom':1,'strength':-1},
   },
   {
-    'name':'',
-    'dimension': '',
-    'value': 0,
-    'buff':{},
+    'name':'', # REQUIRED, designate the indentifier for this option
+    'dimension': '', # REQUIRED, assign this option to an accepted dimension, see Getting Started above
+    'value': 0, # OPTIONAL, only if assigning a value to a character skill or attribute
+    'buff':{}, # OPTIONAL, only if intended to buff a character skill or attribute
   },
 ]
 ```
