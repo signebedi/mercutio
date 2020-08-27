@@ -8,15 +8,15 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 ## Getting Started
 
-Mercutio provides a straightforward API for character creation. By default, it provides default and optional character dimensions, along with vanilla options for each dimension:
+Mercutio provides a straightforward API for character creation. It provides default and optional character dimensions, along with vanilla options for each dimension:
 
 * **class**: [default] warrior, mage, rogue, ranger
 * **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
-* **skills**: [optional]
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] 
 * **language**: [optional]
 * **special**: [optional] 
+* **skills**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
 ![landscape gif](landscape.gif)
