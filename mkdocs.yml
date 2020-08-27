@@ -1,7 +1,7 @@
 site_name: Mercutio
 
 theme:
-    name: readthedocs
+    name: alabaster
     highlightjs: true
     hljs_languages:
         - yaml

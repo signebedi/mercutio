@@ -4,7 +4,7 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 ## Getting Started
 
-mercutio provides a straightforward API for creating RPG characters. By default, if provides two default and four optional character dimensions, along with vanilla options for each dimension:
+Mercutio provides a straightforward API for character creation. By default, it provides default and optional character dimensions, along with vanilla options for each dimension:
 
 * **class**: [default] warrior, mage, rogue, ranger
 * **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
@@ -77,7 +77,7 @@ player.random # generates a random character sheet
 * add support for exp, hp, spells, attacks, and equipment
 * add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
 ```python
-buff_options = [
+default_options = [
   {
     'name':'mage',
     'dimension': 'class',
