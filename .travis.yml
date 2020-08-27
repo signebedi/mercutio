@@ -4,15 +4,10 @@ python:
   - "3.6"      # current default Python on Travis CI
   - "3.8"
 
-# command to install dependencies
-# before_install:
-#   - pip install --upgrade pip
-#   - pip install -r requirements.txt
-
+# command to install module
 install:
   - pip install -e .
 
 # command to run tests
 script:
-  # - pytest tests/test_mercutio.py
   - pytest
