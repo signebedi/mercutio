@@ -1,7 +1,7 @@
 # Mercutio 
 
 yet another character creation engine
-
+---
 See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signebedi/mercutio).
 
 ![dragon gif](cropped.gif)
