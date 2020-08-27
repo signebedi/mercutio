@@ -3,7 +3,6 @@ import pickle
 
 # add support for default, graphical, and random generation
 
-
 class Mercutio:
     def __init__(self):
         self.player_class_options = defaults.player_class_options
@@ -110,3 +109,39 @@ class Mercutio:
             print(f'\nSuccessfully loaded {filename} player data\n')
 
         except: print(f'\nNo player data found at {filename}\n')
+
+
+    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name=None, level=None):
+        if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load_player()
+            if player_class:
+                if player_class in self.player_class_options:
+                    self.player_class = player_class
+            
+            if isinstance(attributes, (dict)):
+                for key in attributes:
+                    if key in self.attributes_options:
+                        self.attributes[key] = attributes[key]
+            if race:
+                if race in self.race_options:
+                    self.race = race
+
+            if religion:
+                if religion in self.religion_options:
+                    self.religion = religion
+
+            if language:
+                if language in self.language_options:
+                    self.language = language
+
+            if special:
+                if special in self.special_options:
+                    self.special = special
+
+            if name: self.name = name
+
+            if isinstance(level, (int)):
+                self.level = level
+
+            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
+        else: 
+            print('\nNo player has been loaded or generated.\nPlease gen() or load_player() before modifying your player')

@@ -23,14 +23,19 @@ Mercutio provides a straightforward API for character creation. By default, it p
 
 ## Usage
 
+Start by importing the mercutio library
 ```python
 import mercutio.mercutio as mc
+```
 
+Next, you can create your player object
+
+```python
 player = mc.Mercutio()
+```
 
-# you can also pass the values for each dimension you'd like to pass to the gen() method, 
-# which will leave dimensions as empty strings when not passed
-
+You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed.
+```python
 player.gen()
   player_class='warrior',
   attributes={
@@ -43,24 +48,36 @@ player.gen()
   },
   name='balthor batwing, earl of pentham',
 )
+```
+Modify an existing player using the mod() method:
 
-# you can write your character details to a pickle file using the save() method
+```python
+player.mod(name='beringor barthenon, guardian of bradley gardens')
+```
 
+Write your character details to a pickle file using the save() method. Note, this will save your character under their designated name and may experience errors if you used non-friendly characters.
+
+```python
 player.save()
+```
+Load character details from a pickle file using the load_player() method.
 
-# you can also load your character details from a pickle file using the load_player() method
-
+```python
 player.load_player(filename='balthor batwing, earl of pentham.pickle')
+```
 
-# you can also load custom dimensions from python lists, using two methods
+Load your custom dimensions from python lists, using two methods:
 
-# method one: overwrite default dimensions
+Method one: overwrite default dimensions
+```python
 import mercutio.mercutio as mc
 player = mc.Mercutio()
 player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
+```
 
-# method two: append to default dimensions
+Method two: append to default dimensions
+```python
 import mercutio.mercutio as mc
 player = mc.Mercutio()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
