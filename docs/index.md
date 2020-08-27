@@ -19,8 +19,6 @@ Mercutio provides a straightforward API for character creation. It provides defa
 * **skills**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
-![landscape gif](landscape.gif)
-
 ## Usage
 
 Start by importing the mercutio library
@@ -83,8 +81,6 @@ player = mc.Mercutio()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
 ```
-
-![got gif](got.gif)
 
 ## Checklist
 
