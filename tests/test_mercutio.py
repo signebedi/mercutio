@@ -24,3 +24,7 @@ def test_load_dimensions_overwrite():
     player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
 
     assert len(player.player_class_options) == 3
+
+def test_mod():
+    # placeholder for tests of the mod() method
+    pass
