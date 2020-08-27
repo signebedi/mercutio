@@ -1,4 +1,4 @@
-![mercutio gif](docs/mercutio.gif)
+![cropped dragon gif](docs/cropped.gif)
 
 # mercutio
 
