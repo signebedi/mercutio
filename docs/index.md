@@ -83,9 +83,15 @@ player.random # generates a random character sheet
 ```
 * add docs and transfer this readme
 * add support for exp, hp, spells, attacks, and equipment
+* add support for dice rolls/random attributes
 * add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving
 ```python
 default_options = [
+  {
+    'name':'strength',
+    'dimension': 'attribute',
+    'value':0, # default value
+  },
   {
     'name':'mage',
     'dimension': 'class',
@@ -94,6 +100,7 @@ default_options = [
   {
     'name':'',
     'dimension': '',
+    'value': 0,
     'buff':{},
   },
 ]
