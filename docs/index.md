@@ -1,6 +1,10 @@
-# Mercutio: yet another character creation engine
+# Mercutio 
+
+yet another character creation engine
 
 See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signebedi/mercutio).
+
+![dragon gif](cropped.gif)
 
 ## Getting Started
 
@@ -14,6 +18,8 @@ Mercutio provides a straightforward API for character creation. By default, it p
 * **language**: [optional]
 * **special**: [optional] 
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
+
+![landscape gif](landscape.gif)
 
 ## Usage
 
@@ -60,6 +66,8 @@ player = mc.Mercutio()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
 ```
+
+![got gif](got.gif)
 
 ## Checklist
 
