@@ -37,3 +37,6 @@ default_dimension_options = [
   },
 ]
 ```
+* add python-semantic-release to automate sematic versioning with travis-ci and setuptools
+  * https://github.com/relekang/python-semantic-release
+  * https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic
