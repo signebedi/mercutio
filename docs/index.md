@@ -1,4 +1,4 @@
-# Mercutio 
+# Getting Started 
 ---
 
 ![dragon gif](cropped.gif)
@@ -7,7 +7,7 @@ yet another character creation engine
 
 See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signebedi/mercutio).
 
-## Getting Started
+## Overview
 
 Mercutio provides a straightforward API for character creation. It provides default and optional character dimensions, along with vanilla options for each dimension:
 
@@ -18,7 +18,12 @@ Mercutio provides a straightforward API for character creation. It provides defa
 * **language**: [optional]
 * **special**: [optional] 
 * **skills**: [optional]
+* **equipment**: [optional]
+* **spells**: [optional]
+* **attacks**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
+
+In addition, it tracks vital data such as level, experience, alignment, and hitpoints.
 
 ## Usage
 
@@ -81,42 +86,4 @@ import mercutio.mercutio as mc
 player = mc.Mercutio()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
-```
-
-## Checklist
-
-* **DONE 8.25.20** build architecture above
-* **DONE 8.25.20** replace to_csv/read_csv with pickle
-* **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
-* **DONE 8.25.20, but needs more!** add pytest unit tests
-* **DONE 8.25.20** finish configuring support for travis ci
-* **DONE 8.26.20** add docs and transfer this readme
-* **DONE 8.26.20** add the ability to modify a player object
-* add graphical and random character creation methods
-```python
-player.graphical # starts the graphical, CLI character creation interface
-player.random # generates a random character sheet
-```
-* add support for exp, hp, spells, attacks, and equipment
-* add support for dice rolls/random attributes
-* add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving; underlying question: should attributes then be handled separately to avoid potential concurrency/ordering problems?
-```python
-default_options = [
-  {
-    'name':'strength',
-    'dimension': 'attribute',
-    'value':0, # default value
-  },
-  {
-    'name':'mage',
-    'dimension': 'class',
-    'buff':{'intelligence':3,'wisdom':1,'strength':-1},
-  },
-  {
-    'name':'', # REQUIRED, designate the indentifier for this option
-    'dimension': '', # REQUIRED, assign this option to an accepted dimension, see Getting Started above
-    'value': 0, # OPTIONAL, only if assigning a value to a character skill or attribute
-    'buff':{}, # OPTIONAL, only if intended to buff a character skill or attribute
-  },
-]
 ```

@@ -1,8 +1,14 @@
 site_name: Mercutio
 
+repo_url: https://github.com/signebedi/mercutio
+
 theme:
     name: readthedocs
     highlightjs: true
     hljs_languages:
         - yaml
         - python
+
+nav:
+    - Getting Started: 'index.md'
+    - Next Steps: 'future.md'
