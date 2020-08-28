@@ -8,6 +8,7 @@ theme:
     hljs_languages:
         - yaml
         - python
+    include_sidebar: false
 
 nav:
     - Getting Started: 'index.md'
