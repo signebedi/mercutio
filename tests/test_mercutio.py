@@ -2,7 +2,7 @@ import pytest
 import mercutio.mercutio as mc
 
 def test_gen():
-    player = mc.Mercutio()
+    player = mc.Player()
     player.gen()
 
     assert isinstance(player.player_class, (str))
@@ -14,13 +14,13 @@ def test_gen():
 
 
 def test_load_dimensions_append():
-    player = mc.Mercutio()
+    player = mc.Player()
     player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 
     assert len(player.player_class_options) == 7
 
 def test_load_dimensions_overwrite():
-    player = mc.Mercutio()
+    player = mc.Player()
     player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
 
     assert len(player.player_class_options) == 3

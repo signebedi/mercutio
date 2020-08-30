@@ -35,7 +35,7 @@ import mercutio.mercutio as mc
 Next, you can create your player object
 
 ```python
-player = mc.Mercutio()
+player = mc.Player()
 ```
 
 You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed.
@@ -75,7 +75,7 @@ Load your custom dimensions from python lists, using two methods:
 Method one: overwrite default dimensions
 ```python
 import mercutio.mercutio as mc
-player = mc.Mercutio()
+player = mc.Player()
 player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
 ```
@@ -83,7 +83,7 @@ player.gen(player_class='wizard', ...)
 Method two: append to default dimensions
 ```python
 import mercutio.mercutio as mc
-player = mc.Mercutio()
+player = mc.Player()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
 ```

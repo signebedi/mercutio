@@ -3,7 +3,7 @@ import pickle
 
 # add support for default, graphical, and random generation
 
-class Mercutio:
+class Player:
     def __init__(self):
         self.player_class_options = defaults.player_class_options
         self.attributes_options = defaults.attributes_options
@@ -12,8 +12,11 @@ class Mercutio:
         self.language_options = defaults.language_options
         self.special_options = defaults.special_options
         
-    def gen(self, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
-        
+    def gen(self, graphical=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
+
+        if graphical:
+            self.gen_graphic         
+
         if player_class:
             if player_class in self.player_class_options:
                 self.player_class = player_class
