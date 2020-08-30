@@ -1,8 +1,6 @@
 import mercutio.defaults as defaults # this is where we store the default dimensions
 import pickle
 
-# add support for default, graphical, and random generation
-
 class Player:
     def __init__(self):
         self.player_class_options = defaults.player_class_options
@@ -11,6 +9,7 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.special_options = defaults.special_options
+        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGMENT, SPELLS, ATTACKS
 
     def gen_graphic(self):
 
@@ -38,6 +37,8 @@ class Player:
             while True:    
                 self.race = input(f'Please enter your desired race -- your options are {self.race_options}: ')
                 if self.race in self.race_options: break
+
+        ### NEED TO ADD SUPPORT FOR RELIGION AND LANGUAGE
 
     def gen(self, graphical=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
 
