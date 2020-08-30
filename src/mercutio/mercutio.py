@@ -11,17 +11,52 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.special_options = defaults.special_options
-        
+
+    def gen_graphic(self):
+
+        title = [
+        '                            _   _       ',
+        '  /\/\   ___ _ __ ___ _   _| |_(_) ___  ',
+        " /    \ / _ \ '__/ __| | | | __| |/ _ \ ",
+        '/ /\/\ \  __/ | | (__| |_| | |_| | (_) |',
+        '\/    \/\___|_|  \___|\__,_|\__|_|\___/ ',
+        ]
+
+        for item in title:print(item)
+
+        print('\nWelcome to the graphical player generator. Please follow the instructions below.\n')
+
+        if not hasattr(self, 'name'):
+            self.name = input('Please enter your desired username: ')
+
+        if not hasattr(self, 'player_class'):
+            while True:    
+                self.player_class = input(f'Please enter your desired class -- your options are {self.player_class_options}: ')
+                if self.player_class in self.player_class_options: break
+
+        if not hasattr(self, 'race'):
+            while True:    
+                self.race = input(f'Please enter your desired race -- your options are {self.race_options}: ')
+                if self.race in self.race_options: break
+
     def gen(self, graphical=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
 
         if graphical:
-            self.gen_graphic         
+            self.gen_graphic()
+        else:
+            if name: self.name = name
+            else: self.name = ''
 
-        if player_class:
-            if player_class in self.player_class_options:
-                self.player_class = player_class
-        else: self.player_class = ''
-        
+            if player_class:
+                if player_class in self.player_class_options:
+                    self.player_class = player_class
+            else: self.player_class = ''
+
+            if race:
+                if race in self.race_options:
+                    self.race = race
+            else: self.race = ''
+
         self.attributes = {}
         if isinstance(attributes, (dict)):
             for key in attributes:
@@ -31,11 +66,6 @@ class Player:
         else: 
             for x in self.attributes_options:
                 self.attributes[x] = 3
-
-        if race:
-            if race in self.race_options:
-                self.race = race
-        else: self.race = ''
 
         if religion:
             if religion in self.religion_options:
@@ -52,15 +82,11 @@ class Player:
                 self.special = special
         else: self.special = ''
 
-        if name: self.name = name
-        else: self.name = ''
-
         if isinstance(level, (int)):
             self.level = level
         else: self.level = 1
 
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
-
 
     def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, special=None):
         if how == 'overwrite':

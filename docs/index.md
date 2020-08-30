@@ -40,7 +40,7 @@ player = mc.Player()
 
 You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed.
 ```python
-player.gen()
+player.gen(
   player_class='warrior',
   attributes={
     'strength': 5,
