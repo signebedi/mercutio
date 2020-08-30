@@ -26,5 +26,9 @@ def test_load_dimensions_overwrite():
     assert len(player.player_class_options) == 3
 
 def test_mod():
-    # placeholder for tests of the mod() method
-    pass
+    player = mc.Player()
+    player.gen(name='balthor batwing, earl of pentham',)
+
+    player.mod(name='beringor barthenon, guardian of bradley gardens')
+
+    assert player.name == 'beringor barthenon, guardian of bradley gardens'

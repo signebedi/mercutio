@@ -53,6 +53,12 @@ player.gen(
   name='balthor batwing, earl of pentham',
 )
 ```
+
+You can also use the graphical player creation interface.
+```python
+player.gen(graphical=True) # starts the graphical, CLI character creation interface
+```
+
 Modify an existing player using the mod() method:
 
 ```python
