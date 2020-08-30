@@ -43,15 +43,18 @@ class Player:
 
         if graphical:
             self.gen_graphic()
-        else:
+
+        if not hasattr(self, 'name'):
             if name: self.name = name
             else: self.name = ''
 
+        if not hasattr(self, 'player_class'):
             if player_class:
                 if player_class in self.player_class_options:
                     self.player_class = player_class
             else: self.player_class = ''
 
+        if not hasattr(self, 'race'):
             if race:
                 if race in self.race_options:
                     self.race = race
@@ -67,26 +70,29 @@ class Player:
             for x in self.attributes_options:
                 self.attributes[x] = 3
 
-        if religion:
-            if religion in self.religion_options:
-                self.religion = religion
-        else: self.religion = ''
+        if not hasattr(self, 'religion'):
+            if religion:
+                if religion in self.religion_options:
+                    self.religion = religion
+            else: self.religion = ''
 
-        if language:
-            if language in self.language_options:
-                self.language = language
-        else: self.language = ''
+        if not hasattr(self, 'language'):
+            if language:
+                if language in self.language_options:
+                    self.language = language
+            else: self.language = ''
 
-        if special:
-            if special in self.special_options:
-                self.special = special
-        else: self.special = ''
+        if not hasattr(self, 'special'):
+            if special:
+                if special in self.special_options:
+                    self.special = special
+            else: self.special = ''
 
         if isinstance(level, (int)):
             self.level = level
         else: self.level = 1
 
-        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nspecial: {self.special}\n')
 
     def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, special=None):
         if how == 'overwrite':

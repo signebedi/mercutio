@@ -7,9 +7,12 @@
 * **DONE 8.25.20** finish configuring support for travis ci
 * **DONE 8.26.20** add docs and transfer this readme
 * **DONE 8.26.20** add the ability to modify a player object
-* add graphical and random character creation methods
+* **DONE 8.29.20** add graphical character creation method
 ```python
 player.gen(graphical=True) # starts the graphical, CLI character creation interface
+```
+* add random character creation method
+```python
 player.gen(random=True, ...) # generates a random character sheet
 ```
 * add support for exp, hp, spells, attacks, and equipment
@@ -37,6 +40,4 @@ default_dimension_options = [
   },
 ]
 ```
-* add python-semantic-release to automate sematic versioning with travis-ci and setuptools
-  * https://github.com/relekang/python-semantic-release
-  * https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic
+* add python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools 
