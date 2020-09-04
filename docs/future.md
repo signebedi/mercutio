@@ -49,3 +49,7 @@ default_dimension_options = [
 ]
 ```
 * add python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools 
+* autogenerate changelog based on git commits -- this means you need to start being more careful about commit messages, especially after the 1.0.0 release 
+* * https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git
+* * https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
+* * https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
