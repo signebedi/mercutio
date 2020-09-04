@@ -1,5 +1,6 @@
 # Checklist
 
+## Finished
 * **DONE 8.25.20** build architecture above
 * **DONE 8.25.20** replace to_csv/read_csv with pickle
 * **DONE 8.25.20** doesn't allow the user to pass values for each of their attributes
@@ -11,6 +12,8 @@
 ```python
 player.gen(graphical=True) # starts the graphical, CLI character creation interface
 ```
+
+## In Progress
 * add random character creation method
 ```python
 player.gen(random=True, ...) # generates a random character sheet
@@ -40,4 +43,6 @@ default_dimension_options = [
   },
 ]
 ```
+
+## Future Projects
 * add python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools 
