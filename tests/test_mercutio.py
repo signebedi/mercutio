@@ -1,5 +1,5 @@
 import pytest
-import mercutio.mercutio as mc
+import mercutio as mc
 
 def test_gen():
     player = mc.Player()
