@@ -147,14 +147,14 @@ class Player:
     def save(self, filename=None, csv=None):
 
         if csv: # write to CSV if the keyword argument is passed
-            if not isinstance(filename, (str)):
+            if not isinstance(filename, (str)): # here we ask whether the user passed a custom filename
                 filename = f'{self.name}.csv'
             else: filename = filename+'.csv'
             df = pd.DataFrame(data=[str(x) for x in self.__dict__.values()], index=self.__dict__.keys(), columns=[self.name])
             df.index.rename(name='Dimensions', inplace=True)
             df.to_csv(filename, sep='|')
         else:
-            if not isinstance(filename, (str)):
+            if not isinstance(filename, (str)): # here we ask whether the user passed a custom filename
                 filename = f'{self.name}.pickle'
             else: filename = filename+'.pickle'
             with open(filename, 'wb') as f:
