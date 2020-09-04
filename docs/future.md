@@ -21,8 +21,11 @@ player.gen(graphical=True) # starts the graphical, CLI character creation interf
 ```python
 player.gen(random=True, ...) # generates a random character sheet
 ```
-* add support for exp, hp, spells, attacks, and equipment
 * add support for dice rolls/random attributes
+```python
+player.gen(class="RANDOM", ...) 
+```
+* add support for exp, hp, spells, attacks, and equipment
 * build more tests!!
 
 ## Future Projects
