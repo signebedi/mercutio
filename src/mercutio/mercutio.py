@@ -1,5 +1,6 @@
 import mercutio.defaults as defaults # this is where we store the default dimensions
 import pickle
+import pandas as pd
 
 class Player:
     def __init__(self):
@@ -131,10 +132,18 @@ class Player:
             if isinstance(special, (list)):
                 [self.special_class_options.append(x) for x in special]
 
-    def save(self):
-        filename = f'{self.name}.pickle'
-        with open(filename, 'wb') as f:
-            pickle.dump(vars(self), f)
+    def save(self, csv=None):
+
+        if csv: # write to CSV if the keyword argument is passed
+            filename = f'{self.name}.csv'
+            df = pd.DataFrame(data=[str(x) for x in self.__dict__.values()], index=self.__dict__.keys(), columns=[self.name])
+            df.index.rename(name='Dimensions', inplace=True)
+            df.to_csv(filename, sep='|')
+        else:
+
+            filename = f'{self.name}.pickle'
+            with open(filename, 'wb') as f:
+                pickle.dump(vars(self), f)
         print(f'\nSuccessfully saved player data to {filename}\n')
 
     def load_player(self, filename):

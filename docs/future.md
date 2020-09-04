@@ -14,6 +14,7 @@ player.gen(graphical=True) # starts the graphical, CLI character creation interf
 ```
 * **DONE 9.4.20** add support for language
 * **DONE 9.4.20** add support for religion
+* **DONE 9.4.20** add support for writing to csv
 
 ## In Progress
 * add random character creation method
@@ -22,7 +23,6 @@ player.gen(random=True, ...) # generates a random character sheet
 ```
 * add support for exp, hp, spells, attacks, and equipment
 * add support for dice rolls/random attributes
-* add support for writing to csv
 * build more tests!!
 
 ## Future Projects

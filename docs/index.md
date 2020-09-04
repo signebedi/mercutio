@@ -9,7 +9,7 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 ## Overview
 
-Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides default and optional character dimensions, along with vanilla options for each dimension:
+Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides default and optional player dimensions, along with vanilla options for each dimension:
 
 * **class**: [default] warrior, mage, rogue, ranger
 * **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
@@ -80,12 +80,17 @@ Modify an existing player using the mod() method:
 player.mod(name='beringor barthenon, guardian of bradley gardens')
 ```
 
-Write your character details to a pickle file using the save() method. Note, this will save your character under their designated name and may experience errors if you used non-friendly characters:
+Write your character details to a pickle file using the save() method. Note, this will save your character under their designated name and may experience errors if you used certain characters based on your system requirements:
 ```python
 player.save()
 ```
 
-Load character details from a pickle file using the load_player() method:
+You can also write to a more user-friendly CSV format -- note the program uses pipe | delimiters to allow for flexibility in characters used in player dimensions:
+```python
+player.save(csv=True)
+```
+
+Load character details from a pickle file using the load_player() method -- noted that CSV files cannot be loaded at this time:
 ```python
 player.load_player(filename='balthor batwing, earl of pentham.pickle')
 ```
