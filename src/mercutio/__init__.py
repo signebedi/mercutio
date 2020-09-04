@@ -144,16 +144,19 @@ class Player:
             if isinstance(special, (list)):
                 [self.special_class_options.append(x) for x in special]
 
-    def save(self, csv=None):
+    def save(self, filename=None, csv=None):
 
         if csv: # write to CSV if the keyword argument is passed
-            filename = f'{self.name}.csv'
+            if not isinstance(filename, (str)):
+                filename = f'{self.name}.csv'
+            else: filename = filename+'.csv'
             df = pd.DataFrame(data=[str(x) for x in self.__dict__.values()], index=self.__dict__.keys(), columns=[self.name])
             df.index.rename(name='Dimensions', inplace=True)
             df.to_csv(filename, sep='|')
         else:
-
-            filename = f'{self.name}.pickle'
+            if not isinstance(filename, (str)):
+                filename = f'{self.name}.pickle'
+            else: filename = filename+'.pickle'
             with open(filename, 'wb') as f:
                 pickle.dump(vars(self), f)
         print(f'\nSuccessfully saved player data to {filename}\n')

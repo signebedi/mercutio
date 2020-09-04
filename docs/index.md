@@ -78,6 +78,7 @@ Write your character details to a pickle file using the save() method. Note, thi
 ```python
 player.save()
 ```
+You can use a custome name using ```player.save(filename='player_one')``` but be careful not to add the file extension, since mercutio does that for you.
 
 You can also write to a more user-friendly CSV format -- note the program uses pipe | delimiters to allow for flexibility in characters used in player dimensions:
 ```python
