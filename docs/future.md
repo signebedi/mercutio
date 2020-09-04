@@ -55,3 +55,4 @@ default_dimension_options = [
 * * https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git
 * * https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
 * * https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
+* **BY v1.0.0** conduct a thorough review of tests/test_mercutio.py and revise/build upon these as appropriate for future anticipated builds
