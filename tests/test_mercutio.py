@@ -11,6 +11,8 @@ def test_gen():
     assert isinstance(player.language, (str))
     assert isinstance(player.name, (str))
     assert isinstance(player.level, (int))
+    assert isinstance(player.attributes, (dict))
+    assert isinstance(player.skills, (dict))
 
 
 def test_load_dimensions_append():
