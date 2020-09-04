@@ -16,14 +16,15 @@ Mercutio provides a straightforward, stable, and highly-customizable API for cha
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
 * **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
-* **special**: [optional] 
-* **skills**: [optional]
+* **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
+
+In the future, support may be added for the following dimensions:
 * **equipment**: [optional]
 * **spells**: [optional]
 * **attacks**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
-In addition, it tracks vital data such as level, experience, alignment, and hit-points.
+In addition, support may be added for vital data such as experience, alignment, and hit-points.
 
 ## Usage
 
@@ -67,7 +68,7 @@ You can also generate entirely random players:
 ```python
 player.gen(random=True, ...) # generates a random character sheet
 ```
-Or you can randomize individual dimensions in most cases by simply not passing a value for them. Dimensions that are not passed by the user will generally be randomized by default, which has thus far proven to be the most stable approach to this issue (Exceptions: name[defaults to empty string], language[defaults to 'common']), religion[defaults to 'none'], special[defaults to empty string]):
+Or you can randomize individual dimensions in most cases by simply not passing a value for them. Dimensions that are not passed by the user will generally be randomized by default, which has thus far proven to be the most stable approach to this issue (Exceptions: name[defaults to empty string], language[defaults to 'common']), religion[defaults to 'none'], skills [defaults to empty string]):
 
 Modify an existing player using the mod() method:
 ```python

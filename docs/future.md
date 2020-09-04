@@ -24,7 +24,6 @@ player.gen(random=True, ...) # generates a random character sheet
 * **DONE 9.4.20** add support for saving to custom filenames
 
 ## In Progress
-* add support for exp, hp, spells, attacks, and equipment
 * build more tests!!
 
 ## Future Projects
@@ -57,3 +56,4 @@ default_dimension_options = [
 * * https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
 * * https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
 * **BY v1.0.0** conduct a thorough review of tests/test_mercutio.py and revise/build upon these as appropriate for future anticipated builds
+* **BY v2.0.0** add support for exp, hp, spells, attacks, and equipment
