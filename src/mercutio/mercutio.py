@@ -43,8 +43,10 @@ class Player:
                 self.language = input(f'Please enter your desired language -- your options are {self.language_options}: ')
                 if self.language in self.language_options: break
 
-
-        ### NEED TO ADD SUPPORT FOR RELIGION
+        if not hasattr(self, 'religion'):
+            while True:    
+                self.religion = input(f'Please enter your desired religion -- your options are {self.religion_options}: ')
+                if self.religion in self.religion_options: break
 
     def gen(self, graphical=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
 
@@ -81,7 +83,7 @@ class Player:
             if religion:
                 if religion in self.religion_options:
                     self.religion = religion
-            else: self.religion = ''
+            else: self.religion = self.religion_options[0] # default to first option, which is "none"
 
         if not hasattr(self, 'language'):
             if language:

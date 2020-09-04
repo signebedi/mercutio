@@ -51,7 +51,7 @@ player.gen(
     'charisma': 3,
   },
   name='balthor batwing, earl of pentham',
-  # religion='dramphor',
+  religion='paladine',
   race='human',
   language='common'
 )
