@@ -65,7 +65,7 @@ player.gen(graphical=True) # starts the graphical, CLI character creation interf
 
 You can also generate entirely random players:
 ```python
-player.gen(rand=True, ...) # generates a random character sheet
+player.gen(random=True, ...) # generates a random character sheet
 ```
 Or you can randomize individual dimensions in most cases by simply not passing a value for them. Dimensions that are not passed by the user will generally be randomized by default, which has thus far proven to be the most stable approach to this issue (Exceptions: name[defaults to empty string], language[defaults to 'common']), religion[defaults to 'none'], special[defaults to empty string]):
 

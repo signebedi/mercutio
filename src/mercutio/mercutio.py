@@ -1,5 +1,6 @@
 import mercutio.defaults as defaults # this is where we store the default dimensions
-import pickle, random
+import pickle
+import random as rd
 import pandas as pd
 
 class Player:
@@ -49,7 +50,7 @@ class Player:
                 self.religion = input(f'Please enter your desired religion -- your options are {self.religion_options}: ')
                 if self.religion in self.religion_options: break
 
-    def gen(self, graphical=None, rand=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
+    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
 
         if graphical:
             self.gen_graphic()
@@ -59,23 +60,23 @@ class Player:
             else: self.name = ''
 
         if not hasattr(self, 'player_class'):
-            if rand:
-                self.player_class = random.choice(self.player_class_options)
+            if random:
+                self.player_class = rd.choice(self.player_class_options)
             if player_class:
                 if player_class in self.player_class_options:
                     self.player_class = player_class
-            else: self.player_class=random.choice(self.player_class_options)
+            else: self.player_class=rd.choice(self.player_class_options)
 
         if not hasattr(self, 'race'):
-            if rand:
-                self.race=random.choice(self.race_options)
+            if random:
+                self.race=rd.choice(self.race_options)
             if race:
                 if race in self.race_options:
                     self.race = race
-            else: self.race = self.race=random.choice(self.race_options)
+            else: self.race = self.race=rd.choice(self.race_options)
 
         self.attributes = {}
-        if rand:
+        if random:
             for x in self.attributes_options:
                 self.attributes[x] = random.randint(1,10)
         if isinstance(attributes, (dict)):
@@ -88,16 +89,16 @@ class Player:
                 self.attributes[x] = random.randint(1,10)
 
         if not hasattr(self, 'religion'):
-            if rand:
-                self.religion=random.choice(self.religion_options)
+            if random:
+                self.religion=rd.choice(self.religion_options)
             if religion:
                 if religion in self.religion_options:
                     self.religion = religion
             else: self.religion = self.religion_options[0] # default to first option, which is "none"
 
         if not hasattr(self, 'language'):
-            if rand:
-                self.language=random.choice(self.language_options)
+            if random:
+                self.language=rd.choice(self.language_options)
             if language:
                 if language in self.language_options:
                     self.language = language
