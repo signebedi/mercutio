@@ -12,6 +12,8 @@
 ```python
 player.gen(graphical=True) # starts the graphical, CLI character creation interface
 ```
+* **DONE 9.4.20** add support for language
+* **DONE 9.4.20** add support for religion
 
 ## In Progress
 * add random character creation method
@@ -20,6 +22,9 @@ player.gen(random=True, ...) # generates a random character sheet
 ```
 * add support for exp, hp, spells, attacks, and equipment
 * add support for dice rolls/random attributes
+* add support for writing to csv
+
+## Future Projects
 * add support for special buffs that can mapped to specific classes/races/religions/languages (eg. a separate dictionary) -- in fact, you could even just replace the current structure with a single data structure that allows the user to specify >> this will make the API more forgiving; underlying question: should attributes then be handled separately to avoid potential concurrency/ordering problems?
 ```python
 default_dimension_options = [
@@ -43,6 +48,4 @@ default_dimension_options = [
   },
 ]
 ```
-
-## Future Projects
 * add python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools 
