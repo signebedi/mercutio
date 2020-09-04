@@ -78,7 +78,7 @@ class Player:
         self.attributes = {}
         if random:
             for x in self.attributes_options:
-                self.attributes[x] = random.randint(1,10)
+                self.attributes[x] = rd.randint(1,10)
         if isinstance(attributes, (dict)):
             for key in attributes:
                 if key in self.attributes_options:
@@ -86,7 +86,7 @@ class Player:
         # in the absence of designated attributes, randomize between 1 and 10
         else: 
             for x in self.attributes_options:
-                self.attributes[x] = random.randint(1,10)
+                self.attributes[x] = rd.randint(1,10)
 
         if not hasattr(self, 'religion'):
             if random:
