@@ -29,7 +29,7 @@ In addition, it tracks vital data such as level, experience, alignment, and hit-
 
 Start by importing the mercutio library:
 ```python
-import mercutio.mercutio as mc
+import mercutio as mc
 ```
 
 Next, you can create your player object:
@@ -93,7 +93,7 @@ Load your custom dimensions from python lists, using two methods:
 
 Method one: overwrite default dimensions
 ```python
-import mercutio.mercutio as mc
+import mercutio as mc
 player = mc.Player()
 player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
@@ -101,7 +101,7 @@ player.gen(player_class='wizard', ...)
 
 Method two: append to default dimensions
 ```python
-import mercutio.mercutio as mc
+import mercutio as mc
 player = mc.Player()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
