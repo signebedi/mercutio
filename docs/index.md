@@ -16,7 +16,7 @@ Mercutio provides a straightforward, stable, and highly-customizable API for cha
 * **race**: [optional] human, elf, dwarf, orc, halfling
 * **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
 * **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
-* **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
+* **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
 
 In the future, support may be added for the following dimensions:
 * **equipment**: [optional]
@@ -44,19 +44,41 @@ You can also pass the values for each dimension you'd like to pass to the gen() 
 player.gen(
   player_class='warrior',
   attributes={
-    'strength': 5,
-    'constitution': 3,
-    'intelligence': 2,
+    'strength': 7,
+    'constitution': 5,
+    'intelligence': 4,
     'wisdom': 3,
-    'dexterity': 2,
-    'charisma': 3,
+    'dexterity': 4,
+    'charisma': 6,
   },
   name='balthor batwing, earl of pentham',
   religion='paladine',
   race='human',
   language='common'
+  level=3 # defaults to level 1
+  skills={
+    'athletics': 8,
+    'acrobatics': 6,
+    'sleight': 3,
+    'stealth': 1,
+    'arcana': 2,
+    'history': 1,
+    'investigation': 2,
+    'nature': 2,
+    'religion': 4,
+    'animal-handling': 2,
+    'insight': 3,
+    'medicine': 1,
+    'perception': 4,
+    'survival': 3,
+    'deception': 4,
+    'intimidation': 5,
+    'performance': 5,
+    'persuasion': 7,
+  },
 )
 ```
+Note: it is highly recommended that you do not pass base values for player attributes or skills, since the engine will randomize these between 1 and 10 when no arguments are passed. However, this argument remains in case you are interested in, for example, replicating an existing player.
 
 You can also use the graphical player creation interface:
 ```python
