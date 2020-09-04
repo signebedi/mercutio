@@ -10,7 +10,7 @@ class Player:
         self.race_options = defaults.race_options
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
-        self.special_options = defaults.special_options
+        self.skills_options = defaults.skills_options
         ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGMENT, SPELLS, ATTACKS
 
     def gen_graphic(self):
@@ -50,7 +50,7 @@ class Player:
                 self.religion = input(f'Please enter your desired religion -- your options are {self.religion_options}: ')
                 if self.religion in self.religion_options: break
 
-    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name='', level=1):
+    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name='', level=1):
 
         if graphical:
             self.gen_graphic()
@@ -104,19 +104,27 @@ class Player:
                     self.language = language
             else: self.language = self.language_options[0] # default to first option, which is "common"
 
-        if not hasattr(self, 'special'):
-            if special:
-                if special in self.special_options:
-                    self.special = special
-            else: self.special = ''
+        self.skills = {}
+        if random:
+            for x in self.skills_options:
+                self.skills[x] = rd.randint(1,10)
+        if isinstance(skills, (dict)):
+            for key in skills:
+                if key in self.skills_options:
+                    self.skills[key] = skills[key]
+        # in the absence of designated skills, randomize between 1 and 10
+        else: 
+            for x in self.skills_options:
+                self.skills[x] = rd.randint(1,10)
+
 
         if isinstance(level, (int)):
             self.level = level
         else: self.level = 1
 
-        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nspecial: {self.special}\n')
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
-    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, special=None):
+    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None):
         if how == 'overwrite':
             if isinstance(player_class, (list)):
                 self.player_class_options = player_class
@@ -128,8 +136,8 @@ class Player:
                 self.religion_options = religion
             if isinstance(language, (list)):
                 self.language_options = language
-            if isinstance(special, (list)):
-                self.special_options = special
+            if isinstance(skills, (list)):
+                self.skills_options = skills
         elif how == 'append': 
             if isinstance(player_class, (list)):
                 [self.player_class_options.append(x) for x in player_class]
@@ -141,8 +149,8 @@ class Player:
                 [self.religion_options.append(x) for x in religion]
             if isinstance(language, (list)):
                 [self.language_options.append(x) for x in language]
-            if isinstance(special, (list)):
-                [self.special_class_options.append(x) for x in special]
+            if isinstance(skills, (list)):
+                [self.skills_class_options.append(x) for x in skills]
 
     def save(self, filename=None, csv=None):
 
@@ -170,7 +178,7 @@ class Player:
             self.race = loaded_file['race']
             self.religion = loaded_file['religion']
             self.language = loaded_file['language']
-            self.special = loaded_file['special']
+            self.skills = loaded_file['skills']
             self.name = loaded_file['name']
             self.level = loaded_file['level']
 
@@ -179,7 +187,7 @@ class Player:
         except: print(f'\nNo player data found at {filename}\n')
 
 
-    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, special=None, name=None, level=None):
+    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, level=None):
         if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load_player()
             if player_class:
                 if player_class in self.player_class_options:
@@ -201,15 +209,15 @@ class Player:
                 if language in self.language_options:
                     self.language = language
 
-            if special:
-                if special in self.special_options:
-                    self.special = special
+            if skills:
+                if skills in self.skills_options:
+                    self.skills = skills
 
             if name: self.name = name
 
             if isinstance(level, (int)):
                 self.level = level
 
-            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nspecial: {self.special}\n')
+            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\n')
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load_player() before modifying your player')

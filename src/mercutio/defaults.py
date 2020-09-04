@@ -87,7 +87,54 @@ language_options = [
     'orc',
 ]
 
-special_options = [
-    
+# Strength
+# • Athletics
+
+# Dexterity
+# • Acrobatics
+# • Sleight of Hand
+# • Stealth
+
+# Intelligence
+# • Arcana
+# • History
+# • Investigation
+# • Nature
+# • Religion
+
+# Wisdom
+# • Animal Handling
+# • Insight
+# • Medicine
+# • Perception
+# • Survival
+
+# Charisma
+# • Deception
+# • Intimidation
+# • Performance
+# • Persuasion
+
+
+
+skills_options = [
+    'athletics',
+    'acrobatics',
+    'sleight',
+    'stealth',
+    'arcana',
+    'history',
+    'investigation',
+    'nature',
+    'religion',
+    'animal-handling',
+    'insight',
+    'medicine',
+    'perception',
+    'survival',
+    'deception',
+    'intimidation',
+    'performance',
+    'persuasion',
 ]
 
