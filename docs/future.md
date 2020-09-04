@@ -21,6 +21,7 @@ player.gen(random=True, ...) # generates a random character sheet
 ```
 * **DONE 9.4.20** add support for dice rolls/random attributes
 * **DONE 9.4.20 -- changed mercutio.py to __init__.py** simplify import process -- right now, you import the library using ```import mercutio.mercutio as mc``` but this should just be ```import mercutio as mc``` 
+* **DONE 9.4.20** add support for saving to custom filenames
 
 ## In Progress
 * add support for exp, hp, spells, attacks, and equipment
