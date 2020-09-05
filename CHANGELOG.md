@@ -46,6 +46,7 @@ Changes will fall under the following categories:
 ### Added
 - graphical character creation method using ```mc.Player.gen(graphical=True)```
 - load custom player class, attributes, race, religion, language, and special using ```mc.Player.load_dimensions()```
+- started following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 
 ## [0.2.0] - 2020-08-26
