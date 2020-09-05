@@ -36,7 +36,8 @@ Changes will fall under the following categories:
 - options to save player to CSV file using ```mc.Player.save(csv=True)```
 - options to specify the name of the save file using ```mc.Player.save(filename=STRING)```
 - random character creation method using ```mc.Player.gen(random=True)```
-- added a changelog based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+- changelog based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+- dependency testing using requires.io
 
 ### Changed
 - import method from ```import mercutio.mercutio as mc``` to ```import mercutio as mc```
