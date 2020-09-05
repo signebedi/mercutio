@@ -4,160 +4,67 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Types of changes
-Added for new features.
-Changed for changes in existing functionality.
-Deprecated for soon-to-be removed features.
-Removed for now removed features.
-Fixed for any bug fixes.
-Security in case of vulnerabilities.
-
-
-
-Changed "special" dimension to "skills"
-Allow users to specify filename at save
-Allow users to save to csv
-Simplified module naming conventions
-Added support for random player generation
-Added options for player religion
-Added options for player language
-
+Changes will fall under the following categories:
+- Added for new features.
+- Changed for changes in existing functionality.
+- Deprecated for soon-to-be removed features.
+- Removed for now removed features.
+- Fixed for any bug fixes.
+- Security in case of vulnerabilities.
 
 
 ## [Unreleased]
-
-## [1.0.0] - 2017-06-20
 ### Added
-- New visual identity by [@tylerfortune8](https://github.com/tylerfortune8).
-- Version navigation.
-- Links to latest released version in previous versions.
-- "Why keep a changelog?" section.
-- "Who needs a changelog?" section.
-- "How do I make a changelog?" section.
-- "Frequently Asked Questions" section.
-- New "Guiding Principles" sub-section to "How do I make a changelog?".
-- Simplified and Traditional Chinese translations from [@tianshuo](https://github.com/tianshuo).
-- German translation from [@mpbzh](https://github.com/mpbzh) & [@Art4](https://github.com/Art4).
-- Italian translation from [@azkidenz](https://github.com/azkidenz).
-- Swedish translation from [@magol](https://github.com/magol).
-- Turkish translation from [@karalamalar](https://github.com/karalamalar).
-- French translation from [@zapashcanon](https://github.com/zapashcanon).
-- Brazilian Portugese translation from [@Webysther](https://github.com/Webysther).
-- Polish translation from [@amielucha](https://github.com/amielucha) & [@m-aciek](https://github.com/m-aciek).
-- Russian translation from [@aishek](https://github.com/aishek).
-- Czech translation from [@h4vry](https://github.com/h4vry).
-- Slovak translation from [@jkostolansky](https://github.com/jkostolansky).
-- Korean translation from [@pierceh89](https://github.com/pierceh89).
-- Croatian translation from [@porx](https://github.com/porx).
-- Persian translation from [@Hameds](https://github.com/Hameds).
-- Ukrainian translation from [@osadchyi-s](https://github.com/osadchyi-s).
+- support for special buffs that can mapped to specific classes/races/religions/languages
+- support for exp, hp, spells, attacks, and equipment customization
+- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools
 
-### Changed
-- Start using "changelog" over "change log" since it's the common usage.
-- Start versioning based on the current English version at 0.3.0 to help
-translation authors keep things up-to-date.
-- Rewrite "What makes unicorns cry?" section.
-- Rewrite "Ignoring Deprecations" sub-section to clarify the ideal
-  scenario.
-- Improve "Commit log diffs" sub-section to further argument against
-  them.
-- Merge "Why can’t people just use a git log diff?" with "Commit log
-  diffs"
-- Fix typos in Simplified Chinese and Traditional Chinese translations.
-- Fix typos in Brazilian Portuguese translation.
-- Fix typos in Turkish translation.
-- Fix typos in Czech translation.
-- Fix typos in Swedish translation.
-- Improve phrasing in French translation.
-- Fix phrasing and spelling in German translation.
-
-### Removed
-- Section about "changelog" vs "CHANGELOG".
-
-## [0.3.0] - 2015-12-03
-### Added
-- RU translation from [@aishek](https://github.com/aishek).
-- pt-BR translation from [@tallesl](https://github.com/tallesl).
-- es-ES translation from [@ZeliosAriex](https://github.com/ZeliosAriex).
-
-## [0.2.0] - 2015-10-06
-### Changed
-- Remove exclusionary mentions of "open source" since this project can
-benefit both "open" and "closed" source projects equally.
-
-## [0.1.0] - 2015-10-06
-### Added
-- Answer "Should you ever rewrite a change log?".
-
-### Changed
-- Improve argument against commit logs.
-- Start following [SemVer](https://semver.org) properly.
-
-## [0.0.8] - 2015-02-17
-### Changed
-- Update year to match in every README example.
-- Reluctantly stop making fun of Brits only, since most of the world
-  writes dates in a strange way.
-
+## [0.5.1] - 2020-09-05
 ### Fixed
-- Fix typos in recent README changes.
-- Update outdated unreleased diff link.
+- PyPi deployment by adding MANIFEST.in
 
-## [0.0.7] - 2015-02-16
+
+## [0.5.0] - 2020-09-05
 ### Added
-- Link, and make it obvious that date format is ISO 8601.
+- first release to PyPi
+- requirements for twine
+
+
+## [0.4.0] - 2020-09-04
+### Added
+- default options for languages and religion based on standard DnD conventions
+- options to save player to CSV file using ```mc.Player.save(csv=True)```
+- options to specify the name of the save file using ```mc.Player.save(filename=STRING)```
+- random character creation method using ```mc.Player.gen(random=True)```
 
 ### Changed
-- Clarified the section on "Is there a standard change log format?".
+- import method from ```import mercutio.mercutio as mc``` to ```import mercutio as mc```
+- ```special``` dimensions are now known as ```skills```, which follow the standard DnD skill list
 
-### Fixed
-- Fix Markdown links to tag comparison URL with footnote-style links.
 
-## [0.0.6] - 2014-12-12
+## [0.3.0] - 2020-08-29
 ### Added
-- README section on "yanked" releases.
+- graphical character creation method using ```mc.Player.gen(graphical=True)```
+- load custom player class, attributes, race, religion, language, and special using ```mc.Player.load_dimensions()```
 
-## [0.0.5] - 2014-08-09
+
+## [0.2.0] - 2020-08-26
 ### Added
-- Markdown links to version tags on release headings.
-- Unreleased section to gather unreleased changes and encourage note
-keeping prior to releases.
+- pickle files for saving player details
+- load player from pickle files ```mc.Player.load_player()```
+- support for readthedocs
+- support for Travis-CI
+- ability to modify a player object using ```mc.Player.mod()```
 
-## [0.0.4] - 2014-08-09
+## 0.1.0 - 2020-08-25
 ### Added
-- Better explanation of the difference between the file ("CHANGELOG")
-and its function "the change log".
+- generate player using ```mc.Player.gen()```
+- standard player dimensions for class, attributes, race, religion, language, and special
 
-### Changed
-- Refer to a "change log" instead of a "CHANGELOG" throughout the site
-to differentiate between the file and the purpose of the file — the
-logging of changes.
 
-### Removed
-- Remove empty sections from CHANGELOG, they occupy too much space and
-create too much noise in the file. People will have to assume that the
-missing sections were intentionally left out because they contained no
-notable changes.
-
-## [0.0.3] - 2014-08-09
-### Added
-- "Why should I care?" section mentioning The Changelog podcast.
-
-## [0.0.2] - 2014-07-10
-### Added
-- Explanation of the recommended reverse chronological release ordering.
-
-## [0.0.1] - 2014-05-31 [YANKED]
-### Added
-- This CHANGELOG file to hopefully serve as an evolving example of a
-  standardized open source project CHANGELOG.
-- CNAME file to enable GitHub Pages custom domain
-- README now contains answers to common questions about CHANGELOGs
-- Good examples and basic guidelines, including proper date formatting.
-- Counter-examples: "What makes unicorns cry?"
-
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.4.0...HEAD
-[0.0.5]: https://github.com/signebedi/mercutio/compare/0.4.0...0.5.0
-[0.0.4]: https://github.com/signebedi/mercutio/compare/0.3.0...0.4.0
-[0.0.3]: https://github.com/signebedi/mercutio/compare/0.2.0...0.3.0
-[0.0.2]: https://github.com/signebedi/mercutio/releases/tag/0.2.0
+[Unreleased]: https://github.com/signebedi/mercutio/compare/releases/0.5.1...HEAD
+[0.5.1]: https://github.com/signebedi/mercutio/compare/0.5.0...0.5.1
+[0.5.0]: https://github.com/signebedi/mercutio/compare/0.4.0...0.5.0
+[0.4.0]: https://github.com/signebedi/mercutio/compare/0.3.0...0.4.0
+[0.3.0]: https://github.com/signebedi/mercutio/compare/v.0.2-beta...0.3.0
+[0.2.0]: https://github.com/signebedi/mercutio/releases/tag/v.0.2-beta
