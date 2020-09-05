@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setuptools.setup(
-    name="Mercutio",
+    name="mercutio",
     version="0.5.0",
     author="Sig Janoska-Bedi",
     author_email="signe@siftingwinnowing.com",
