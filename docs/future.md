@@ -24,7 +24,8 @@ player.gen(random=True, ...) # generates a random character sheet
 * **DONE 9.4.20** add support for saving to custom filenames
 * **DONE 9.5.20**  add badges for stable release version and/or PYPI release, licence  and dependency status
 * **DONE 9.5.20** Upload to PYPI https://packaging.python.org/tutorials/packaging-projects/
-* * upload using Twine https://twine.readthedocs.io/en/latest/
+* * uploaded using Twine https://twine.readthedocs.io/en/latest/
+* * added a MANIFEST.in file https://packaging.python.org/guides/using-manifest-in/ to include requirements file
 
 ## In Progress
 * build more tests!!
