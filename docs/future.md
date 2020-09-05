@@ -56,6 +56,7 @@ default_dimension_options = [
 * * https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git
 * * https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
 * * https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
+* **BY v1.0.0** Upload to PYPI https://packaging.python.org/tutorials/packaging-projects/
 * **BY v1.0.0** conduct a thorough review of tests/test_mercutio.py and revise/build upon these as appropriate for future anticipated builds
 * **BY v1.0.0** add badges for stable release version and/or PYPI release, licence (DONE 9.5.2020) and dependency status (DONE 9.5.2020)
 * **BY v2.0.0** add support for exp, hp, spells, attacks, and equipment
