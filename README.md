@@ -6,6 +6,7 @@
 [![Inline docs](https://readthedocs.org/projects/pip/badge/?version=latest&style=flat)](https://mercutio.readthedocs.io/en/latest/)
 [![Version 1.1.0 Badge][version-badge]](changelog) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/signebedi/mercutio)
 
 yet another character creation engine
 
