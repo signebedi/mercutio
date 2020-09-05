@@ -23,6 +23,8 @@ player.gen(random=True, ...) # generates a random character sheet
 * **DONE 9.4.20 -- changed mercutio.py to __init__.py** simplify import process -- right now, you import the library using ```import mercutio.mercutio as mc``` but this should just be ```import mercutio as mc``` 
 * **DONE 9.4.20** add support for saving to custom filenames
 * **DONE 9.5.20**  add badges for stable release version and/or PYPI release, licence  and dependency status
+* **DONE 9.5.20** Upload to PYPI https://packaging.python.org/tutorials/packaging-projects/
+* * upload using Twine https://twine.readthedocs.io/en/latest/
 
 ## In Progress
 * build more tests!!
@@ -57,6 +59,5 @@ default_dimension_options = [
 * * https://stackoverflow.com/questions/3523534/good-ways-to-manage-a-changelog-using-git
 * * https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
 * * https://medium.com/better-programming/create-your-own-changelog-generator-with-git-aefda291ea93
-* **BY v1.0.0** Upload to PYPI https://packaging.python.org/tutorials/packaging-projects/
 * **BY v1.0.0** conduct a thorough review of tests/test_mercutio.py and revise/build upon these as appropriate for future anticipated builds
 * **BY v2.0.0** add support for exp, hp, spells, attacks, and equipment
