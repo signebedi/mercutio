@@ -131,7 +131,20 @@ player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain']
 player.gen(player_class='wizard', ...)
 ```
 
-Another key element of loading dimensions is also passing additional buffs, which are stored in ```mercutio.defaults``` as buff_options
+Another key element of loading dimensions is also passing additional buffs, which are stored in ```mercutio.defaults``` as buff_options list, and each individual buff follows the following structure:
+
+```python
+{
+  'name':'wizard', #  designate the player identifier that will trigger this buff
+  'dimension': 'class', # designates which dimension the 'name' option falls under
+  'buff': {'strength':-1,'intelligence':3,}, #  designates the character skills or attributes to buff
+}
+```
+
+In order for the new character dimensions you pass to have any impact of character atttributes and skills, you need to pass details about the the impact these have:
+```python
+PLACEHOLDER FOR API FOR MODIFYING BUFFS -- only provide an append option
+```
 
 The program also provides an API for rolling dice using the ```mc.Roll()``` class:
 
