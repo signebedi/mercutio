@@ -19,7 +19,7 @@ Changes will fall under the following categories:
 - support for multiclassing and multiple languages
 - support for ability/proficiency checks and saving throws to dice-rolls
 
-## [0.7.0] - 2020-09-06
+## [0.7.0] - 2020-09-07
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
 - Documentation for buffs
@@ -36,7 +36,7 @@ Changes will fall under the following categories:
 
 ## [0.6.0] - 2020-09-06
 ### Added
-- support for dice-rolling using eg. ```mc.Roll.six()```
+- support for dice-rolling using eg. ```mc.Roll().six()```
 - tests for dice-rolling
 
 
