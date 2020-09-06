@@ -5,13 +5,14 @@ import pandas as pd
 
 class Player:
     def __init__(self):
+        self.roll = Roll() # create a dice roll object
         self.player_class_options = defaults.player_class_options
         self.attributes_options = defaults.attributes_options
         self.race_options = defaults.race_options
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = defaults.skills_options
-        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS
+        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, BACKGROUND, EXP, HP
 
     def gen_graphic(self):
 
@@ -78,15 +79,15 @@ class Player:
         self.attributes = {}
         if random:
             for x in self.attributes_options:
-                self.attributes[x] = rd.randint(1,10)
+                self.attributes[x] = self.roll.twenty()
         if isinstance(attributes, (dict)):
             for key in attributes:
                 if key in self.attributes_options:
                     self.attributes[key] = attributes[key]
-        # in the absence of designated attributes, randomize between 1 and 10
+        # in the absence of designated attributes, randomize between 1 and 20
         else: 
             for x in self.attributes_options:
-                self.attributes[x] = rd.randint(1,10)
+                self.attributes[x] = self.roll.twenty()
 
         if not hasattr(self, 'religion'):
             if random:
@@ -107,15 +108,15 @@ class Player:
         self.skills = {}
         if random:
             for x in self.skills_options:
-                self.skills[x] = rd.randint(1,10)
+                self.skills[x] = self.roll.twenty()
         if isinstance(skills, (dict)):
             for key in skills:
                 if key in self.skills_options:
                     self.skills[key] = skills[key]
-        # in the absence of designated skills, randomize between 1 and 10
+        # in the absence of designated skills, randomize between 1 and 20
         else: 
             for x in self.skills_options:
-                self.skills[x] = rd.randint(1,10)
+                self.skills[x] = self.roll.twenty()
 
 
         if isinstance(level, (int)):
@@ -169,6 +170,7 @@ class Player:
                 pickle.dump(vars(self), f)
         print(f'\nSuccessfully saved player data to {filename}\n')
 
+    ### NOTE THAT AS NEW DIMENSIONS ARE ADDED, THIS WILL NEED TO BE UPDATED TO ENSURE THAT IT COLLECTS THE CORRECT PLAYER DATA
     def load_player(self, filename):
         try: 
             loaded_file = pickle.load(open(filename, "rb"))
@@ -225,7 +227,8 @@ class Player:
 
 class Roll:
     def __init__(self):
-        print('\nCreated a dice roller object')
+        # print('\nCreated a dice roller object')
+        pass
     def four(self):
         return rd.randint(1,4)
     def six(self):
