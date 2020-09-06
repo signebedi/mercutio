@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="mercutio",
-    version="0.5.1",
+    version="0.6.0",
     author="Sig Janoska-Bedi",
     author_email="signe@siftingwinnowing.com",
     description="yet another character creation engine",

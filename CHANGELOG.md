@@ -18,7 +18,13 @@ Changes will fall under the following categories:
 - support for special buffs that can mapped to specific classes/races/religions/languages
 - support for exp, hp, background, spells, attacks, and equipment customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, and setuptools
-- support for dice-rolling
+- index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
+
+## [0.6.0] - 2020-09-06
+### Added
+- support for dice-rolling using eg. ```mc.Roll.six()```
+- tests for dice-rolling
+
 
 ## [0.5.1] - 2020-09-05
 ### Fixed
@@ -66,7 +72,8 @@ Changes will fall under the following categories:
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.5.1...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.6.0...HEAD
+[0.6.0]: https://github.com/signebedi/mercutio/compare/0.5.1...0.6.0
 [0.5.1]: https://github.com/signebedi/mercutio/compare/0.5.0...0.5.1
 [0.5.0]: https://github.com/signebedi/mercutio/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/signebedi/mercutio/compare/0.3.0...0.4.0
