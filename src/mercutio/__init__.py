@@ -225,6 +225,16 @@ class Player:
 
 class Roll:
     def __init__(self):
-        pass
-    def six():
+        print('\nCreated a dice roller object')
+    def four(self):
+        return rd.randint(1,4)
+    def six(self):
         return rd.randint(1,6)
+    def eight(self):
+        return rd.randint(1,8)
+    def ten(self):
+        return rd.randint(1,10)
+    def twelve(self):
+        return rd.randint(1,12)
+    def twenty(self):
+        return rd.randint(1,20)
