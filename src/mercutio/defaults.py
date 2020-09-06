@@ -1,8 +1,8 @@
 player_class_options = [
-    'warrior',    
-    'mage',    
+    'fighter',    
+    'wizard',    
     'rogue',    
-    'ranger',    
+    'cleric',    
 ]
 
 attributes_options = [
