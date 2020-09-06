@@ -138,3 +138,10 @@ skills_options = [
     'persuasion',
 ]
 
+default_dimension_options = [
+  {
+    'name':'mage', # REQUIRED, designate the player identifier that will trigger this buff
+    'dimension': 'class', # REQUIRED, designates which dimension the 'name' option falls under
+    'buff': {'strength':-1,'intelligence':3}, # OPTIONAL, designates the character skills or attributes to buff
+  },
+]
