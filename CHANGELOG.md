@@ -17,8 +17,7 @@ Changes will fall under the following categories:
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
 - support for exp, hp, background, spells, attacks, and equipment customization
-- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, and setuptools
-- index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
+- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 
 ## [0.7.0] - 2020-09-06
 ### Change
