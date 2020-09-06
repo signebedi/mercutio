@@ -16,8 +16,9 @@ Changes will fall under the following categories:
 ## [Unreleased]
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
-- support for exp, hp, spells, attacks, and equipment customization
-- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci and setuptools
+- support for exp, hp, background, spells, attacks, and equipment customization
+- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, and setuptools
+- support for dice-rolling
 
 ## [0.5.1] - 2020-09-05
 ### Fixed
