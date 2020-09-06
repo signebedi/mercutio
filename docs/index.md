@@ -136,7 +136,8 @@ The program also provides an API for rolling dice using the ```mc.Roll()``` clas
 ```python
 roll = mc.Roll() # instantiate the Roll() class
 
-roll.four()
+# now you can call dice rolls 
+roll.four() 
 roll.six()
 roll.eight()
 roll.ten()
