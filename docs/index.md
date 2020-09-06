@@ -131,6 +131,8 @@ player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain']
 player.gen(player_class='wizard', ...)
 ```
 
+Another key element of loading dimensions is also passing additional buffs, which are stored in ```mercutio.defaults``` as buff_options
+
 The program also provides an API for rolling dice using the ```mc.Roll()``` class:
 
 ```python
