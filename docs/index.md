@@ -18,13 +18,16 @@ Mercutio provides a straightforward, stable, and highly-customizable API for cha
 * **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
 * **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
 
+## Future Features
+
 In the future, support may be added for the following dimensions:
 * **equipment**: [optional]
+* **background**: [optional]
 * **spells**: [optional]
 * **attacks**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
 
-In addition, support may be added for vital data such as experience, alignment, and hit-points.
+In addition, support may be added for vital data such as experience, and hit-points.
 
 ## Use Cases
 
