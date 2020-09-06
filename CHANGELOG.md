@@ -12,11 +12,11 @@ Changes will fall under the following categories:
 - Fixed for any bug fixes.
 - Security in case of vulnerabilities.
 
-
 ## [Unreleased]
 ### Added
 - support for exp, hp, background, spells, attacks, and equipment customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
+- support for proficiency checks and saving throws to dice-rolls
 
 ## [0.7.0] - 2020-09-06
 ### Added
