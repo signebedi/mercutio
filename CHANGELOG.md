@@ -31,7 +31,7 @@ Changes will fall under the following categories:
 
 
 ### Removed
-- Next Steps docs page
+- Next Steps docs page, which is now covered by the changelog
 
 
 ## [0.6.0] - 2020-09-06
