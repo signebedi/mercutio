@@ -17,9 +17,11 @@ def test_gen():
 # test that overwriting player dimensions works as expected 
 def test_load_dimensions_append():
     player = mc.Player()
+    class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
+
     player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 
-    assert len(player.player_class_options) == 7
+    assert len(player.player_class_options) == class_len + 3 # assert that this has increased the length of the class list by three
 
 # test that overwriting player dimensions works as expected 
 def test_load_dimensions_overwrite():

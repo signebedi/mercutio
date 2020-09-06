@@ -20,6 +20,11 @@ Changes will fall under the following categories:
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, and setuptools
 - index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
 
+## [0.7.0] - 2020-09-06
+### Change
+- index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
+
+
 ## [0.6.0] - 2020-09-06
 ### Added
 - support for dice-rolling using eg. ```mc.Roll.six()```
