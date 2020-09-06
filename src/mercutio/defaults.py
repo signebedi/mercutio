@@ -121,6 +121,14 @@ language_options = [
 # • Performance
 # • Persuasion
 
+background_options = [
+    'acolyte', 
+    'criminal', 
+    'folk hero', 
+    'noble', 
+    'sage', 
+    'soldier',
+]
 
 
 skills_options = [
