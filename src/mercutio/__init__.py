@@ -11,7 +11,7 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = defaults.skills_options
-        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGMENT, SPELLS, ATTACKS
+        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS
 
     def gen_graphic(self):
 
@@ -221,3 +221,10 @@ class Player:
             print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\n')
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load_player() before modifying your player')
+
+
+class Roll:
+    def __init__(self):
+        pass
+    def six():
+        return rd.randint(1,6)
