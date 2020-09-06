@@ -11,4 +11,4 @@ theme:
 
 nav:
     - Getting Started: 'index.md'
-    - Next Steps: 'future.md'
+    - Usage: 'usage.md'

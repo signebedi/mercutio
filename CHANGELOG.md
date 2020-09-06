@@ -22,9 +22,14 @@ Changes will fall under the following categories:
 ## [0.7.0] - 2020-09-06
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
+- Docs pages for usage
 
 ### Changed
 - index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
+
+
+### Removed
+- Next Steps docs
 
 
 ## [0.6.0] - 2020-09-06
