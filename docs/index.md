@@ -130,3 +130,17 @@ player = mc.Player()
 player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
 player.gen(player_class='wizard', ...)
 ```
+
+The program also provides an API for rolling dice using the ```mc.Roll()``` class:
+
+```python
+roll = mc.Roll() # instantiate the Roll() class
+
+roll.four()
+roll.six()
+roll.eight()
+roll.ten()
+roll.twelve()
+roll.twenty()
+
+```
