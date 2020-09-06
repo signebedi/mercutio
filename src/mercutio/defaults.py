@@ -144,15 +144,31 @@ skills_options = [
     'persuasion',
 ]
 
-default_dimension_options = [
+buff_options = [
   {
-    'name':'mage', # REQUIRED, designate the player identifier that will trigger this buff
-    'dimension': 'class', # REQUIRED, designates which dimension the 'name' option falls under
-    'buff': {'strength':-1,'intelligence':3,}, # OPTIONAL, designates the character skills or attributes to buff
+    'name':'wizard', #  designate the player identifier that will trigger this buff
+    'dimension': 'class', # designates which dimension the 'name' option falls under
+    'buff': {'strength':-1,'intelligence':3,}, #  designates the character skills or attributes to buff
+  },
+    {
+    'name':'fighter', 
+    'dimension': 'class', 
+    'buff': {'strength':-1,'intelligence':3,}, 
   },
   {
-    'name':'human', # REQUIRED, designate the player identifier that will trigger this buff
-    'dimension': 'race', # REQUIRED, designates which dimension the 'name' option falls under
-    'buff': {'all':1,}, # OPTIONAL, designates the character skills or attributes to buff
+    'name':'rogue', 
+    'dimension': 'class', 
+    'buff': {'strength':-1,'intelligence':3,}, 
+  },
+  {
+    'name':'cleric', 
+    'dimension': 'class', 
+    'buff': {'strength':-1,'intelligence':3,},
+  },
+
+  {
+    'name':'human', 
+    'dimension': 'race',
+    'buff': {'all':1,},
   },
 ]
