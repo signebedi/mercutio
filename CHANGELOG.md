@@ -14,7 +14,7 @@ Changes will fall under the following categories:
 
 ## [Unreleased]
 ### Added
-- support for exp, hp, background, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
+- support for exp, hp, size, speed, background, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 - support for multiclassing and multiple languages
 - support for ability/proficiency checks and saving throws to dice-rolls
@@ -22,14 +22,16 @@ Changes will fall under the following categories:
 ## [0.7.0] - 2020-09-06
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
-- Docs pages for usage
+- Documentation for buffs
+- Test for buffs
+- Usage docs page
 
 ### Changed
 - index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
 
 
 ### Removed
-- Next Steps docs
+- Next Steps docs page
 
 
 ## [0.6.0] - 2020-09-06

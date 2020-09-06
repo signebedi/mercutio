@@ -174,55 +174,90 @@ buff_options = [
   },
 
   { 
-    'name':'human', 'dimension': 'race', 'buff': {'all':1,},
+    'name':'human', 
+    'dimension': 'race', 
+    'buff': {'all':1,},
   },
   { 
-    'name':'elf', 'dimension': 'race', 'buff': {'all':1,},
+    'name':'elf', 
+    'dimension': 'race', 
+    'buff': {'dexterity':2,},
   },
   { 
-    'name':'wood elf','dimension': 'race', 'buff': {'all':1,},
+    'name':'wood elf',
+    'dimension': 'race', 
+    'buff': {'dexterity':2, 'wisdom':1,},
   },
   { 
-    'name':'high elf','dimension': 'race', 'buff': {'all':1,},
+    'name':'high elf',
+    'dimension': 'race', 
+    'buff': {'dexterity':2, 'intelligence':1,},
   },
   { 
-    'name':'dark elf','dimension': 'race', 'buff': {'all':1,},
+    'name':'dark elf',
+    'dimension': 'race', 
+    'buff': {'dexterity':2, 'charisma':1,},
   },
   { 
-    'name':'dwarf', 'dimension': 'race', 'buff': {'all':1,},
+    'name':'dwarf', 
+    'dimension': 'race', 
+    'buff': {'constitution':2,},
   },
   { 
-    'name':'hill dwarf','dimension': 'race', 'buff': {'all':1,},
+    'name':'hill dwarf',
+    'dimension': 'race', 
+    'buff': {'constitution':2, 'wisdom':1,},
   },
   { 
-    'name':'mountain dwarf','dimension': 'race', 'buff': {'all':1,},
+    'name':'mountain dwarf',
+    'dimension': 'race', 
+    'buff': {'constitution':2, 'strength':2,},
   },
   { 
-    'name':'halfling', 'dimension': 'race', 'buff': {'all':1,},
+    'name':'halfling', 
+    'dimension': 'race', 
+    'buff': {'dexterity':2,},
   },
   { 
-    'name':'stout halfling','dimension': 'race', 'buff': {'all':1,},
+    'name':'stout halfling',
+    'dimension': 'race', 
+    'buff': {'dexterity':2, 'constitution':1,},
   },
   { 
-    'name':'lightfoot halfling', 'dimension': 'race', 'buff': {'all':1,},
+    'name':'lightfoot halfling',
+    'dimension': 'race', 
+    'buff': {'dexterity':2, 'charisma':1,},
   },
   { 
-    'name': 'acolyte', 'dimension': 'background', 'buff': {'all':1,},
+    'name': 'acolyte', 
+    'dimension': 
+    'background', 
+    'buff': {'all':1,},
   },
   { 
-    'name': 'criminal', 'dimension': 'background', 'buff': {'all':1,},
+    'name': 'criminal', 
+    'dimension': 'background', 
+    'buff': {'all':1,},
   },
   { 
-    'name': 'folk hero','dimension': 'background', 'buff': {'all':1,},
+    'name': 'folk hero',
+    'dimension': 'background', 
+    'buff': {'all':1,},
   },
   { 
-    'name': 'noble', 'dimension': 'background', 'buff': {'all':1,},
+    'name': 'noble', 
+    'dimension': 'background', 
+    'buff': {'all':1,},
   },
   { 
-    'name': 'sage', 'dimension': 'background', 'buff': {'all':1,},
+    'name': 'sage', 
+    'dimension': 'background', 
+    'buff': {'all':1,},
   },
   { 
-    'name': 'soldier', 'dimension': 'background', 'buff': {'all':1,},
+    'name': 'soldier', 
+    'dimension': 'background', 
+    'buff': {'all':1,},
   },
 
 ]
