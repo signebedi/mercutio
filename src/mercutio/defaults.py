@@ -130,7 +130,6 @@ background_options = [
     'soldier',
 ]
 
-
 skills_options = [
     'athletics',
     'acrobatics',
@@ -156,27 +155,74 @@ buff_options = [
   {
     'name':'wizard', #  designate the player identifier that will trigger this buff
     'dimension': 'class', # designates which dimension the 'name' option falls under
-    'buff': {'strength':-1,'intelligence':3,}, #  designates the character skills or attributes to buff
+    'buff': {}, #  designates the character skills or attributes to buff
   },
     {
     'name':'fighter', 
     'dimension': 'class', 
-    'buff': {'strength':-1,'intelligence':3,}, 
+    'buff': {}, 
   },
   {
     'name':'rogue', 
     'dimension': 'class', 
-    'buff': {'strength':-1,'intelligence':3,}, 
+    'buff': {}, 
   },
   {
     'name':'cleric', 
     'dimension': 'class', 
-    'buff': {'strength':-1,'intelligence':3,},
+    'buff': {},
   },
 
-  {
-    'name':'human', 
-    'dimension': 'race',
-    'buff': {'all':1,},
+  { 
+    'name':'human', 'dimension': 'race', 'buff': {'all':1,},
   },
+  { 
+    'name':'elf', 'dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'wood elf','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'high elf','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'dark elf','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'dwarf', 'dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'hill dwarf','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'mountain dwarf','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'halfling', 'dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'stout halfling','dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name':'lightfoot halfling', 'dimension': 'race', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'acolyte', 'dimension': 'background', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'criminal', 'dimension': 'background', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'folk hero','dimension': 'background', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'noble', 'dimension': 'background', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'sage', 'dimension': 'background', 'buff': {'all':1,},
+  },
+  { 
+    'name': 'soldier', 'dimension': 'background', 'buff': {'all':1,},
+  },
+
 ]
