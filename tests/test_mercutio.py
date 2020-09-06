@@ -48,3 +48,7 @@ def test_dice():
     assert all([roll.ten() for _ in range(100)]) in range(1,11) 
     assert all([roll.twelve() for _ in range(100)]) in range(1,13) 
     assert all([roll.twenty() for _ in range(100)]) in range(1,21) 
+
+def test_buffs():
+    # this is a placeholder test for checking that Player() buffs work as expected
+    pass
