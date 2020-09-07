@@ -11,9 +11,9 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides default and optional player dimensions, along with vanilla options for each dimension:
 
-- **class**: [default] warrior, mage, rogue, ranger
+- **class**: [default] fighter, wizard, rogue, cleric
 - **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
-- **race**: [optional] human, elf, dwarf, orc, halfling
+- **race**: [optional] 'human, elf, wood elf, high elf, dark elf, dwarf, hill dwarf, mountain dwarf, halfling, stout halfling, lightfoot halfling
 - **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
 - **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
 - **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
@@ -22,7 +22,7 @@ Mercutio provides a straightforward, stable, and highly-customizable API for cha
 
 In the future, support may be added for the following dimensions:
 * **equipment**: [optional]
-* **background**: [optional]
+* **background**: [optional] acolyte, criminal, folk hero, noble, sage, soldier
 * **spells**: [optional]
 * **attacks**: [optional]
 * **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
