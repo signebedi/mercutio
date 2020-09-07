@@ -248,37 +248,37 @@ buff_options = [
     'name': 'acolyte', 
     'dimension': 
     'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
   { 
     'name': 'criminal', 
     'dimension': 'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
   { 
     'name': 'folk hero',
     'dimension': 'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
   { 
     'name': 'noble', 
     'dimension': 'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
   { 
     'name': 'sage', 
     'dimension': 'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
   { 
     'name': 'soldier', 
     'dimension': 'background', 
-    'attributes': {'all':1,},
+    'attributes': {},
     'skills':[],
   },
 
