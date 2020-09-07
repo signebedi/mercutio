@@ -19,12 +19,17 @@ Changes will fall under the following categories:
 - support for multiclassing and multiple languages
 - support for ability/proficiency checks and saving throws to dice-rolls
 
+
+## [0.7.1] - 2020-09-07
+### Added
+- Test for buffs
+
+
 ## [0.7.0] - 2020-09-07
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
 - support for backgrounds
 - Documentation for buffs
-- Test for buffs
 - Usage docs page
 
 ### Changed
@@ -87,7 +92,8 @@ Changes will fall under the following categories:
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.7.0...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.7.1...HEAD
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/signebedi/mercutio/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/signebedi/mercutio/compare/0.5.1...0.6.0
 [0.5.1]: https://github.com/signebedi/mercutio/compare/0.5.0...0.5.1
