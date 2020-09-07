@@ -156,108 +156,129 @@ buff_options = [
     'name':'wizard', #  designate the player identifier that will trigger this buff
     'dimension': 'class', # designates which dimension the 'name' option falls under
     'buff': {}, #  designates the character skills or attributes to buff
+    'skills':[], # designates character skill proficiencies
   },
     {
     'name':'fighter', 
     'dimension': 'class', 
-    'buff': {}, 
+    'buff': {},
+    'skills':[],
   },
   {
     'name':'rogue', 
     'dimension': 'class', 
     'buff': {}, 
+    'skills':[],
   },
   {
     'name':'cleric', 
     'dimension': 'class', 
     'buff': {},
+    'skills':[],
   },
 
   { 
     'name':'human', 
     'dimension': 'race', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name':'elf', 
     'dimension': 'race', 
     'buff': {'dexterity':2,},
+    'skills':[],
   },
   { 
     'name':'wood elf',
     'dimension': 'race', 
     'buff': {'dexterity':2, 'wisdom':1,},
+    'skills':[],
   },
   { 
     'name':'high elf',
     'dimension': 'race', 
     'buff': {'dexterity':2, 'intelligence':1,},
+    'skills':[],
   },
   { 
     'name':'dark elf',
     'dimension': 'race', 
     'buff': {'dexterity':2, 'charisma':1,},
+    'skills':[],
   },
   { 
     'name':'dwarf', 
     'dimension': 'race', 
     'buff': {'constitution':2,},
+    'skills':[],
   },
   { 
     'name':'hill dwarf',
     'dimension': 'race', 
     'buff': {'constitution':2, 'wisdom':1,},
+    'skills':[],
   },
   { 
     'name':'mountain dwarf',
     'dimension': 'race', 
     'buff': {'constitution':2, 'strength':2,},
+    'skills':[],
   },
   { 
     'name':'halfling', 
     'dimension': 'race', 
     'buff': {'dexterity':2,},
+    'skills':[],
   },
   { 
     'name':'stout halfling',
     'dimension': 'race', 
     'buff': {'dexterity':2, 'constitution':1,},
+    'skills':[],
   },
   { 
     'name':'lightfoot halfling',
     'dimension': 'race', 
     'buff': {'dexterity':2, 'charisma':1,},
+    'skills':[],
   },
   { 
     'name': 'acolyte', 
     'dimension': 
     'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name': 'criminal', 
     'dimension': 'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name': 'folk hero',
     'dimension': 'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name': 'noble', 
     'dimension': 'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name': 'sage', 
     'dimension': 'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
   { 
     'name': 'soldier', 
     'dimension': 'background', 
     'buff': {'all':1,},
+    'skills':[],
   },
 
 ]
