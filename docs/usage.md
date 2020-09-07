@@ -126,19 +126,19 @@ buffs = [
     'dimension': 'class', 
     'attributes': {'strength':-1,'intelligence':3, 'constitution':1,},
     'skills':[], 
-  }
+  },
   {
     'name':'general',
     'dimension': 'class',
     'attributes': {'strength':3,'intelligence':1,'wisdom':1,}, 
     'skills':[], 
-  }
+  },
   {
     'name':'edain',
     'dimension': 'class', 
     'attributes': {'strength':2,'dexterity':2,'constitution':1}
     'skills':[],  
-  }
+  },
 ]
 
 player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'], buffs=buffs)
