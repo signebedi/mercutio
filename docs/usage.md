@@ -96,34 +96,56 @@ Load your custom dimensions from python lists, using two methods:
 
 Method one: overwrite default dimensions
 ```python
-import mercutio as mc
-player = mc.Player()
-player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
-player.gen(player_class='wizard', ...)
+player.load_dimensions(how='overwrite', player_class=['necromancer', 'general', 'edain'])
+player.gen(player_class='necromancer', ...)
 ```
 
 Method two: append to default dimensions
 ```python
-import mercutio as mc
-player = mc.Player()
-player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
-player.gen(player_class='wizard', ...)
+player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'])
+player.gen(player_class='necromancer', ...)
 ```
 
-Another key element of loading dimensions is also passing additional buffs, which are stored in ```mercutio.defaults``` as buff_options list, and each individual buff follows the following structure:
+Another key element of loading dimensions is passing buffs -- eg. the way in which a player dimension impacts a skill or attribute -- which are stored in ```mercutio.defaults``` as buff_options list, and each individual buff follows the following structure:
 
 ```python
 {
   'name':'wizard', #  designate the player identifier that will trigger this buff
   'dimension': 'class', # designates which dimension the 'name' option falls under
-  'buff': {'strength':-1,'intelligence':3,}, #  designates the character skills or attributes to buff
+  'attributes': {'strength':-1,'intelligence':3,}, #  designates the character attributes to buff
+  'skills':[], # designates character skill proficiencies
 }
 ```
 
-In order for the new character dimensions you pass to have any impact of character atttributes and skills, you need to pass details about the the impact these have:
+In order for the new character dimensions you pass to have any impact of character atttributes and skills, you also need to pass details about the the impact these have when loading new character dimensions:
 ```python
-PLACEHOLDER FOR API FOR MODIFYING BUFFS -- only provide an append option
+
+buffs = [
+  {
+    'name':'necromancer', 
+    'dimension': 'class', 
+    'attributes': {'strength':-1,'intelligence':3, 'constitution':1,},
+    'skills':[], 
+  }
+  {
+    'name':'general',
+    'dimension': 'class',
+    'attributes': {'strength':3,'intelligence':1,'wisdom':1,}, 
+    'skills':[], 
+  }
+  {
+    'name':'edain',
+    'dimension': 'class', 
+    'attributes': {'strength':2,'dexterity':2,'constitution':1}
+    'skills':[],  
+  }
+]
+
+player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'], buffs=buffs)
+player.gen(player_class='necromancer', ...)
 ```
+
+Buffs that impact all attributes equally use the 'all' keyword: ```'attributes':{'all':1}```
 
 ## Dice Rolls
 
