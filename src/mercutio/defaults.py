@@ -278,7 +278,7 @@ buff_options = [
   { 
     'name': 'soldier', 
     'dimension': 'background', 
-    'attributes': {},
+    'attributes': {'strength':1,},
     'skills':[],
   },
 

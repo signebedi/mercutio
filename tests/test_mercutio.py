@@ -50,5 +50,21 @@ def test_dice():
     assert all([roll.twenty() for _ in range(100)]) in range(1,21) 
 
 def test_buffs():
-    # this is a placeholder test for checking that Player() buffs work as expected
-    pass
+    player = mc.Player()
+    player.gen(
+        player_class='fighter', 
+        name='balthor batwing, earl of pentham', 
+        religion='paladine', 
+        race='human', 
+        language='common',
+        background='none'
+    )
+    attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
+
+    player.background = 'soldier' # now manually change the player background to soldier
+    player.buff(name='soldier', dimension='background') # then we buff the character
+
+    assert player.attributes['strength'] == attribute_check+ 1 # and check that the buff successfully passed
+
+
+
