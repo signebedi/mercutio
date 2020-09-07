@@ -14,7 +14,7 @@ Changes will fall under the following categories:
 
 ## [Unreleased]
 ### Added
-- support for exp, hp, size, speed, background, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
+- support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 - support for multiclassing and multiple languages
 - support for ability/proficiency checks and saving throws to dice-rolls
@@ -22,6 +22,7 @@ Changes will fall under the following categories:
 ## [0.7.0] - 2020-09-07
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
+- support for backgrounds
 - Documentation for buffs
 - Test for buffs
 - Usage docs page

@@ -29,6 +29,7 @@ player.gen(
   name='balthor batwing, earl of pentham',
   religion='paladine',
   race='human',
+  background='soldier',
   language='common'
   level=3 # defaults to level 1
   skills={

@@ -121,15 +121,6 @@ language_options = [
 # • Performance
 # • Persuasion
 
-background_options = [
-    'acolyte', 
-    'criminal', 
-    'folk hero', 
-    'noble', 
-    'sage', 
-    'soldier',
-]
-
 skills_options = [
     'athletics',
     'acrobatics',
@@ -149,6 +140,16 @@ skills_options = [
     'intimidation',
     'performance',
     'persuasion',
+]
+
+background_options = [
+    'none',
+    'acolyte', 
+    'criminal', 
+    'folk hero', 
+    'noble', 
+    'sage', 
+    'soldier',
 ]
 
 buff_options = [

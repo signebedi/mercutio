@@ -12,8 +12,10 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = defaults.skills_options
+        self.background_options = defaults.background_options
         self.buff_options = defaults.buff_options
-        ### NEED TO ADD SUPPORT FOR EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, BACKGROUND, EXP, HP
+
+        ### NEED TO ADD SUPPORT FOR EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, EXP, HP
         print('\nCreated player object')
     def gen_graphic(self):
 
@@ -52,7 +54,38 @@ class Player:
                 self.religion = input(f'Please enter your desired religion -- your options are {self.religion_options}: ')
                 if self.religion in self.religion_options: break
 
-    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name='', level=1):
+        if not hasattr(self, 'background'):
+            while True:    
+                self.background = input(f'Please enter your desired background -- your options are {self.background_options}: ')
+                if self.background in self.background_options: break
+
+    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, background=None, name='', level=1):
+
+        self.attributes = {}
+        if random:
+            for x in self.attributes_options:
+                self.attributes[x] = self.roll.twenty()
+        if isinstance(attributes, (dict)):
+            for key in attributes:
+                if key in self.attributes_options:
+                    self.attributes[key] = attributes[key]
+        # in the absence of designated attributes, randomize between 1 and 20
+        else: 
+            for x in self.attributes_options:
+                self.attributes[x] = self.roll.twenty()
+
+        self.skills = {}
+        if random:
+            for x in self.skills_options:
+                self.skills[x] = self.roll.twenty()
+        if isinstance(skills, (dict)):
+            for key in skills:
+                if key in self.skills_options:
+                    self.skills[key] = skills[key]
+        # in the absence of designated skills, randomize between 1 and 20
+        else: 
+            for x in self.skills_options:
+                self.skills[x] = self.roll.twenty()
 
         if graphical:
             self.gen_graphic()
@@ -68,6 +101,7 @@ class Player:
                 if player_class in self.player_class_options:
                     self.player_class = player_class
             else: self.player_class=rd.choice(self.player_class_options)
+        self.buff(name=self.player_class, dimension='class')
 
         if not hasattr(self, 'race'):
             if random:
@@ -76,19 +110,16 @@ class Player:
                 if race in self.race_options:
                     self.race = race
             else: self.race = self.race=rd.choice(self.race_options)
+        self.buff(name=self.race, dimension='race')
 
-        self.attributes = {}
-        if random:
-            for x in self.attributes_options:
-                self.attributes[x] = self.roll.twenty()
-        if isinstance(attributes, (dict)):
-            for key in attributes:
-                if key in self.attributes_options:
-                    self.attributes[key] = attributes[key]
-        # in the absence of designated attributes, randomize between 1 and 20
-        else: 
-            for x in self.attributes_options:
-                self.attributes[x] = self.roll.twenty()
+        if not hasattr(self, 'background'):
+            if random:
+                self.background = rd.choice(self.background_options)
+            if background:
+                if background in self.background_options:
+                    self.player_cbackgroundlass = background
+            else: self.background=rd.choice(self.background_options)
+        self.buff(name=self.background, dimension='background')
 
         if not hasattr(self, 'religion'):
             if random:
@@ -106,34 +137,20 @@ class Player:
                     self.language = language
             else: self.language = self.language_options[0] # default to first option, which is "common"
 
-        self.skills = {}
-        if random:
-            for x in self.skills_options:
-                self.skills[x] = self.roll.twenty()
-        if isinstance(skills, (dict)):
-            for key in skills:
-                if key in self.skills_options:
-                    self.skills[key] = skills[key]
-        # in the absence of designated skills, randomize between 1 and 20
-        else: 
-            for x in self.skills_options:
-                self.skills[x] = self.roll.twenty()
-
-
         if isinstance(level, (int)):
             self.level = level
         else: self.level = 1
 
         # now we add buffs
-        if hasattr(self, 'player_class'):
-            self.buff(name=self.player_class, dimension='class')
-        if hasattr(self, 'race'):
-            self.buff(name=self.race, dimension='race')
-        if hasattr(self, 'background'): ### PLACEHOLDER FOR BACKGROUND
-            pass
-        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
+        # if hasattr(self, 'player_class'):
+        #     self.buff(name=self.player_class, dimension='class')
+        # if hasattr(self, 'race'):
+        #     self.buff(name=self.race, dimension='race')
+        # if hasattr(self, 'background'): 
+        #     self.buff(name=self.background, dimension='background')
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
-    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, buffs=None):
+    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, backgrounds=None, buffs=None):
         if how == 'overwrite':
             if isinstance(player_class, (list)):
                 self.player_class_options = player_class
@@ -147,6 +164,8 @@ class Player:
                 self.language_options = language
             if isinstance(skills, (list)):
                 self.skills_options = skills
+            if isinstance(backgrounds, (list)):
+                self.backgrounds_options = backgrounds
             if isinstance(buffs, (list)):
                 self.buff_options = buffs
 
@@ -163,6 +182,8 @@ class Player:
                 [self.language_options.append(x) for x in language]
             if isinstance(skills, (list)):
                 [self.skills_class_options.append(x) for x in skills]
+            if isinstance(backgrounds, (list)):
+                [self.backgrounds_options.append(x) for x in backgrounds]
             if isinstance(buffs, (list)):
                 [self.buff_options.append(x) for x in buffs]
 
@@ -195,6 +216,7 @@ class Player:
             self.language = loaded_file['language']
             self.skills = loaded_file['skills']
             self.name = loaded_file['name']
+            self.background = loaded_file['background']
             self.level = loaded_file['level']
 
             print(f'\nSuccessfully loaded {filename} player data\n')
@@ -202,13 +224,19 @@ class Player:
         except: print(f'\nNo player data found at {filename}\n')
 
 
-    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, level=None):
+    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, background=None, level=None):
         if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load_player()
             if player_class:
                 if player_class in self.player_class_options:
                     self.buff(name=self.player_class, dimension='class', remove=True)
                     self.player_class = player_class
                     self.buff(name=self.player_class, dimension='class')
+
+            if background:
+                if background in self.background_options:
+                    self.buff(name=self.background, dimension='class', remove=True)
+                    self.background = background
+                    self.buff(name=self.background, dimension='class')
 
             if isinstance(attributes, (dict)):
                 for key in attributes:
