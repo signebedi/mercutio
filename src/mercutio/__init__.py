@@ -12,7 +12,8 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = defaults.skills_options
-        ### NEED TO ADD SUPPORT FOR SKILLS, EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, BACKGROUND, EXP, HP
+        self.buff_options = defaults.buff_options
+        ### NEED TO ADD SUPPORT FOR EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, BACKGROUND, EXP, HP
 
     def gen_graphic(self):
 
@@ -125,7 +126,7 @@ class Player:
 
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
-    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None):
+    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, buffs=None):
         if how == 'overwrite':
             if isinstance(player_class, (list)):
                 self.player_class_options = player_class
@@ -139,6 +140,9 @@ class Player:
                 self.language_options = language
             if isinstance(skills, (list)):
                 self.skills_options = skills
+            if isinstance(buffs, (list)):
+                self.buff_options = buffs
+
         elif how == 'append': 
             if isinstance(player_class, (list)):
                 [self.player_class_options.append(x) for x in player_class]
@@ -152,6 +156,8 @@ class Player:
                 [self.language_options.append(x) for x in language]
             if isinstance(skills, (list)):
                 [self.skills_class_options.append(x) for x in skills]
+            if isinstance(buffs, (list)):
+                [self.buff_options.append(x) for x in buffs]
 
     def save(self, filename=None, csv=None):
 
