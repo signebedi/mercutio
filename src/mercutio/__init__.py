@@ -14,7 +14,7 @@ class Player:
         self.skills_options = defaults.skills_options
         self.buff_options = defaults.buff_options
         ### NEED TO ADD SUPPORT FOR EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, BACKGROUND, EXP, HP
-
+        print('\nCreated player object')
     def gen_graphic(self):
 
         title = [
@@ -124,6 +124,13 @@ class Player:
             self.level = level
         else: self.level = 1
 
+        # now we add buffs
+        if hasattr(self, 'player_class'):
+            self.buff(name=self.player_class, dimension='class')
+        if hasattr(self, 'race'):
+            self.buff(name=self.race, dimension='race')
+        if hasattr(self, 'background'): ### PLACEHOLDER FOR BACKGROUND
+            pass
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
     def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, buffs=None):
@@ -199,15 +206,19 @@ class Player:
         if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load_player()
             if player_class:
                 if player_class in self.player_class_options:
+                    self.buff(name=self.player_class, dimension='class', remove=True)
                     self.player_class = player_class
-            
+                    self.buff(name=self.player_class, dimension='class')
+
             if isinstance(attributes, (dict)):
                 for key in attributes:
                     if key in self.attributes_options:
                         self.attributes[key] = attributes[key]
             if race:
                 if race in self.race_options:
+                    self.buff(name=self.race, dimension='race', remove=True)
                     self.race = race
+                    self.buff(name=self.race, dimension='race')
 
             if religion:
                 if religion in self.religion_options:
@@ -230,10 +241,29 @@ class Player:
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load_player() before modifying your player')
 
+    def buff(self, name, dimension, remove=None):
+        if remove:
+            for item in self.buff_options:
+                if item['name'] == name and item['dimension'] == dimension:
+                    for attribute in item['attributes'].keys():
+                        self.attributes[attribute] -= item['attributes'][attribute]
+                    ### STILL NEED TO ADD SKILL PROFICIENCIES
+                    print(f'\nSuccessfully removed buff for the player {dimension} called {name}')
+                    break
+                # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 
+        else: 
+            for item in self.buff_options:
+                if item['name'] == name and item['dimension'] == dimension:
+                    for attribute in item['attributes'].keys():
+                        self.attributes[attribute] += item['attributes'][attribute]
+                    ### STILL NEED TO ADD SKILL PROFICIENCIES
+                    print(f'\nSuccessfully added buff for the player {dimension} called {name}')
+                    break
+                # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 class Roll:
     def __init__(self):
-        # print('\nCreated a dice roller object')
+        print('\nCreated a dice roller object')
         pass
     def four(self):
         return rd.randint(1,4)

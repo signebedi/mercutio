@@ -17,7 +17,7 @@ player = mc.Player()
 You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed:
 ```python
 player.gen(
-  player_class='warrior',
+  player_class='fighter',
   attributes={
     'strength': 7,
     'constitution': 5,
@@ -144,8 +144,6 @@ buffs = [
 player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'], buffs=buffs)
 player.gen(player_class='necromancer', ...)
 ```
-
-Buffs that impact all attributes equally use the 'all' keyword: ```'attributes':{'all':1}```
 
 ## Dice Rolls
 
