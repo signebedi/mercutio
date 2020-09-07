@@ -117,7 +117,7 @@ class Player:
                 self.background = rd.choice(self.background_options)
             if background:
                 if background in self.background_options:
-                    self.player_cbackgroundlass = background
+                    self.background = background
             else: self.background=rd.choice(self.background_options)
         self.buff(name=self.background, dimension='background')
 
