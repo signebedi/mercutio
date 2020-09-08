@@ -16,10 +16,16 @@ Changes will fall under the following categories:
 ### Added
 - support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
-- support for multiclassing and multiple languages
-- support for proficiencies, ability checks and saving throws instead of skill values
+- support for multiclassing 
+- support for multiple languages
 - leveling bonuses for skills and attributes
 
+## [0.7.2] - 2020-09-08
+### Added
+- support for proficiencies, ability checks and saving throws instead of skill values
+
+### Changed
+- changed skills to support proficiencies along the axis of 1 (proficient), 0 (common), and -1 (weak)
 
 ## [0.7.1] - 2020-09-07
 ### Added
