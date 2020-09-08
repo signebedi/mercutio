@@ -17,7 +17,8 @@ Changes will fall under the following categories:
 - support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 - support for multiclassing and multiple languages
-- support for ability/proficiency checks and saving throws to dice-rolls
+- support for proficiencies, ability checks and saving throws instead of skill values
+- leveling bonuses for skills and attributes
 
 
 ## [0.7.1] - 2020-09-07
