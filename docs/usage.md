@@ -21,45 +21,27 @@ player = mc.Player()
 
 You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed:
 ```python
+
+proficiencies = [
+  'skills': ['athletics', 'intimidation', 'survival', 'insight'],
+]
+
+buffs = [
+  'class': 'fighter',
+  'background': 'soldier',
+  'religion': 'paladine',
+  'race': 'human',
+  'language': 'common',
+]
+
 player.gen(
-  player_class='fighter',
-  attributes={
-    'strength': 7,
-    'constitution': 5,
-    'intelligence': 4,
-    'wisdom': 3,
-    'dexterity': 4,
-    'charisma': 6,
-  },
   name='balthor batwing, earl of pentham',
-  religion='paladine',
-  race='human',
-  background='soldier',
-  language='common'
   level=3 # defaults to level 1
-  skills={
-    'athletics': 8,
-    'acrobatics': 6,
-    'sleight': 3,
-    'stealth': 1,
-    'arcana': 2,
-    'history': 1,
-    'investigation': 2,
-    'nature': 2,
-    'religion': 4,
-    'animal-handling': 2,
-    'insight': 3,
-    'medicine': 1,
-    'perception': 4,
-    'survival': 3,
-    'deception': 4,
-    'intimidation': 5,
-    'performance': 5,
-    'persuasion': 7,
-  },
+  proficiencies=proficiencies,
+  buffs=buffs,
 )
 ```
-Note: it is highly recommended that you do not pass base values for player attributes or skills, since the engine will randomize these between 1 and 10 when no arguments are passed. However, this argument remains in case you are interested in, for example, replicating an existing player.
+Note: it is highly recommended that you do not pass base values for proficiencies -- especially attribute, equipment, armor, and tool proficiencies, since the engine will randomize these when no arguments are passed. However, this argument remains in case you are interested in, for example, replicating an existing player.
 
 You can also use the graphical player creation interface:
 ```python
