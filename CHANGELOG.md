@@ -20,13 +20,30 @@ Changes will fall under the following categories:
 - support for multiple languages
 - leveling bonuses for skills and attributes
 
-### Deprecated
-- support for option lists in favor of using the buff dictionary for all indexed dimensions/characteristics (v.1.0.0)
+buffs = [
+    {
+    'name':'wizard', #  designate the player identifier that will trigger this buff
+    'dimension': 'class', # designates which dimension the 'name' option falls under
+    'proficiencies': {'strength':-1,'intelligence':3,}, #  designates the character proficiencies to modify
+    },
+]
 
-## [0.7.3] - 2020-09-09
+proficiencies = [
+    {
+        'name': 'stength',
+        'dimension': 'attribute',
+    },
+]
+
+## [0.8.0] - 2020-09-09
+### Added
+- proficiencies for armour, weapons, tools, and skills measured along the axis of 1 (proficient), 0 (common), and -1 (weak)
 
 ### Changed
-- skills to support proficiencies along the axis of 1 (proficient), 0 (common), and -1 (weak)
+- skills to simply proficiencies in armour, weapons, tools, attributes, skills
+
+### Removed
+- support for option lists in favor of using the buff dictionary for all indexed dimensions/characteristics
 
 
 ## [0.7.2] - 2020-09-09
@@ -108,7 +125,8 @@ Changes will fall under the following categories:
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.7.3...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.8.0...HEAD
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.3...0.8.0
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.2...0.7.3
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.0...0.7.1

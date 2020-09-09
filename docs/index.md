@@ -9,26 +9,27 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 ## Overview
 
-Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides default and optional player dimensions, along with vanilla options for each dimension:
+Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides two categories of player dimensions, along with various default options for each dimension:
 
-- **class**: [default] fighter, wizard, rogue, cleric
-- **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
-- **race**: [optional] 'human, elf, wood elf, high elf, dark elf, dwarf, hill dwarf, mountain dwarf, halfling, stout halfling, lightfoot halfling
-- **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
-- **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
-- **background**: [optional] none, acolyte, criminal, folk hero, noble, sage, soldier
-- **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
+- **proficiencies**: areas that a character may develop particular expertise: attributes, skills, armour, weapons, tools.
+
+    - **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
+    - **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
+    - **equipment**: [optional]
+    - **weapons**: [optional]
+    - **tools**: [optional]
+
+- **buffs**: character customizations that impact their proficiencies: class, race, religion, language, background.
+
+    - **class**: [default] fighter, wizard, rogue, cleric
+    - **race**: [optional] 'human, elf, wood elf, high elf, dark elf, dwarf, hill dwarf, mountain dwarf, halfling, stout halfling, lightfoot halfling
+    - **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
+    - **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
+    - **background**: [optional] none, acolyte, criminal, folk hero, noble, sage, soldier
 
 ## Future Features
 
-In the future, support may be added for the following dimensions:
-
-- **equipment**: [optional]
-- **spells**: [optional]
-- **attacks**: [optional]
-- **alignment**: [optional] {'personal: [chaotic, neutral, lawful], 'moral': [good, evil, neutral]}
-
-In addition, support may be added for vital data such as experience, and hit-points.
+In the future, support may be added for vital data such as alignment, experience, size, speed, and hit-points. 
 
 ## Use Cases
 

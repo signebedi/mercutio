@@ -151,6 +151,23 @@ player.load_dimensions(how='append', player_class=['necromancer', 'general', 'ed
 player.gen(player_class='necromancer', ...)
 ```
 
+```python
+buffs = [
+    {
+    'name':'wizard', #  designate the player identifier that will trigger this buff
+    'dimension': 'class', # designates which dimension the 'name' option falls under
+    'proficiencies': {'strength':-1,'intelligence':3,}, #  designates the character proficiencies to modify
+    },
+]
+
+proficiencies = [
+    {
+        'name': 'stength',
+        'dimension': 'attribute',
+    },
+]
+```
+
 ## Dice Rolls
 
 Mercution also provides an API for rolling dice using the ```mc.Roll()``` class:

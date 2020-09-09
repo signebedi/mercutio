@@ -77,15 +77,17 @@ class Player:
         self.skills = {}
         if random:
             for x in self.skills_options:
-                self.skills[x] = self.roll.twenty()
+                # self.skills[x] = self.roll.twenty()
+                self.skills[x] = 0
         if isinstance(skills, (dict)):
             for key in skills:
                 if key in self.skills_options:
                     self.skills[key] = skills[key]
-        # in the absence of designated skills, randomize between 1 and 20
+        # in the absence of designated skills, set all to 0
         else: 
             for x in self.skills_options:
-                self.skills[x] = self.roll.twenty()
+                # self.skills[x] = self.roll.twenty()
+                self.skills[x] = 0
 
         if graphical:
             self.gen_graphic()
