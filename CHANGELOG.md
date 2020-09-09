@@ -23,12 +23,17 @@ Changes will fall under the following categories:
 ### Deprecated
 - support for option lists in favor of using the buff dictionary for all indexed dimensions/characteristics (v.1.0.0)
 
-## [0.7.2] - 2020-09-08
+## [0.7.3] - 2020-09-09
+
+### Changed
+- skills to support proficiencies along the axis of 1 (proficient), 0 (common), and -1 (weak)
+
+
+## [0.7.2] - 2020-09-09
 ### Added
 - support for proficiencies, ability checks and saving throws instead of skill values
 
 ### Changed
-- skills to support proficiencies along the axis of 1 (proficient), 0 (common), and -1 (weak)
 - tests for buffs to ensure that proficiencies are well accounted for
 
 ## [0.7.1] - 2020-09-07
@@ -103,7 +108,9 @@ Changes will fall under the following categories:
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.7.1...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.7.3...HEAD
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.2...0.7.3
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/signebedi/mercutio/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/signebedi/mercutio/compare/0.5.1...0.6.0
