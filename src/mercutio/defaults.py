@@ -273,7 +273,7 @@ buff_options = [
     'name': 'sage', 
     'dimension': 'background', 
     'attributes': {},
-    'skills':[],
+    'skills':['arcana', 'history'],
   },
   { 
     'name': 'soldier', 

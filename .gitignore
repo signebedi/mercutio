@@ -130,3 +130,6 @@ dmypy.json
 
 # picke files
 *.picklesite/
+
+# deployment script
+deploy.sh
