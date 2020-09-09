@@ -3,7 +3,12 @@
 
 ## Creating Players
 
-Start by importing the mercutio library:
+Start by installing mercutio over pip:
+```
+pip install mercutio
+```
+
+Next, you can import the mercutio library:
 ```python
 import mercutio as mc
 ```
