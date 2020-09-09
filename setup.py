@@ -1,8 +1,8 @@
 from glob import glob
-import setuptools
+import setuptools, re
 
 with open("README.md", "r") as fh:
-    long_description = fh.read()
+    long_description = re.sub(r'![cropped dragon gif](docs/cropped.gif)', '', fh.read()) # substitute out the gif image
 
 with open('requirements.txt') as f:
     required = f.read().splitlines()
