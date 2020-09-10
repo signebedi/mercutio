@@ -1,4 +1,4 @@
-# src: https://1d4chan.org/wiki/Gods_of_Dungeons_and_Dragons#Dragonlance
+# religion src: https://1d4chan.org/wiki/Gods_of_Dungeons_and_Dragons#Dragonlance
 
 # Gods of Good
 # Branchala (the harp), music, inspiration, bards
@@ -25,30 +25,6 @@
 # Takhisis (the five-headed dragon), control, conquest, tyrants
 # Zeboim (the dragon-turtle), strife, mood-swings, bane of sailors
 
-religion_options = [
-    'none',
-    'branchala',
-    'habbakuk',
-    'kiri-jolith',
-    'majere',
-    'mishakal',
-    'paladine',
-    'solinari',
-    'chislev',
-    'gilean',
-    'lunitari',
-    'reorx',
-    'shinare',
-    'sirrion',
-    'zivilyn',
-    'chemosh',
-    'hiddukel',
-    'morgion',
-    'nuitari',
-    'sargonnas',
-    'takhisis',
-    'zeboim',
-]
 
 buffs = [
   {  'name':'wizard', 'dimension': 'class',  'proficiencies': {},  },
@@ -80,7 +56,28 @@ buffs = [
   {  'name':'goblin', 'dimension':'language','proficiencies':{}   },
   {  'name':'halfling', 'dimension':'language','proficiencies':{}   },
   {  'name':'orc', 'dimension':'language','proficiencies':{}   },
-
+  {  'name':'none', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'branchala', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'habbakuk', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'kiri-jolith', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'majere', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'mishakal', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'paladine', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'solinari', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'chislev', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'gilean', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'lunitari', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'reorx', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'shinare', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'sirrion', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'zivilyn', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'chemosh', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'hiddukel', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'morgion', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'nuitari', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'sargonnas', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'takhisis', 'dimension':'religion', 'proficiencies': {}   },
+  {  'name':'zeboim', 'dimension':'religion', 'proficiencies': {}   },
 
 ]
 

@@ -9,7 +9,7 @@ class Player:
         self.player_class_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'class']
         self.attributes_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'attribute']
         self.race_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'race']
-        self.religion_options = defaults.religion_options
+        self.religion_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'religion']
         self.language_options =  [x['name'] for x in defaults.buffs if x['dimension'] == 'language']
         self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
         self.background_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'background']

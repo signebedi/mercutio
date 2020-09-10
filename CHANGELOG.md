@@ -27,7 +27,6 @@ Changes will fall under the following categories:
 - religion so that it is included in buff list
 - problems with ```Player().gen()``` allowing users to correctly pass their dimensions as explained in docs
 
-
 ### Added
 - proficiences for armour, weapons, tools
 
