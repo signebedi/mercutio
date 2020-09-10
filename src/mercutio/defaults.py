@@ -72,19 +72,6 @@ religion_options = [
     'zeboim',
 ]
 
-# src: https://rpg.stackexchange.com/questions/125845/what-are-the-official-languages-available-to-players
-
-language_options = [ 
-    'common',
-    'dwarvish',
-    'elvish',
-    'giant',
-    'gnomish',
-    'goblin',
-    'halfling',
-    'orc',
-]
-
 # Strength
 # • Athletics
 
@@ -114,147 +101,41 @@ language_options = [
 # • Persuasion
 
 
-background_options = [
-    'none',
-    'acolyte', 
-    'criminal', 
-    'folk hero', 
-    'noble', 
-    'sage', 
-    'soldier',
-]
-
 buffs = [
-  {
-    'name':'wizard', #  designate the player identifier that will trigger this buff
-    'dimension': 'class', # designates which dimension the 'name' option falls under
-    'attributes': {}, #  designates the character skills or attributes to buff
-    'skills':[], # designates character skill proficiencies
-  },
-  {
-    'name':'fighter', 
-    'dimension': 'class', 
-    'attributes': {},
-    'skills':[],
-  },
-  {
-    'name':'rogue', 
-    'dimension': 'class', 
-    'attributes': {}, 
-    'skills':[],
-  },
-  {
-    'name':'cleric', 
-    'dimension': 'class', 
-    'attributes': {},
-    'skills':[],
-  },
-  { 
-    'name':'human', 
-    'dimension': 'race', 
-    'attributes': {'strength':1,'dexterity':1,'constitution':1,'intelligence':1,'wisdom':1,'charisma':1,},
-    'skills':[],
-  },
-  { 
-    'name':'elf', 
-    'dimension': 'race', 
-    'attributes': {'dexterity':2,},
-    'skills':[],
-  },
-  { 
-    'name':'wood elf',
-    'dimension': 'race', 
-    'attributes': {'dexterity':2, 'wisdom':1,},
-    'skills':[],
-  },
-  { 
-    'name':'high elf',
-    'dimension': 'race', 
-    'attributes': {'dexterity':2, 'intelligence':1,},
-    'skills':[],
-  },
-  { 
-    'name':'dark elf',
-    'dimension': 'race', 
-    'attributes': {'dexterity':2, 'charisma':1,},
-    'skills':[],
-  },
-  { 
-    'name':'dwarf', 
-    'dimension': 'race', 
-    'attributes': {'constitution':2,},
-    'skills':[],
-  },
-  { 
-    'name':'hill dwarf',
-    'dimension': 'race', 
-    'attributes': {'constitution':2, 'wisdom':1,},
-    'skills':[],
-  },
-  { 
-    'name':'mountain dwarf',
-    'dimension': 'race', 
-    'attributes': {'constitution':2, 'strength':2,},
-    'skills':[],
-  },
-  { 
-    'name':'halfling', 
-    'dimension': 'race', 
-    'attributes': {'dexterity':2,},
-    'skills':[],
-  },
-  { 
-    'name':'stout halfling',
-    'dimension': 'race', 
-    'attributes': {'dexterity':2, 'constitution':1,},
-    'skills':[],
-  },
-  { 
-    'name':'lightfoot halfling',
-    'dimension': 'race', 
-    'attributes': {'dexterity':2, 'charisma':1,},
-    'skills':[],
-  },
-  { 
-    'name': 'acolyte', 
-    'dimension': 'background', 
-    'attributes': {},
-    'skills':[],
-  },
-  { 
-    'name': 'criminal', 
-    'dimension': 'background', 
-    'attributes': {},
-    'skills':[],
-  },
-  { 
-    'name': 'folk hero',
-    'dimension': 'background', 
-    'attributes': {},
-    'skills':[],
-  },
-  { 
-    'name': 'noble', 
-    'dimension': 'background', 
-    'attributes': {},
-    'skills':[],
-  },
-  { 
-    'name': 'sage', 
-    'dimension': 'background', 
-    'attributes': {},
-    'skills':['arcana', 'history'],
-  },
-  { 
-    'name': 'soldier', 
-    'dimension': 'background', 
-    'attributes': {'strength':1,},
-    'skills':[],
-  },
+  {  'name':'wizard', 'dimension': 'class',  'proficiencies': {},  },
+  {  'name':'fighter', 'dimension': 'class',  'proficiencies': {},  },
+  {  'name':'rogue', 'dimension': 'class',  'proficiencies': {},   },
+  {  'name':'cleric', 'dimension': 'class',  'proficiencies': {},  },
+  {  'name':'human', 'dimension': 'race',  'proficiencies': {'strength':1,'dexterity':1,'constitution':1,'intelligence':1,'wisdom':1,'charisma':1,},  },
+  {  'name':'elf', 'dimension': 'race',  'proficiencies': {'dexterity':2,},  },
+  {  'name':'wood elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'wisdom':1,},  },
+  {  'name':'high elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'intelligence':1,},  },
+  {  'name':'dark elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'charisma':1,},  },
+  {  'name':'dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2,},  },
+  {  'name':'hill dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2, 'wisdom':1,},  },
+  {  'name':'mountain dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2, 'strength':2,},  },
+  {  'name':'halfling', 'dimension': 'race',  'proficiencies': {'dexterity':2,},  },
+  {  'name':'stout halfling', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'constitution':1,},  },
+  {  'name':'lightfoot halfling', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'charisma':1,},  },
+  {  'name': 'acolyte', 'dimension': 'background',  'proficiencies': {},  },
+  {  'name': 'criminal', 'dimension': 'background',  'proficiencies': {},  },
+  {  'name': 'folk hero', 'dimension': 'background',  'proficiencies': {},  },
+  {  'name': 'noble', 'dimension': 'background',  'proficiencies': {},  },
+  {  'name': 'sage', 'dimension': 'background',  'proficiencies': {'arcana':1, 'history':1},},
+  {  'name': 'soldier', 'dimension': 'background',  'proficiencies': {'strength':1,},  },
+  {  'name':'common', 'dimension':'language','proficiencies':{}   },
+  {  'name':'dwarvish', 'dimension':'language','proficiencies':{}   },
+  {  'name':'elvish', 'dimension':'language','proficiencies':{}   },
+  {  'name':'giant', 'dimension':'language','proficiencies':{}   },
+  {  'name':'gnomish', 'dimension':'language','proficiencies':{}   },
+  {  'name':'goblin', 'dimension':'language','proficiencies':{}   },
+  {  'name':'halfling', 'dimension':'language','proficiencies':{}   },
+  {  'name':'orc', 'dimension':'language','proficiencies':{}   },
+
 
 ]
 
-
+### still need to add weapon, armor, tool proficiencies
 proficiencies = [
     {'name': 'athletics', 'dimension': 'skill'},
     {'name': 'acrobatics', 'dimension': 'skill'},

@@ -10,7 +10,7 @@ class Player:
         self.attributes_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'attribute']
         self.race_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'race']
         self.religion_options = defaults.religion_options
-        self.language_options = defaults.language_options
+        self.language_options =  [x['name'] for x in defaults.buffs if x['dimension'] == 'language']
         self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
         self.background_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'background']
         self.buff_options = defaults.buffs
