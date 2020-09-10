@@ -15,18 +15,18 @@ def test_gen():
     assert isinstance(player.skills, (dict))
 
 # test that overwriting player dimensions works as expected 
-def test_load_dimensions_append():
+def test_customize_append():
     player = mc.Player()
     class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
 
-    player.load_dimensions(how='append', player_class=['wizard', 'general', 'edain'])
+    player.customize(how='append', player_class=['wizard', 'general', 'edain'])
 
     assert len(player.player_class_options) == class_len + 3 # assert that this has increased the length of the class list by three
 
 # test that overwriting player dimensions works as expected 
-def test_load_dimensions_overwrite():
+def test_customize_overwrite():
     player = mc.Player()
-    player.load_dimensions(how='overwrite', player_class=['wizard', 'general', 'edain'])
+    player.customize(how='overwrite', player_class=['wizard', 'general', 'edain'])
 
     assert len(player.player_class_options) == 3
 

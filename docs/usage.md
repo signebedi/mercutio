@@ -63,14 +63,14 @@ You can also write to a more user-friendly CSV format -- note the program uses p
 player.save(csv=True)
 ```
 
-Load character details from a pickle file using the load_player() method -- noted that CSV files cannot be loaded at this time:
+Load character details from a pickle file using the load() method -- noted that CSV files cannot be loaded at this time:
 ```python
-player.load_player(filename='balthor batwing, earl of pentham.pickle')
+player.load(filename='balthor batwing, earl of pentham.pickle')
 ```
 
 ## Customization
 
-Load custom dimensions by loading new character dimensions for buffs:
+Load custom dimensions by adding new character dimensions for buffs:
 ```python
 buffs = [
   {
@@ -113,13 +113,13 @@ Finally, load your custom dimensions using two methods:
 
 Method one: overwrite default dimensions
 ```python
-player.load_dimensions(how='overwrite', buffs=buffs, proficiencies=proficiencies)
+player.customize(how='overwrite', buffs=buffs, proficiencies=proficiencies)
 player.gen(player_class='necromancer', ...)
 ```
 
 Method two: append to default dimensions
 ```python
-player.load_dimensions(how='append', buffs=buffs, proficiencies=proficiencies)
+player.customize(how='append', buffs=buffs, proficiencies=proficiencies)
 player.gen(player_class='necromancer', ...)
 ```
 

@@ -152,7 +152,7 @@ class Player:
         #     self.buff(name=self.background, dimension='background')
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
-    def load_dimensions(self, how='append', proficiencies=None, buffs=None):
+    def customize(self, how='append', proficiencies=None, buffs=None):
         if how == 'overwrite':
             player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, backgrounds=None
 
@@ -200,7 +200,7 @@ class Player:
         print(f'\nSuccessfully saved player data to {filename}\n')
 
     ### NOTE THAT AS NEW DIMENSIONS ARE ADDED, THIS WILL NEED TO BE UPDATED TO ENSURE THAT IT COLLECTS THE CORRECT PLAYER DATA
-    def load_player(self, filename):
+    def load(self, filename):
         try: 
             loaded_file = pickle.load(open(filename, "rb"))
 
@@ -220,7 +220,7 @@ class Player:
 
 
     def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, background=None, level=None):
-        if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load_player()
+        if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load()
             if player_class:
                 if player_class in self.player_class_options:
                     self.buff(name=self.player_class, dimension='class', remove=True)
@@ -262,7 +262,7 @@ class Player:
 
             print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\n')
         else: 
-            print('\nNo player has been loaded or generated.\nPlease gen() or load_player() before modifying your player')
+            print('\nNo player has been loaded or generated.\nPlease gen() or load() before modifying your player')
 
     def buff(self, name, dimension, remove=None):
         if remove:
