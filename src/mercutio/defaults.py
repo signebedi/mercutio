@@ -1,25 +1,3 @@
-player_class_options = [
-    'fighter',    
-    'wizard',    
-    'rogue',    
-    'cleric',    
-]
-
-
-race_options = [
-    'human', 
-    'elf', 
-    'wood elf', 
-    'high elf', 
-    'dark elf', 
-    'dwarf', 
-    'hill dwarf', 
-    'mountain dwarf', 
-    'halfling', 
-    'stout halfling', 
-    'lightfoot halfling', 
-]
-
 # src: https://1d4chan.org/wiki/Gods_of_Dungeons_and_Dragons#Dragonlance
 
 # Gods of Good
@@ -71,35 +49,6 @@ religion_options = [
     'takhisis',
     'zeboim',
 ]
-
-# Strength
-# • Athletics
-
-# Dexterity
-# • Acrobatics
-# • Sleight of Hand
-# • Stealth
-
-# Intelligence
-# • Arcana
-# • History
-# • Investigation
-# • Nature
-# • Religion
-
-# Wisdom
-# • Animal Handling
-# • Insight
-# • Medicine
-# • Perception
-# • Survival
-
-# Charisma
-# • Deception
-# • Intimidation
-# • Performance
-# • Persuasion
-
 
 buffs = [
   {  'name':'wizard', 'dimension': 'class',  'proficiencies': {},  },

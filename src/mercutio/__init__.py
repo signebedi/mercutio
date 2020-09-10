@@ -275,8 +275,8 @@ class Player:
         if remove:
             for item in self.buff_options:
                 if item['name'] == name and item['dimension'] == dimension:
-                    for attribute in item['attributes'].keys():
-                        self.attributes[attribute] -= item['attributes'][attribute]
+                    for attribute in item['proficiencies'].keys():
+                        self.attributes[attribute] -= item['proficiencies'][attribute]
                     ### STILL NEED TO ADD SKILL PROFICIENCIES
                     print(f'\nSuccessfully removed buff for the player {dimension} called {name}')
                     break
@@ -285,8 +285,8 @@ class Player:
         else: 
             for item in self.buff_options:
                 if item['name'] == name and item['dimension'] == dimension:
-                    for attribute in item['attributes'].keys():
-                        self.attributes[attribute] += item['attributes'][attribute]
+                    for attribute in item['proficiencies'].keys():
+                        self.attributes[attribute] += item['proficiencies'][attribute]
                     ### STILL NEED TO ADD SKILL PROFICIENCIES
                     print(f'\nSuccessfully added buff for the player {dimension} called {name}')
                     break
