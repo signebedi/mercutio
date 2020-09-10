@@ -27,8 +27,11 @@ Changes will fall under the following categories:
 
 ## [0.8.1] - 2020-09-10
 ### Fixed
-- problems with ```Player().load_dimensions()``` allowing users to correctly pass new dimensions
+- problems with ```Player().customize()``` allowing users to correctly pass new dimensions
 - religion so that it is included in buff list
+### Changed
+- ```load_player()``` is now simply ```load()``` 
+- ```load_dimensions()``` is now simply ```customize()```
 
 ## [0.8.0] - 2020-09-09
 ### Added
