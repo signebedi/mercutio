@@ -20,13 +20,17 @@ Changes will fall under the following categories:
 - support for multiple languages
 - leveling bonuses for skills and attributes
 
-## [0.8.1] - 2020-09-09
+
+## [0.8.1] - 2020-09-10
 ### Fixed
-- problems with ```Player().mod``` allowing users to correctly pass new dimensions
+- problems with ```Player().mod()``` allowing users to correctly pass new dimensions
 - religion so that it is included in buff list
+- problems with ```Player().gen()``` allowing users to correctly pass their dimensions as explained in docs
+
 
 ### Added
 - proficiences for armour, weapons, tools
+
 
 ## [0.8.0] - 2020-09-09
 ### Added
