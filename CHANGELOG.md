@@ -20,16 +20,15 @@ Changes will fall under the following categories:
 - support for multiple languages
 - leveling bonuses for skills and attributes
 
-
-## [0.8.1] - 2020-09-10
-### Fixed
-- problems with ```Player().mod()``` allowing users to correctly pass new dimensions
-- religion so that it is included in buff list
-- problems with ```Player().gen()``` allowing users to correctly pass their dimensions as explained in docs
-
+## [0.9.0] - 2020-09-10
 ### Added
 - proficiences for armour, weapons, tools
 
+
+## [0.8.1] - 2020-09-10
+### Fixed
+- problems with ```Player().load_dimensions()``` allowing users to correctly pass new dimensions
+- religion so that it is included in buff list
 
 ## [0.8.0] - 2020-09-09
 ### Added
@@ -121,10 +120,11 @@ Changes will fall under the following categories:
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.8.1...HEAD
-[0.7.1]: https://github.com/signebedi/mercutio/compare/0.8.0...0.8.1
-[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.2...0.8.0
-[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.0...HEAD
+[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.1...0.9.0
+[0.8.1]: https://github.com/signebedi/mercutio/compare/0.8.0...0.8.1
+[0.8.0]: https://github.com/signebedi/mercutio/compare/0.7.2...0.8.0
+[0.7.2]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/signebedi/mercutio/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/signebedi/mercutio/compare/0.5.1...0.6.0
