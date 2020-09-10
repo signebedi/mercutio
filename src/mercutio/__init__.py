@@ -6,14 +6,15 @@ import pandas as pd
 class Player:
     def __init__(self):
         self.roll = Roll() # create a dice roll object
-        self.player_class_options = defaults.player_class_options
+        self.player_class_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'class']
         self.attributes_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'attribute']
-        self.race_options = defaults.race_options
+        self.race_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'race']
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
         self.background_options = defaults.background_options
         self.buff_options = defaults.buff_options
+
 
         print('\nCreated player object')
     def gen_graphic(self):

@@ -131,7 +131,7 @@ buff_options = [
     'attributes': {}, #  designates the character skills or attributes to buff
     'skills':[], # designates character skill proficiencies
   },
-    {
+  {
     'name':'fighter', 
     'dimension': 'class', 
     'attributes': {},
@@ -149,7 +149,6 @@ buff_options = [
     'attributes': {},
     'skills':[],
   },
-
   { 
     'name':'human', 
     'dimension': 'race', 
@@ -218,8 +217,7 @@ buff_options = [
   },
   { 
     'name': 'acolyte', 
-    'dimension': 
-    'background', 
+    'dimension': 'background', 
     'attributes': {},
     'skills':[],
   },
