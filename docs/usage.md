@@ -19,26 +19,16 @@ Next, you can create your player object:
 player = mc.Player()
 ```
 
-You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will leave dimensions empty when they are not passed:
+You can also pass the values for each dimension you'd like to pass to the gen() method. Note: this method will generally randomize player dimensions when they are not passed:
 ```python
-
-proficiencies = [
-  'skills': ['athletics', 'intimidation', 'survival', 'insight'],
-]
-
-buffs = [
-  'class': 'fighter',
-  'background': 'soldier',
-  'religion': 'paladine',
-  'race': 'human',
-  'language': 'common',
-]
-
 player.gen(
   name='balthor batwing, earl of pentham',
-  level=3 # defaults to level 1
-  proficiencies=proficiencies,
-  buffs=buffs,
+  player_class='fighter'
+  background='soldier',
+  religion='paladine',
+  race='human',
+  languag='common',
+  proficiencies={'athletics':1, 'intimidation':1, 'survival':1, 'insight':1},
 )
 ```
 Note: it is highly recommended that you do not pass base values for proficiencies -- especially attribute, equipment, armor, and tool proficiencies, since the engine will randomize these when no arguments are passed. However, this argument remains in case you are interested in, for example, replicating an existing player.
