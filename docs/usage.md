@@ -8,7 +8,7 @@ Start by installing mercutio over pip:
 pip install mercutio
 ```
 
-Next, you can import the mercutio library:
+Next, you can import the mercutio library into the development environment of your choice:
 ```python
 import mercutio as mc
 ```
@@ -80,75 +80,60 @@ player.load_player(filename='balthor batwing, earl of pentham.pickle')
 
 ## Customization
 
-Load your custom dimensions from python lists, using two methods:
+Load custom dimensions by loading new character dimensions for buffs:
+```python
+buffs = [
+  {
+    'name':'necromancer', 
+    'dimension': 'class', 
+    'proficiencies': {'strength':-1,'intelligence':3,},
+  },
+  {
+    'name':'general',
+    'dimension': 'class',
+    'proficiencies': {'strength':3,'intelligence':1,'wisdom':1,}, 
+  },
+  {
+    'name':'edain',
+    'dimension': 'class', 
+    'proficiencies': {'strength':2,'dexterity':2,'constitution':1}
+  },
+]
+```
+
+... and proficiencies:
+```python
+proficiencies = [
+    {
+        'name': 'will',
+        'dimension': 'attribute',
+    },
+    {
+        'name': 'greed',
+        'dimension': 'attribute',
+    },
+    {
+        'name': 'pride',
+        'dimension': 'attribute',
+    },
+]
+```
+
+Finally, load your custom dimensions using two methods:
 
 Method one: overwrite default dimensions
 ```python
-player.load_dimensions(how='overwrite', player_class=['necromancer', 'general', 'edain'])
+player.load_dimensions(how='overwrite', buffs=buffs, proficiencies=proficiencies)
 player.gen(player_class='necromancer', ...)
 ```
 
 Method two: append to default dimensions
 ```python
-player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'])
+player.load_dimensions(how='append', buffs=buffs, proficiencies=proficiencies)
 player.gen(player_class='necromancer', ...)
 ```
 
-Another key element of loading dimensions is passing buffs -- eg. the way in which a player dimension impacts a skill or attribute -- which are stored in ```mercutio.defaults``` as buff_options list, and each individual buff follows the following structure:
-
-```python
-{
-  'name':'wizard', #  designate the player identifier that will trigger this buff
-  'dimension': 'class', # designates which dimension the 'name' option falls under
-  'attributes': {'strength':-1,'intelligence':3,}, #  designates the character attributes to buff
-  'skills':[], # designates character skill proficiencies
-}
-```
-
-In order for the new character dimensions you pass to have any impact of character atttributes and skills, you also need to pass details about the the impact these have when loading new character dimensions:
-```python
-
-buffs = [
-  {
-    'name':'necromancer', 
-    'dimension': 'class', 
-    'attributes': {'strength':-1,'intelligence':3, 'constitution':1,},
-    'skills':[], 
-  },
-  {
-    'name':'general',
-    'dimension': 'class',
-    'attributes': {'strength':3,'intelligence':1,'wisdom':1,}, 
-    'skills':[], 
-  },
-  {
-    'name':'edain',
-    'dimension': 'class', 
-    'attributes': {'strength':2,'dexterity':2,'constitution':1}
-    'skills':[],  
-  },
-]
-
-player.load_dimensions(how='append', player_class=['necromancer', 'general', 'edain'], buffs=buffs)
-player.gen(player_class='necromancer', ...)
-```
-
-```python
-buffs = [
-    {
-    'name':'wizard', #  designate the player identifier that will trigger this buff
-    'dimension': 'class', # designates which dimension the 'name' option falls under
-    'proficiencies': {'strength':-1,'intelligence':3,}, #  designates the character proficiencies to modify
-    },
-]
-
-proficiencies = [
-    {
-        'name': 'stength',
-        'dimension': 'attribute',
-    },
-]
-```
+As a note, loading dimensions will typically be significantly less buggy when run **prior** to using ```mc.Player().gen()```.
 
 ## Dice Rolls
 
