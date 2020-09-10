@@ -152,42 +152,35 @@ class Player:
         #     self.buff(name=self.background, dimension='background')
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
 
-    def load_dimensions(self, how='append', player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, backgrounds=None, buffs=None):
+    def load_dimensions(self, how='append', proficiencies=None, buffs=None):
         if how == 'overwrite':
-            if isinstance(player_class, (list)):
-                self.player_class_options = player_class
-            if isinstance(attributes, (list)):
-                self.attributes_options = attributes
-            if isinstance(race, (list)):
-                self.race_options = race
-            if isinstance(religion, (list)):
-                self.religion_options = religion
-            if isinstance(language, (list)):
-                self.language_options = language
-            if isinstance(skills, (list)):
-                self.skills_options = skills
-            if isinstance(backgrounds, (list)):
-                self.backgrounds_options = backgrounds
+            player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, backgrounds=None
+
+            if isinstance(proficiencies, (list)):
+                self.attributes_options = [x['name'] for x in proficiencies if x['dimension'] == 'attribute']
+                self.skills_options = [x['name'] for x in proficiencies if x['dimension'] == 'skill']
             if isinstance(buffs, (list)):
+                self.player_class_options = [x['name'] for x in buffs if x['dimension'] == 'class']
+                self.race_options = [x['name'] for x in buffs if x['dimension'] == 'race']
+                self.religion_options = [x['name'] for x in buffs if x['dimension'] == 'religion']
+                self.language_options =  [x['name'] for x in buffs if x['dimension'] == 'language']
+                self.background_options = [x['name'] for x in buffs if x['dimension'] == 'background']
                 self.buff_options = buffs
 
         elif how == 'append': 
-            if isinstance(player_class, (list)):
-                [self.player_class_options.append(x) for x in player_class]
-            if isinstance(attributes, (list)):
-                [self.attributes_options.append(x) for x in attributes]
-            if isinstance(race, (list)):
-                [self.race_options.append(x) for x in race]
-            if isinstance(religion, (list)):
-                [self.religion_options.append(x) for x in religion]
-            if isinstance(language, (list)):
-                [self.language_options.append(x) for x in language]
-            if isinstance(skills, (list)):
-                [self.skills_class_options.append(x) for x in skills]
-            if isinstance(backgrounds, (list)):
-                [self.backgrounds_options.append(x) for x in backgrounds]
+
+            if isinstance(proficiencies, (list)):
+                [self.attributes_options.append(x['name']) for x in proficiencies if x['dimension'] == 'attribute']
+                [self.skills_options.append(x['name']) for x in proficiencies if x['dimension'] == 'skill']
+
             if isinstance(buffs, (list)):
-                [self.buff_options.append(x) for x in buffs]
+                [self.player_class_options.append(x['name']) for x in buffs if x['dimension'] == 'class']
+                [self.race_options.append(x['name']) for x in buffs if x['dimension'] == 'race']
+                [self.religion_options.append(x['name']) for x in buffs if x['dimension'] == 'religion']
+                [self.language_options.append(x['name']) for x in buffs if x['dimension'] == 'language']
+                [self.background_options.append(x['name']) for x in buffs if x['dimension'] == 'background']
+                self.buff_options.append(buffs)
+
 
     def save(self, filename=None, csv=None):
 
