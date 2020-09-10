@@ -7,11 +7,11 @@ class Player:
     def __init__(self):
         self.roll = Roll() # create a dice roll object
         self.player_class_options = defaults.player_class_options
-        self.attributes_options = defaults.attributes_options
+        self.attributes_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'attribute']
         self.race_options = defaults.race_options
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
-        self.skills_options = defaults.skills_options
+        self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
         self.background_options = defaults.background_options
         self.buff_options = defaults.buff_options
 

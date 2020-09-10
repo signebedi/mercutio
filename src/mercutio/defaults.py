@@ -5,14 +5,6 @@ player_class_options = [
     'cleric',    
 ]
 
-attributes_options = [
-    'strength', 
-    'constitution', 
-    'intelligence', 
-    'wisdom', 
-    'dexterity', 
-    'charisma',
-]
 
 race_options = [
     'human', 
@@ -140,6 +132,15 @@ skills_options = [
     'intimidation',
     'performance',
     'persuasion',
+]
+
+attributes_options = [
+    'strength', 
+    'constitution', 
+    'intelligence', 
+    'wisdom', 
+    'dexterity', 
+    'charisma',
 ]
 
 background_options = [
@@ -282,4 +283,37 @@ buff_options = [
     'skills':[],
   },
 
+]
+
+
+
+
+# [x['name'] for x in d.proficiencies if x['dimension'] == 'attribute']
+# [x['name'] for x in d.proficiencies if x['dimension'] == 'skill']
+
+proficiencies = [
+    {'name': 'athletics', 'dimension': 'skill'},
+    {'name': 'acrobatics', 'dimension': 'skill'},
+    {'name': 'sleight', 'dimension': 'skill'},
+    {'name': 'stealth', 'dimension': 'skill'},
+    {'name': 'arcana', 'dimension': 'skill'},
+    {'name': 'history', 'dimension': 'skill'},
+    {'name': 'investigation', 'dimension': 'skill'},
+    {'name': 'nature', 'dimension': 'skill'},
+    {'name': 'religion', 'dimension': 'skill'},
+    {'name': 'animal-handling', 'dimension': 'skill'},
+    {'name': 'insight', 'dimension': 'skill'},
+    {'name': 'medicine', 'dimension': 'skill'},
+    {'name': 'perception', 'dimension': 'skill'},
+    {'name': 'survival', 'dimension': 'skill'},
+    {'name': 'deception', 'dimension': 'skill'},
+    {'name': 'intimidation', 'dimension': 'skill'},
+    {'name': 'performance', 'dimension': 'skill'},
+    {'name': 'persuasion', 'dimension': 'skill'},
+    {'name': 'strength', 'dimension': 'attribute'},
+    {'name': 'constitution', 'dimension': 'attribute'},
+    {'name': 'intelligence', 'dimension': 'attribute'},
+    {'name': 'wisdom', 'dimension': 'attribute'},
+    {'name': 'dexterity', 'dimension': 'attribute'},
+    {'name': 'charisma', 'dimension': 'attribute'},
 ]
