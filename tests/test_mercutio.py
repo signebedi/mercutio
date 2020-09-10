@@ -57,7 +57,7 @@ def test_buffs():
         religion='paladine', 
         race='human', 
         language='common',
-        background='none'
+        background='sage'
     )
     attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
 

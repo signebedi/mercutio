@@ -12,8 +12,8 @@ class Player:
         self.religion_options = defaults.religion_options
         self.language_options = defaults.language_options
         self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
-        self.background_options = defaults.background_options
-        self.buff_options = defaults.buff_options
+        self.background_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'background']
+        self.buff_options = defaults.buffs
 
 
         print('\nCreated player object')
