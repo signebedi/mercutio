@@ -64,7 +64,7 @@ def test_buffs():
     player.background = 'soldier' # now manually change the player background to soldier
     player.buff(name='soldier', dimension='background') # then we buff the character
 
-    assert player.attributes['strength'] == attribute_check+ 1 # and check that the buff successfully passed
+    assert player.attributes['strength'] == attribute_check + 1 # and check that the buff successfully passed
 
 
 
