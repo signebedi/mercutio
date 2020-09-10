@@ -113,35 +113,6 @@ language_options = [
 # • Performance
 # • Persuasion
 
-skills_options = [
-    'athletics',
-    'acrobatics',
-    'sleight',
-    'stealth',
-    'arcana',
-    'history',
-    'investigation',
-    'nature',
-    'religion',
-    'animal-handling',
-    'insight',
-    'medicine',
-    'perception',
-    'survival',
-    'deception',
-    'intimidation',
-    'performance',
-    'persuasion',
-]
-
-attributes_options = [
-    'strength', 
-    'constitution', 
-    'intelligence', 
-    'wisdom', 
-    'dexterity', 
-    'charisma',
-]
 
 background_options = [
     'none',
@@ -285,11 +256,6 @@ buff_options = [
 
 ]
 
-
-
-
-# [x['name'] for x in d.proficiencies if x['dimension'] == 'attribute']
-# [x['name'] for x in d.proficiencies if x['dimension'] == 'skill']
 
 proficiencies = [
     {'name': 'athletics', 'dimension': 'skill'},

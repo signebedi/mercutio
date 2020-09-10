@@ -15,7 +15,6 @@ class Player:
         self.background_options = defaults.background_options
         self.buff_options = defaults.buff_options
 
-        ### NEED TO ADD SUPPORT FOR EQUIPMENT, ALIGNMENT, SPELLS, ATTACKS, EXP, HP
         print('\nCreated player object')
     def gen_graphic(self):
 
