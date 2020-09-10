@@ -15,7 +15,6 @@ Changes will fall under the following categories:
 ## [Unreleased]
 ### Added
 - support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
-- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools 
 - support for multiclassing 
 - support for multiple languages
 - leveling bonuses for skills and attributes
@@ -23,7 +22,10 @@ Changes will fall under the following categories:
 ## [0.9.0] - 2020-09-10
 ### Added
 - proficiences for armour, weapons, tools
+- automatic releases to pypi and github releases 
 
+### Changed
+- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 
 ## [0.8.1] - 2020-09-10
 ### Fixed
