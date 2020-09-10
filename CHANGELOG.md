@@ -20,27 +20,20 @@ Changes will fall under the following categories:
 - support for multiple languages
 - leveling bonuses for skills and attributes
 
-buffs = [
-    {
-    'name':'wizard', #  designate the player identifier that will trigger this buff
-    'dimension': 'class', # designates which dimension the 'name' option falls under
-    'proficiencies': {'strength':-1,'intelligence':3,}, #  designates the character proficiencies to modify
-    },
-]
+## [0.8.1] - 2020-09-09
+### Fixed
+- problems with ```Player().mod``` allowing users to correctly pass new dimensions
+- religion so that it is included in buff list
 
-proficiencies = [
-    {
-        'name': 'stength',
-        'dimension': 'attribute',
-    },
-]
+### Added
+- proficiences for armour, weapons, tools
 
 ## [0.8.0] - 2020-09-09
 ### Added
-- proficiencies for armour, weapons, tools, and skills measured along the axis of 1 (proficient), 0 (common), and -1 (weak)
+- proficiencies for skills (armour, weapons, tools to come) measured along the axis of 1 (proficient), 0 (common), and -1 (weak)
 
 ### Changed
-- skills to simply proficiencies in armour, weapons, tools, attributes, skills
+- skills to simply proficiencies in attributes and skills (armour, weapons, tools to come)
 
 ### Removed
 - support for option lists in favor of using the buff dictionary for all indexed dimensions/characteristics
@@ -125,9 +118,9 @@ proficiencies = [
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.8.0...HEAD
-[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.3...0.8.0
-[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.2...0.7.3
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.8.1...HEAD
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.8.0...0.8.1
+[0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.2...0.8.0
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/signebedi/mercutio/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/signebedi/mercutio/compare/0.6.0...0.7.0
