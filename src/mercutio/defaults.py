@@ -124,7 +124,7 @@ background_options = [
     'soldier',
 ]
 
-buff_options = [
+buffs = [
   {
     'name':'wizard', #  designate the player identifier that will trigger this buff
     'dimension': 'class', # designates which dimension the 'name' option falls under
