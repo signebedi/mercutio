@@ -154,8 +154,6 @@ class Player:
 
     def customize(self, how='append', proficiencies=None, buffs=None):
         if how == 'overwrite':
-            player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, backgrounds=None
-
             if isinstance(proficiencies, (list)):
                 self.attributes_options = [x['name'] for x in proficiencies if x['dimension'] == 'attribute']
                 self.skills_options = [x['name'] for x in proficiencies if x['dimension'] == 'skill']
