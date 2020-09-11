@@ -1,7 +1,7 @@
 import pytest
-import mercutio as mc
 
 def test_gen():
+    import mercutio as mc
     player = mc.Player()
     player.gen()
 
@@ -14,8 +14,9 @@ def test_gen():
     assert isinstance(player.attributes, (dict))
     assert isinstance(player.skills, (dict))
 
-# test that overwriting player dimensions works as expected 
+# test that appending to player dimensions works as expected 
 def test_customize_append():
+    import mercutio as mc
     player = mc.Player()
     class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
 
@@ -30,30 +31,33 @@ def test_customize_append():
     assert len(player.player_class_options) == class_len + 3 # assert that this has increased the length of the class list by three
 
 # test that overwriting player dimensions works as expected 
-# def test_customize_overwrite():
-#     player = mc.Player()
+def test_customize_overwrite():
+    import mercutio as mc
+    player = mc.Player()
 
-#     buffs=[
-#         { 'name':'wizard', 'dimension':'class'},
-#         { 'name':'general', 'dimension':'class'},
-#         { 'name':'edain','dimension':'class'},
-#     ]
+    buffs= [
+        { 'name':'wizard', 'dimension':'class' },
+        { 'name':'general', 'dimension':'class'},
+        { 'name':'edain','dimension':'class'   },
+    ]
 
-#     player.customize(how='overwrite', buffs=buffs)
+    player.customize(how='overwrite', buffs=buffs)
 
-#     assert len(player.player_class_options) == 3
+    assert len(player.player_class_options) == 3
 
 # test that modifications to player stats work as expected
-# def test_mod():
-#     player = mc.Player()
-#     player.gen(name='balthor batwing, earl of pentham',)
+def test_mod():
+    import mercutio as mc
+    player = mc.Player()
+    player.gen(name='balthor batwing, earl of pentham',)
 
-#     player.mod(name='beringor barthenon, guardian of bradley gardens')
+    player.mod(name='beringor barthenon, guardian of bradley gardens')
 
-#     assert player.name == 'beringor barthenon, guardian of bradley gardens'
+    assert player.name == 'beringor barthenon, guardian of bradley gardens'
 
 # test that dice-rolls return values w/i expected ranges
 def test_dice():
+    import mercutio as mc
     roll = mc.Roll() # instantiate the Roll() class
 
     assert all([roll.four() for _ in range(100)]) in range(1,5) 
@@ -62,22 +66,23 @@ def test_dice():
     assert all([roll.twelve() for _ in range(100)]) in range(1,13) 
     assert all([roll.twenty() for _ in range(100)]) in range(1,21) 
 
-# def test_buffs():
-#     player = mc.Player()
-#     player.gen(
-#         player_class='fighter', 
-#         name='balthor batwing, earl of pentham', 
-#         religion='paladine', 
-#         race='human', 
-#         language='common',
-#         background='sage'
-#     )
-#     attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
+def test_buffs():
+    import mercutio as mc
+    player = mc.Player()
+    player.gen(
+        player_class='fighter', 
+        name='balthor batwing, earl of pentham', 
+        religion='paladine', 
+        race='human', 
+        language='common',
+        background='sage'
+    )
+    attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
 
-#     player.background = 'soldier' # now manually change the player background to soldier
-#     player.buff(name='soldier', dimension='background') # then we buff the character
+    player.background = 'soldier' # now manually change the player background to soldier
+    player.buff(name='soldier', dimension='background') # then we buff the character
 
-#     assert player.attributes['strength'] == attribute_check + 1 # and check that the buff successfully passed
+    assert player.attributes['strength'] == attribute_check + 1 # and check that the buff successfully passed
 
 
 

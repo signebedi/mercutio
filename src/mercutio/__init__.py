@@ -177,7 +177,7 @@ class Player:
                 [self.religion_options.append(x['name']) for x in buffs if x['dimension'] == 'religion']
                 [self.language_options.append(x['name']) for x in buffs if x['dimension'] == 'language']
                 [self.background_options.append(x['name']) for x in buffs if x['dimension'] == 'background']
-                self.buff_options.append(buffs)
+                [self.buff_options.append(x) for x in buffs]
 
 
     def save(self, filename=None, csv=None):
