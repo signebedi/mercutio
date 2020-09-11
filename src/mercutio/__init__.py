@@ -1,7 +1,9 @@
 import mercutio.defaults as defaults # this is where we store the default dimensions
+from mercutio._version import __version__
 import pickle
 import random as rd
 import pandas as pd
+
 
 class Player:
     def __init__(self):
