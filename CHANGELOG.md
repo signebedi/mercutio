@@ -27,6 +27,11 @@ Changes will fall under the following categories:
 ### Changed
 - python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
 
+## [0.8.3] - 2020-09-11
+### Added
+- __version__ variable 
+
+
 ## [0.8.2] - 2020-09-10
 ### Fixed
 - minor syntax errors in build 
@@ -130,8 +135,9 @@ Changes will fall under the following categories:
 
 
 [Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.0...HEAD
-[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.2...0.9.0
-[0.8.2]: https://github.com/signebedi/mercutio/compare/0.8.0...0.8.2
+[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.3...0.9.0
+[0.8.3]: https://github.com/signebedi/mercutio/compare/0.8.2...0.8.3
+[0.8.2]: https://github.com/signebedi/mercutio/compare/0.8.1...0.8.2
 [0.8.1]: https://github.com/signebedi/mercutio/compare/0.8.0...0.8.1
 [0.8.0]: https://github.com/signebedi/mercutio/compare/0.7.2...0.8.0
 [0.7.2]: https://github.com/signebedi/mercutio/compare/0.7.1...0.7.2
