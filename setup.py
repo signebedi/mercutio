@@ -1,19 +1,26 @@
 from glob import glob
-import setuptools, re
+import setuptools, re, os
 
-with open("README.md", "r") as fh:
-    long_description = re.sub(r'![cropped dragon gif](docs/cropped.gif)', '', fh.read()) # substitute out the gif image
+with open("README.md", "r") as f:
+    LONG_DESCRIPTION = re.sub(r'![cropped dragon gif](docs/cropped.gif)', '', f.read()) # substitute out the gif image
+
+with open(os.path.join('src', 'mercutio', '_version.py')) as f:
+    versionstr = f.read()
+    regex = r"^__version__ = ['\"]([\d\.]*)['\"]"
+    mo = re.search(regex, versionstr, re.M)
+    VERSION = mo.group(1)
+
 
 with open('requirements.txt') as f:
-    required = f.read().splitlines()
+    REQUIRED = f.read().splitlines()
 
 setuptools.setup(
     name="mercutio",
-    version="0.8.2",
+    version=VERSION,
     author="Sig Janoska-Bedi",
     author_email="signe@siftingwinnowing.com",
     description="yet another character creation engine",
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/signebedi/mercutio",
     packages=setuptools.find_packages('src'),
@@ -24,6 +31,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=required,
+    install_requires=REQUIRED,
     python_requires='>=3.6',
 )
