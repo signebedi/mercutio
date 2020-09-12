@@ -1,8 +1,10 @@
 # src https://gist.github.com/mcguffin/746afffa0929ca8e2ea2ba8538776742
 
+# get version number
 REGEX="[0-9]\.[0-9]\.[0-9]"
 VERSION=`grep -o "$REGEX" src/mercutio/_version.py`
 
+# set a standard, simple message -- in the future, summarize from CHANGELOG
 MESSAGE=$(printf "Release of version %s" $VERSION)
 
 DRAFT="false"
@@ -10,7 +12,7 @@ PRE="false"
 BRANCH="master"
 GITHUB_ACCESS_TOKEN=`cat .github_token`
 
-# get repon name and owner
+# get repo name and owner
 REPO_REMOTE=$(git config --get remote.origin.url)
 
 if [ -z $REPO_REMOTE ]; then
@@ -27,3 +29,5 @@ echo "$API_RESPONSE_STATUS"
 
 python setup.py sdist bdist_wheel
 twine upload dist/* --repository pypi --config-file .pypirc # uses project-scoped API token for mercutio
+
+rm -rf dist/
