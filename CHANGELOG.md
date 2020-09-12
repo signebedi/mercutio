@@ -14,10 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.9.0] - 2020-09-10
 ### Added
 - proficiences for armour, weapons, tools
-- automatic releases to pypi and github releases 
+- proficiency buffs for classes and backgrounds 
 
-### Changed
-- python-semantic-release to automate [sematic versioning](https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic) with travis-ci, twine, github tags/releases, and setuptools
+## [0.8.5] - 2020-09-11
+### Fixed
+- ```mc.buff()``` so that it only applies buff if the proficiency dict is not empty
 
 ## [0.8.4] - 2020-09-11
 ### Added
@@ -131,7 +132,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.0...HEAD
-[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.4...0.9.0
+[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.5...0.9.0
+[0.8.5]: https://github.com/signebedi/mercutio/compare/0.8.4...0.8.5
 [0.8.4]: https://github.com/signebedi/mercutio/compare/0.8.3...0.8.4
 [0.8.3]: https://github.com/signebedi/mercutio/compare/0.8.2...0.8.3
 [0.8.2]: https://github.com/signebedi/mercutio/compare/0.8.1...0.8.2
