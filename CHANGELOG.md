@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.8.5] - 2020-09-11
 ### Fixed
 - ```mc.buff()``` so that it only applies buff if the proficiency dict is not empty
+- improved tests for ```mc.buff()```
 
 ## [0.8.4] - 2020-09-11
 ### Added
