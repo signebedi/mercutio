@@ -11,7 +11,6 @@ with open(os.path.join('src', 'mercutio', '_version.py')) as f:
     mo = re.search(regex, versionstr, re.M)
     VERSION = mo.group(1)
 
-
 with open('requirements.txt') as f:
     REQUIRED = f.read().splitlines()
 
