@@ -23,7 +23,6 @@ fi
 
 REPO_NAME=$(basename -s .git $REPO_REMOTE)
 REPO_OWNER=$(git config --get user.name)
-https://api.github.com/user/repos?access_token=883651d227d1610682e906c9c5d4fe5fc18faae8
 API_JSON=$(printf '{"tag_name": "%s","target_commitish": "%s","name": "mercutio %s","body": "%s","draft": %s,"prerelease": %s}' "$VERSION" "$BRANCH" "$VERSION" "$MESSAGE" "$DRAFT" "$PRE" )
 API_RESPONSE_STATUS=$(curl --data "$API_JSON" -s -i -H "Authorization: token $GITHUB_ACCESS_TOKEN" https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases)
 echo "$API_RESPONSE_STATUS"
