@@ -131,5 +131,6 @@ dmypy.json
 # picke files
 *.picklesite/
 
-# deployment configuration
+# deployment configuration files
 .pypirc
+.github_token
