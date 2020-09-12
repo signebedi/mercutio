@@ -20,7 +20,7 @@ def test_customize_append():
     player = mc.Player()
     class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
 
-    buffs=[
+    buffs = [
         { 'name':'wizard', 'dimension':'class'},
         { 'name':'general', 'dimension':'class'},
         { 'name':'edain','dimension':'class'},
@@ -35,7 +35,7 @@ def test_customize_overwrite():
     import mercutio as mc
     player = mc.Player()
 
-    buffs= [
+    buffs = [
         { 'name':'wizard', 'dimension':'class' },
         { 'name':'general', 'dimension':'class'},
         { 'name':'edain','dimension':'class'   },
@@ -66,7 +66,7 @@ def test_dice():
     assert all([roll.twelve() for _ in range(100)]) in range(1,13) 
     assert all([roll.twenty() for _ in range(100)]) in range(1,21) 
 
-def test_buffs():
+def test_buffs_not_empty():
     import mercutio as mc
     player = mc.Player()
     player.gen(
@@ -78,10 +78,33 @@ def test_buffs():
     )
     attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
 
-    player.buff(name='human', dimension='race', remove=True) # try removing soldier buff
+    player.buff(name='human', dimension='race', remove=True) # try removing human buff
     player.buff(name='elf', dimension='race') # then we buff the character
 
     assert player.attributes['strength'] == attribute_check - 1 # and check that the buff successfully passed
 
 
+# like the above test, but now we pass purposefully empty buffs to assert this does not break the logic of mc.buff()
+def test_buffs_empty():
+    import mercutio as mc
+    player = mc.Player()
 
+    # append an empty race
+    buffs = [
+        { 'name':'misanthrope', 'dimension':'race', 'proficiencies': {} },
+    ]
+    player.customize(how='append', buffs=buffs)
+
+    player.gen(
+        player_class='fighter', 
+        name='balthor batwing, earl of pentham', 
+        religion='paladine', 
+        race='human', 
+        language='common',
+    )
+    attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
+
+    player.buff(name='human', dimension='race', remove=True) # try removing human buff
+    player.buff(name=buffs[0]['name'], dimension='race') # then we buff the character with an empty proficiency buff
+
+    assert player.attributes['strength'] == attribute_check - 1 # and check that the LACK of any buff successfully passed
