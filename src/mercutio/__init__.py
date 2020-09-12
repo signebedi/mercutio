@@ -290,6 +290,7 @@ class Player:
                             try: 
                                 self.skills[attribute] += item['proficiencies'][attribute]
                             except Exception as e: print(e)
+                            
                     print(f'\nSuccessfully added buff for the player {dimension} called {name}')
                     break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')

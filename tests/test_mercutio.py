@@ -75,14 +75,13 @@ def test_buffs():
         religion='paladine', 
         race='human', 
         language='common',
-        background='sage'
     )
     attribute_check = player.attributes['strength'] # create a snapshot of the player's attributes
 
-    player.background = 'soldier' # now manually change the player background to soldier
-    player.buff(name='soldier', dimension='background') # then we buff the character
+    player.buff(name='human', dimension='race', remove=True) # try removing soldier buff
+    player.buff(name='elf', dimension='race') # then we buff the character
 
-    assert player.attributes['strength'] == attribute_check + 1 # and check that the buff successfully passed
+    assert player.attributes['strength'] == attribute_check - 1 # and check that the buff successfully passed
 
 
 
