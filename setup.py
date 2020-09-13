@@ -1,15 +1,12 @@
 from glob import glob
 import setuptools, re, os
+from mercutio import __author__ as AUTHOR
+from mercutio import __license__ as LICENSE
+from mercutio import __email__ as EMAIL
+from mercutio._version import __version__ as VERSION
 
 with open("README.md", "r") as f:
-    LONG_DESCRIPTION = re.sub(r'![cropped dragon gif](docs/cropped.gif)', '', f.read()) # substitute out the gif image
-
-# based on https://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package
-with open(os.path.join('src', 'mercutio', '_version.py')) as f:
-    versionstr = f.read()
-    regex = r"^__version__ = ['\"]([\d\.]*)['\"]"
-    mo = re.search(regex, versionstr, re.M)
-    VERSION = mo.group(1)
+    LONG_DESCRIPTION = re.sub(r'\!\[cropped dragon gif\]\(docs\/cropped.gif\)', '', f.read()) # substitute out the gif image
 
 with open('requirements.txt') as f:
     REQUIRED = f.read().splitlines()
@@ -17,8 +14,9 @@ with open('requirements.txt') as f:
 setuptools.setup(
     name="mercutio",
     version=VERSION,
-    author="Sig Janoska-Bedi",
-    author_email="signe@siftingwinnowing.com",
+    author=AUTHOR,
+    author_email=EMAIL,
+    license=LICENSE,
     description="yet another character creation engine",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",

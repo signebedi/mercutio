@@ -1,12 +1,5 @@
 """__init__.py: primary source file for mercutio, a straightforward, stable, and highly-customizable API for character creation"""
 
-import mercutio.defaults as defaults # this is where we store the default dimensions
-from mercutio._version import __version__
-import pickle
-import random as rd
-import pandas as pd
-
-
 __author__ = "Sig Janoska-Bedi"
 __copyright__ = "Copyright (c) 2020 Signe Janoska-Bedi"
 __credits__ = ["Sig Janoska-Bedi",]
@@ -15,6 +8,11 @@ __maintainer__ = "Sig Janoska-Bedi"
 __email__ = "signe@siftingwinnowing.com"
 __status__ = "Development"
 
+import mercutio.defaults as defaults # this is where we store the default dimensions
+from mercutio._version import __version__
+import pickle
+import random as rd
+import pandas as pd
 
 class Player:
     def __init__(self):
