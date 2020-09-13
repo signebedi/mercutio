@@ -1,8 +1,8 @@
 from glob import glob
 import setuptools, re, os
-from src.mercutio import __author__ as AUTHOR
-from src.mercutio import __license__ as LICENSE
-from src.mercutio import __email__ as EMAIL
+from src.mercutio._metadata import __author__ as AUTHOR
+from src.mercutio._metadata import __license__ as LICENSE
+from src.mercutio._metadata import __email__ as EMAIL
 from src.mercutio._version import __version__ as VERSION
 
 with open("README.md", "r") as f:
