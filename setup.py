@@ -1,12 +1,36 @@
 from glob import glob
 import setuptools, re, os
-from src.mercutio._metadata import __author__ as AUTHOR
-from src.mercutio._metadata import __license__ as LICENSE
-from src.mercutio._metadata import __email__ as EMAIL
-from src.mercutio._version import __version__ as VERSION
 
 with open("README.md", "r") as f:
     LONG_DESCRIPTION = re.sub(r'\!\[cropped dragon gif\]\(docs\/cropped.gif\)', '', f.read()) # substitute out the gif image
+# based on https://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package
+
+with open(os.path.join('src', 'mercutio', '_version.py')) as f:
+    versionstr = f.read()
+    regex = r"^__version__ = ['\"]([\d\.]*)['\"]"
+    mo = re.search(regex, versionstr, re.M)
+    VERSION = mo.group(1)
+
+with open(os.path.join('src', 'mercutio', '_metadata.py')) as f:
+    authorstr = f.read()
+    regex = r"__author__ = [\'\"]([\w\- ]*)[\'\"]"
+    mo = re.search(regex, authorstr, re.M)
+    AUTHOR = mo.group(1)
+
+with open(os.path.join('src', 'mercutio', '_metadata.py')) as f:
+    licensestr = f.read()
+    regex = r"__license__ = [\'\"]([\w]*)[\'\"]"
+    mo = re.search(regex, licensestr, re.M)
+    LICENSE = mo.group(1)
+
+with open(os.path.join('src', 'mercutio', '_metadata.py')) as f:
+    emailstr = f.read()
+    regex = r"__email__ = [\'\"]([\w\-\@\. ]*)[\'\"]"
+    mo = re.search(regex, emailstr, re.M)
+    EMAIL = mo.group(1)
+
+
+
 
 with open('requirements.txt') as f:
     REQUIRED = f.read().splitlines()
