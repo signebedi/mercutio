@@ -29,9 +29,6 @@ with open(os.path.join('src', 'mercutio', '_metadata.py')) as f:
     mo = re.search(regex, emailstr, re.M)
     EMAIL = mo.group(1)
 
-
-
-
 with open('requirements.txt') as f:
     REQUIRED = f.read().splitlines()
 

@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - support for multiple languages
 - leveling bonuses for skills and attributes
 
-## [0.9.0] - 2020-09-10
+## [0.9.0] - 2020-09-15
 ### Added
 - proficiences for armour, weapons, tools
 - proficiency buffs for classes and backgrounds 
