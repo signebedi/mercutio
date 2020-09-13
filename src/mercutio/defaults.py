@@ -1,3 +1,6 @@
+"""defaults.py: sets default player options mercutio, a straightforward, stable, and highly-customizable API for character creation"""
+
+
 # religion src: https://1d4chan.org/wiki/Gods_of_Dungeons_and_Dragons#Dragonlance
 
 # Gods of Good
