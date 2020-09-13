@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - proficiences for armour, weapons, tools
 - proficiency buffs for classes and backgrounds 
 
+## [0.8.6] - 2020-09-13
+### Added
+- header data like __author__ and __license__
+
 ## [0.8.5] - 2020-09-11
 ### Fixed
 - ```mc.buff()``` so that it only applies buff if the proficiency dict is not empty
@@ -133,7 +137,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.0...HEAD
-[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.5...0.9.0
+[0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.6...0.9.0
+[0.8.6]: https://github.com/signebedi/mercutio/compare/0.8.5...0.8.6
 [0.8.5]: https://github.com/signebedi/mercutio/compare/0.8.4...0.8.5
 [0.8.4]: https://github.com/signebedi/mercutio/compare/0.8.3...0.8.4
 [0.8.3]: https://github.com/signebedi/mercutio/compare/0.8.2...0.8.3
