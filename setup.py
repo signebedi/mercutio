@@ -1,9 +1,9 @@
 from glob import glob
 import setuptools, re, os
-from mercutio import __author__ as AUTHOR
-from mercutio import __license__ as LICENSE
-from mercutio import __email__ as EMAIL
-from mercutio._version import __version__ as VERSION
+from src.mercutio import __author__ as AUTHOR
+from src.mercutio import __license__ as LICENSE
+from src.mercutio import __email__ as EMAIL
+from src.mercutio._version import __version__ as VERSION
 
 with open("README.md", "r") as f:
     LONG_DESCRIPTION = re.sub(r'\!\[cropped dragon gif\]\(docs\/cropped.gif\)', '', f.read()) # substitute out the gif image
