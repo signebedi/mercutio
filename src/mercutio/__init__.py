@@ -163,6 +163,9 @@ class Player:
             if isinstance(proficiencies, (list)):
                 self.attributes_options = [x['name'] for x in proficiencies if x['dimension'] == 'attribute']
                 self.skills_options = [x['name'] for x in proficiencies if x['dimension'] == 'skill']
+                self.weapon_options = [x['name'] for x in proficiencies if x['dimension'] == 'weapon']
+                self.armor_options = [x['name'] for x in proficiencies if x['dimension'] == 'armor']
+
             if isinstance(buffs, (list)):
                 self.player_class_options = [x['name'] for x in buffs if x['dimension'] == 'class']
                 self.race_options = [x['name'] for x in buffs if x['dimension'] == 'race']
@@ -176,6 +179,8 @@ class Player:
             if isinstance(proficiencies, (list)):
                 [self.attributes_options.append(x['name']) for x in proficiencies if x['dimension'] == 'attribute']
                 [self.skills_options.append(x['name']) for x in proficiencies if x['dimension'] == 'skill']
+                [self.weapon_options.append(x['name']) for x in proficiencies if x['dimension'] == 'weapon']
+                [self.armor_options.append(x['name']) for x in proficiencies if x['dimension'] == 'armor']
 
             if isinstance(buffs, (list)):
                 [self.player_class_options.append(x['name']) for x in buffs if x['dimension'] == 'class']
