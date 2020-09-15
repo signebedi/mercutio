@@ -18,6 +18,9 @@ class Player:
         self.skills_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'skill']
         self.background_options = [x['name'] for x in defaults.buffs if x['dimension'] == 'background']
         self.buff_options = defaults.buffs
+        self.weapon_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'weapon']
+        self.tool_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'tool']
+        self.armor_options = [x['name'] for x in defaults.proficiencies if x['dimension'] == 'armor']
 
 
         print('\nCreated player object')

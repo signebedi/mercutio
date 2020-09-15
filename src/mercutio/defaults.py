@@ -110,4 +110,30 @@ proficiencies = [
     {'name': 'wisdom', 'dimension': 'attribute'},
     {'name': 'dexterity', 'dimension': 'attribute'},
     {'name': 'charisma', 'dimension': 'attribute'},
+
+    {'name': 'axes', 'dimension': 'weapon'},
+    {'name': 'bows', 'dimension': 'weapon'},
+    {'name': 'brawling', 'dimension': 'weapon'},
+    {'name': 'staffs', 'dimension': 'weapon'},
+    {'name': 'crossbows', 'dimension': 'weapon'},
+    {'name': 'flails', 'dimension': 'weapon'},
+    {'name': 'maces', 'dimension': 'weapon'},
+    {'name': 'blades', 'dimension': 'weapon'},
+    {'name': 'polearms', 'dimension': 'weapon'},
+    {'name': 'shields', 'dimension': 'weapon'},
+    {'name': 'spears', 'dimension': 'weapon'},
+    {'name': 'slings', 'dimension': 'weapon'},
+
+    {'name': 'leather', 'dimension': 'armor'},
+    {'name': 'hide', 'dimension': 'armor'},
+    {'name': 'chain', 'dimension': 'armor'},
+    {'name': 'scale', 'dimension': 'armor'},
+    {'name': 'breastplate', 'dimension': 'armor'},
+    {'name': 'halfplate', 'dimension': 'armor'},
+    {'name': 'ringmail', 'dimension': 'armor'},
+    {'name': 'chainmail', 'dimension': 'armor'},
+    {'name': 'splint', 'dimension': 'armor'},
+    {'name': 'plate', 'dimension': 'armor'},
+
+
 ]

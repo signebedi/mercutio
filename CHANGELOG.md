@@ -10,11 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - support for multiclassing 
 - support for multiple languages
 - leveling bonuses for skills and attributes
+- proficiencies for tools, if there is demand for this feature
+
+
+## [0.9.1] - 2020-09-15
+### Added
+- proficiency buffs for classes and backgrounds 
+
+### Fixed
+- armor and weapon proficiencies in ```Player.gen()```, ```Player.mod()```, and ```Player.buff()```
 
 ## [0.9.0] - 2020-09-15
 ### Added
-- proficiences for armour, weapons, tools
-- proficiency buffs for classes and backgrounds 
+- proficiences for armour, weapons
 
 ## [0.8.7] - 2020-09-13
 ### Fixed
@@ -140,7 +148,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - standard player dimensions for class, attributes, race, religion, language, and special
 
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.0...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.1...HEAD
+[0.9.0]: https://github.com/signebedi/mercutio/compare/0.9.0...0.9.1
 [0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.7...0.9.0
 [0.8.7]: https://github.com/signebedi/mercutio/compare/0.8.6...0.8.7
 [0.8.6]: https://github.com/signebedi/mercutio/compare/0.8.5...0.8.6
