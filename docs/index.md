@@ -11,25 +11,24 @@ See our GitHub repo at [github.com/signebedi/mercutio](https://github.com/signeb
 
 Mercutio provides a straightforward, stable, and highly-customizable API for character creation. It provides two categories of player dimensions, along with various default options for each dimension:
 
-- **proficiencies**: areas that a character may develop particular expertise: attributes, skills, armour, weapons, tools.
+- **proficiencies**: areas that a character may develop particular expertise: attributes, skills, armor, weapons.
 
-    - **attributes**: [default] strength, constitution, intelligence, wisdom, dexterity, charisma
-    - **skills**: [optional] athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
-    - **equipment**: [optional]
-    - **weapons**: [optional]
-    - **tools**: [optional]
+    - **attributes**: strength, constitution, intelligence, wisdom, dexterity, charisma
+    - **skills**: athletics, acrobatics, sleight, stealth, arcana, history, investigation, nature, religion, animal-handling, insight, medicine, perception, survival, deception, intimidation, performance, persuasion
+    - **armor**: leather, hide, chain, scale, breastplate, halfplate, ringmail, chainmail, splint, plate
+    - **weapons**: axes, bows, brawling, staffs, crossbows, flails, maces, blades, polearms, shields, spears, slings
 
 - **buffs**: character customizations that impact their proficiencies: class, race, religion, language, background.
 
-    - **class**: [default] fighter, wizard, rogue, cleric
-    - **race**: [optional] 'human, elf, wood elf, high elf, dark elf, dwarf, hill dwarf, mountain dwarf, halfling, stout halfling, lightfoot halfling
-    - **religion**: [optional] none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
-    - **language**: [optional] common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
-    - **background**: [optional] none, acolyte, criminal, folk hero, noble, sage, soldier
+    - **class**: fighter, wizard, rogue, cleric
+    - **race**: 'human, elf, wood elf, high elf, dark elf, dwarf, hill dwarf, mountain dwarf, halfling, stout halfling, lightfoot halfling
+    - **religion**: none, branchala, habbakuk, kiri-jolith, majere, mishakal, paladine, solinari, chislev, gilean, lunitari, reorx, shinare, sirrion, zivilyn, chemosh, hiddukel, morgion, nuitari, sargonnas, takhisis, zeboim
+    - **language**: common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
+    - **background**: none, acolyte, criminal, folk hero, noble, sage, soldier
 
 ## Future Features
 
-In the future, support may be added for vital data such as alignment, experience, size, speed, and hit-points. 
+In the future, support may be added for vital data such as alignment, experience, size, speed, and hit-points. In addition, tool proficiencies may be added if there is demand for this feature.
 
 ## Use Cases
 
