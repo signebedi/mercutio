@@ -12,8 +12,10 @@ git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep ^Tests >> .co
 COMMITS=$(cat .commits)
 
 # set a standard, simple message -- in the future, summarize from CHANGELOG
-MESSAGE=$(printf $'Release of version %s\n%s' $VERSION "$COMMITS")
+M=$(printf $'Release of version %s\n%s' $VERSION "$COMMITS")
+MESSAGE="${M//[\n]/<br/>}"
 
+echo "$MESSAGE"
 # remove the temporary file
 rm .commits
 
