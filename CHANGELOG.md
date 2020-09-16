@@ -9,6 +9,7 @@ Git commits will follow these conventions
 - Changed
 - Fixed
 - Docs
+- Tests
 - Routine
 
 ## [Unreleased]
@@ -18,6 +19,7 @@ Git commits will follow these conventions
 - support for multiple languages
 - leveling bonuses for skills and attributes
 - proficiencies for tools, if there is demand for this feature
+- enable support to add buffs to dice rolls
 
 ## [0.9.2] - 2020-09-16
 ### Added
