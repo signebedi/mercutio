@@ -249,6 +249,8 @@ class Player:
             self.name = loaded_file['name']
             self.background = loaded_file['background']
             self.level = loaded_file['level']
+            self.armor = loaded_file['armor']
+            self.weapons = loaded_file['weapons']
 
             print(f'\nSuccessfully loaded {filename} player data\n')
 
