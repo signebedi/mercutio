@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+Git commits will follow these conventions
+- Added
+- Changed
+- Fixed
+- Docs
+- Routine
+
 ## [Unreleased]
 ### Added
 - support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
@@ -12,14 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - leveling bonuses for skills and attributes
 - proficiencies for tools, if there is demand for this feature
 
-
 ## [0.9.2] - 2020-09-16
 ### Added
 - proficiency buffs for classes and backgrounds 
 
 ## [0.9.1] - 2020-09-15
-### Fixed
-- armor and weapon proficiencies in ```Player.gen()```, ```Player.mod()```,  ```Player.buff()```, and ```Player.load()```
+### Added
+- armor and weapon proficiencies in ```Player.gen()```, ```Player.buff()```, ```Player.mod()```,  and ```Player.load()```
 
 ## [0.9.0] - 2020-09-15
 ### Added

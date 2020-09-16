@@ -30,6 +30,7 @@
 
 
 buffs = [
+  
   {  'name':'wizard', 'dimension': 'class',  'proficiencies': {},  },
   {  'name':'fighter', 'dimension': 'class',  'proficiencies': {},  },
   {  'name':'rogue', 'dimension': 'class',  'proficiencies': {},   },
@@ -86,6 +87,7 @@ buffs = [
 
 ### still need to add weapon, armor, tool proficiencies
 proficiencies = [
+
     {'name': 'athletics', 'dimension': 'skill'},
     {'name': 'acrobatics', 'dimension': 'skill'},
     {'name': 'sleight', 'dimension': 'skill'},
@@ -110,7 +112,6 @@ proficiencies = [
     {'name': 'wisdom', 'dimension': 'attribute'},
     {'name': 'dexterity', 'dimension': 'attribute'},
     {'name': 'charisma', 'dimension': 'attribute'},
-
     {'name': 'axes', 'dimension': 'weapon'},
     {'name': 'bows', 'dimension': 'weapon'},
     {'name': 'brawling', 'dimension': 'weapon'},
@@ -123,7 +124,6 @@ proficiencies = [
     {'name': 'shields', 'dimension': 'weapon'},
     {'name': 'spears', 'dimension': 'weapon'},
     {'name': 'slings', 'dimension': 'weapon'},
-
     {'name': 'leather', 'dimension': 'armor'},
     {'name': 'hide', 'dimension': 'armor'},
     {'name': 'chain', 'dimension': 'armor'},
@@ -134,6 +134,5 @@ proficiencies = [
     {'name': 'chainmail', 'dimension': 'armor'},
     {'name': 'splint', 'dimension': 'armor'},
     {'name': 'plate', 'dimension': 'armor'},
-
 
 ]
