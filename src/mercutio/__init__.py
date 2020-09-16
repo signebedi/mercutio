@@ -310,7 +310,7 @@ class Player:
             if isinstance(level, (int)):
                 self.level = level
 
-            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\narmour: {self.armor}\nweapons: {self.weapons}\n')
+            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nrace: {self.race}\nbackground: {self.background}\nreligion: {self.religion}\nattributes: {self.attributes}\nskills: {self.skills}\narmour: {self.armor}\nweapons: {self.weapons}\n')
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load() before modifying your player')
 
