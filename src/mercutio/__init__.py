@@ -287,7 +287,6 @@ class Player:
                     if key in self.weapon_options:
                         self.weapons[key] = weapons[key]
 
-
             if race:
                 if race in self.race_options:
                     self.buff(name=self.race, dimension='race', remove=True)
@@ -326,9 +325,15 @@ class Player:
                             except:
                                 try: 
                                     self.skills[attribute] -= item['proficiencies'][attribute]
-                                except Exception as e: print(e)
+                                except:
+                                    try: 
+                                        self.weapons[attribute] -= item['proficiencies'][attribute]
+                                    except:
+                                        try:
+                                            self.armor[attribute] -= item['proficiencies'][attribute]
+                                        except Exception as e: print(e)
 
-                        print(f'\nSuccessfully removed buff for the player {dimension} called {name}')
+                        # print(f'\nSuccessfully removed buff for the player {dimension} called {name}')
                     break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 
@@ -342,9 +347,15 @@ class Player:
                             except:
                                 try: 
                                     self.skills[attribute] += item['proficiencies'][attribute]
-                                except Exception as e: print(e)
+                                except:
+                                    try: 
+                                        self.weapons[attribute] += item['proficiencies'][attribute]
+                                    except:
+                                        try:
+                                            self.armor[attribute] += item['proficiencies'][attribute]
+                                        except Exception as e: print(e)
 
-                    print(f'\nSuccessfully added buff for the player {dimension} called {name}')
+                    # print(f'\nSuccessfully added buff for the player {dimension} called {name}')
                 break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 class Roll:
