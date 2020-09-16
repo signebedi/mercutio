@@ -26,6 +26,7 @@ Git commits will follow these conventions
 ## [0.9.1] - 2020-09-15
 ### Added
 - armor and weapon proficiencies in ```Player.gen()```, ```Player.buff()```, ```Player.mod()```,  and ```Player.load()```
+- add docs and tests for armor and weapon proficiencies
 
 ## [0.9.0] - 2020-09-15
 ### Added

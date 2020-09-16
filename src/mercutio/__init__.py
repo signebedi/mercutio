@@ -257,7 +257,8 @@ class Player:
         except: print(f'\nNo player data found at {filename}\n')
 
 
-    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, background=None, level=None):
+    def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, background=None, 
+        armor=None, weapons=None, level=None):
         if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load()
             if player_class:
                 if player_class in self.player_class_options:
@@ -275,6 +276,18 @@ class Player:
                 for key in attributes:
                     if key in self.attributes_options:
                         self.attributes[key] = attributes[key]
+
+            if isinstance(armor, (dict)):
+                for key in armor:
+                    if key in self.armor_options:
+                        self.armor[key] = armor[key]
+
+            if isinstance(weapons, (dict)):
+                for key in weapons:
+                    if key in self.weapon_options:
+                        self.weapons[key] = weapons[key]
+
+
             if race:
                 if race in self.race_options:
                     self.buff(name=self.race, dimension='race', remove=True)
@@ -298,7 +311,7 @@ class Player:
             if isinstance(level, (int)):
                 self.level = level
 
-            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\n')
+            print(f'\nSuccessfully modified player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nreligion: {self.religion}\nskills: {self.skills}\narmour: {self.armor}\nweapons: {self.weapons}\n')
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load() before modifying your player')
 
