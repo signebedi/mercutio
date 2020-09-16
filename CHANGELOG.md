@@ -13,10 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - proficiencies for tools, if there is demand for this feature
 
 
-## [0.9.1] - 2020-09-15
+## [0.9.2] - 2020-09-16
 ### Added
 - proficiency buffs for classes and backgrounds 
 
+## [0.9.1] - 2020-09-15
 ### Fixed
 - armor and weapon proficiencies in ```Player.gen()```, ```Player.mod()```,  ```Player.buff()```, and ```Player.load()```
 
@@ -68,7 +69,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - support for option lists in favor of using the buff dictionary for all indexed dimensions/characteristics
 
-
 ## [0.7.2] - 2020-09-09
 ### Added
 - support for proficiencies, ability checks and saving throws instead of skill values
@@ -80,7 +80,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Test for buffs
 
-
 ## [0.7.0] - 2020-09-07
 ### Added
 - support for special buffs that can mapped to specific classes/races/religions/languages
@@ -91,27 +90,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - index to [DnD Basic Rules, Version 1.0, Released November 2018](https://media.wizards.com/2018/dnd/downloads/DnD_BasicRules_2018.pdf)
 
-
 ### Removed
 - Next Steps docs page, which is now covered by the changelog
-
 
 ## [0.6.0] - 2020-09-06
 ### Added
 - support for dice-rolling using eg. ```mc.Roll().six()```
 - tests for dice-rolling
 
-
 ## [0.5.1] - 2020-09-05
 ### Fixed
 - PyPi deployment by adding MANIFEST.in
-
 
 ## [0.5.0] - 2020-09-05
 ### Added
 - first release to PyPi
 - requirements for twine
-
 
 ## [0.4.0] - 2020-09-04
 ### Added
@@ -126,13 +120,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - import method from ```import mercutio.mercutio as mc``` to ```import mercutio as mc```
 - ```special``` dimensions are now known as ```skills```, which follow the standard DnD skill list
 
-
 ## [0.3.0] - 2020-08-29
 ### Added
 - graphical character creation method using ```mc.Player.gen(graphical=True)```
 - load custom player class, attributes, race, religion, language, and special using ```mc.Player.load_dimensions()```
 - started following [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
-
 
 ## [0.2.0] - 2020-08-26
 ### Added
@@ -147,9 +139,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - generate player using ```mc.Player.gen()```
 - standard player dimensions for class, attributes, race, religion, language, and special
 
-
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.1...HEAD
-[0.9.0]: https://github.com/signebedi/mercutio/compare/0.9.0...0.9.1
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.2...HEAD
+[0.9.2]: https://github.com/signebedi/mercutio/compare/0.9.1...0.9.2
+[0.9.1]: https://github.com/signebedi/mercutio/compare/0.9.0...0.9.1
 [0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.7...0.9.0
 [0.8.7]: https://github.com/signebedi/mercutio/compare/0.8.6...0.8.7
 [0.8.6]: https://github.com/signebedi/mercutio/compare/0.8.5...0.8.6
