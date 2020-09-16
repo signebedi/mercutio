@@ -14,12 +14,15 @@ Git commits will follow these conventions
 
 ## [Unreleased]
 ### Added
-- support for exp, hp, size, speed, spells, attacks, and equipment (default to starting equipment, but allow add'l items to be added) customization
-- support for multiclassing 
-- support for multiple languages
+- enable support to add buffs to dice rolls
+- support for exp, hp, size, speed, spells, attacks
 - leveling bonuses for skills and attributes
 - proficiencies for tools, if there is demand for this feature
-- enable support to add buffs to dice rolls
+- support for multiclassing, if there is demand for this feature
+
+## [0.9.3] - 2020-09-17
+### Added
+- support for multiple languages
 
 ## [0.9.2] - 2020-09-16
 ### Added
@@ -149,7 +152,8 @@ Git commits will follow these conventions
 - generate player using ```mc.Player.gen()```
 - standard player dimensions for class, attributes, race, religion, language, and special
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.2...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.3...HEAD
+[0.9.3]: https://github.com/signebedi/mercutio/compare/0.9.2...0.9.3
 [0.9.2]: https://github.com/signebedi/mercutio/compare/0.9.1...0.9.2
 [0.9.1]: https://github.com/signebedi/mercutio/compare/0.9.0...0.9.1
 [0.9.0]: https://github.com/signebedi/mercutio/compare/0.8.7...0.9.0
