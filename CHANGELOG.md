@@ -23,11 +23,12 @@ Git commits will follow these conventions
 ## [0.9.3] - 2020-09-17
 ### Added
 - support for multiple languages
+- proficiency buffs for classes and backgrounds
+- randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
 
 ## [0.9.2] - 2020-09-16
 ### Added
-- proficiency buffs for classes and backgrounds 
-- add docs and tests for armor and weapon proficiencies
+- git commits to release notes
 
 ## [0.9.1] - 2020-09-15
 ### Added
