@@ -65,7 +65,8 @@ class Player:
                 self.background = input(f'Please enter your desired background -- your options are {self.background_options}: ')
                 if self.background in self.background_options: break
 
-    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, background=None, name='', level=1):
+    def gen(self, graphical=None, random=None, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, background=None, 
+                armor=None, weapons=None, name='', level=1):
 
         self.attributes = {}
         if random:
@@ -94,6 +95,32 @@ class Player:
             for x in self.skills_options:
                 # self.skills[x] = self.roll.twenty()
                 self.skills[x] = 0
+
+        self.armor = {}
+        if random:
+            for x in self.armor_options:
+                self.armor[x] = 0
+        if isinstance(armor, (dict)):
+            for key in armor:
+                if key in self.armor_options:
+                    self.armor[key] = armor[key]
+        # in the absence of designated armor proficiencies, set all to 0
+        else: 
+            for x in self.armor_options:
+                self.armor[x] = 0
+
+        self.weapons = {}
+        if random:
+            for x in self.weapon_options:
+                self.weapons[x] = 0
+        if isinstance(weapons, (dict)):
+            for key in weapons:
+                if key in self.weapon_options:
+                    self.weapons[key] = weapons[key]
+        # in the absence of designated weapon proficiencies, set all to 0
+        else: 
+            for x in self.weapon_options:
+                self.weapons[x] = 0
 
         if graphical:
             self.gen_graphic()
@@ -156,7 +183,7 @@ class Player:
         #     self.buff(name=self.race, dimension='race')
         # if hasattr(self, 'background'): 
         #     self.buff(name=self.background, dimension='background')
-        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nattributes: {self.attributes}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nskills: {self.skills}\n')
+        print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nattributes: {self.attributes}\nskills: {self.skills}\narmour: {self.armor}\nweapons: {self.weapons}\n')
 
     def customize(self, how='append', proficiencies=None, buffs=None):
         if how == 'overwrite':
