@@ -14,7 +14,7 @@ COMMITS=$(cat .commits)
 # set a standard, simple message -- in the future, summarize from CHANGELOG
 MESSAGE=$(printf $'Release of version %s\n%s' $VERSION "$COMMITS")
 
-remove the temporary file
+# remove the temporary file
 rm .commits
 
 DRAFT="false"
