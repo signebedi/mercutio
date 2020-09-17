@@ -26,6 +26,8 @@ Git commits will follow these conventions
 - support for multiple languages
 - proficiency buffs for classes and backgrounds
 - randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
+### Fixed
+- ```mc.Player.mod()``` problems when name was not set
 
 ## [0.9.2] - 2020-09-16
 ### Added
@@ -60,7 +62,6 @@ Git commits will follow these conventions
 ## [0.8.3] - 2020-09-11
 ### Added
 - __version__ variable 
-
 
 ## [0.8.2] - 2020-09-10
 ### Fixed

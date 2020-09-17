@@ -259,7 +259,7 @@ class Player:
 
     def mod(self, player_class=None, attributes=None, race=None, religion=None, language=None, skills=None, name=None, background=None, 
         armor=None, weapons=None, level=None):
-        if hasattr(self, 'name'): # this asserts that self.name has been set, meaning the user has run gen() or load()
+        if hasattr(self, 'player_class') or hasattr(self, 'name') or hasattr(self, 'attributes'): # this asserts that a name, class, or attribute have been set, meaning the user has run gen() or load()
             if player_class:
                 if player_class in self.player_class_options:
                     self.buff(name=self.player_class, dimension='class', remove=True)
@@ -268,9 +268,9 @@ class Player:
 
             if background:
                 if background in self.background_options:
-                    self.buff(name=self.background, dimension='class', remove=True)
+                    self.buff(name=self.background, dimension='background', remove=True)
                     self.background = background
-                    self.buff(name=self.background, dimension='class')
+                    self.buff(name=self.background, dimension='background')
 
             if isinstance(attributes, (dict)):
                 for key in attributes:
@@ -334,7 +334,7 @@ class Player:
                                         except Exception as e: print(e)
 
                         # print(f'\nSuccessfully removed buff for the player {dimension} called {name}')
-                    break
+                        break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 
         else: 
@@ -356,7 +356,7 @@ class Player:
                                         except Exception as e: print(e)
 
                     # print(f'\nSuccessfully added buff for the player {dimension} called {name}')
-                break
+                    break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 class Roll:
     def __init__(self):
