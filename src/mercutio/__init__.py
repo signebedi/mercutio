@@ -360,6 +360,15 @@ class Player:
                     # print(f'\nSuccessfully added buff for the player {dimension} called {name}')
                     break
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
+
+
+    def distribute(self, dimension):
+        if dimension == '':
+            pass
+        else:
+            pass
+
+
 class Roll:
     def __init__(self):
         print('\nCreated a dice roller object')
