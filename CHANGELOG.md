@@ -16,13 +16,19 @@ Git commits will follow these conventions
 
 ## [Unreleased]
 ### Added
-- enable support to add buffs to dice rolls through a wrapper function
-- support for exp, hp, size, speed, spells, attacks
-- leveling bonuses for skills and attributes
+- support for exp, hp, size, speed, spells, attacks, if there is demand for this feature
+- leveling bonuses for skills and attributes, if there is demand for this feature
 - proficiencies for tools, if there is demand for this feature
 - support for multiclassing, if there is demand for this feature
+- support for multiple languages, if there is demand for this feature
+
+## [0.10.0] - 2020-09-17
+### Added
+- enable support to add buffs to dice rolls through a wrapper function
+
+## [0.9.4] - 2020-09-17
+### Added
 - randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
-- support for multiple languages
 
 ## [0.9.3] - 2020-09-17
 ### Added
@@ -158,7 +164,9 @@ Git commits will follow these conventions
 - generate player using ```mc.Player.gen()```
 - standard player dimensions for class, attributes, race, religion, language, and special
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.9.3...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.10.0...HEAD
+[0.10.0]: https://github.com/signebedi/mercutio/compare/0.9.4...0.10.0
+[0.9.4]: https://github.com/signebedi/mercutio/compare/0.9.3...0.9.4
 [0.9.3]: https://github.com/signebedi/mercutio/compare/0.9.2...0.9.3
 [0.9.2]: https://github.com/signebedi/mercutio/compare/0.9.1...0.9.2
 [0.9.1]: https://github.com/signebedi/mercutio/compare/0.9.0...0.9.1
