@@ -26,10 +26,6 @@ Mercutio provides a straightforward, stable, and highly-customizable API for cha
     - **language**: common, dwarvish, elvish, giant, gnomish, goblin, halfling, orc
     - **background**: none, acolyte, criminal, folk hero, noble, sage, soldier
 
-## Future Features
-
-In the future, support may be added for vital data such as alignment, experience, size, speed, and hit-points. In addition, tool proficiencies may be added if there is demand for this feature.
-
 ## Use Cases
 
 Mercutio provides a number of features that may prove useful for:
@@ -38,5 +34,5 @@ Mercutio provides a number of features that may prove useful for:
 - Dungeon Masters looking to automate character creation and dice rolls
 - Everyday enthusiasts interested in learning more about Python and gaming
 
-You can always add a [Github issue](https://github.com/signebedi/mercutio/issues) if there are features that might be useful to additional audiences.
+To see intended future features and developments, see the changelog. You can always add a [Github issue](https://github.com/signebedi/mercutio/issues) if there are features that might be useful to additional audiences.
 
