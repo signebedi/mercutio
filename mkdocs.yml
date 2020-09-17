@@ -12,3 +12,4 @@ theme:
 nav:
     - Getting Started: 'index.md'
     - Usage: 'usage.md'
+    - Changelog: 'CHANGELOG.md'
