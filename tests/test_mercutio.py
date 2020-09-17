@@ -24,8 +24,8 @@ def test_mod():
 
     assert player.name == 'beringor barthenon, guardian of bradley gardens'
 
-# test that dice-rolls return values w/i expected ranges
-def test_dice():
+# test that dice-rolls return values w/i expected ranges when not modified
+def test_roll_no_modifier():
     import mercutio as mc
     roll = mc.Roll() # instantiate the Roll() class
 
@@ -34,6 +34,17 @@ def test_dice():
     assert all([roll.ten() for _ in range(100)]) in range(1,11) 
     assert all([roll.twelve() for _ in range(100)]) in range(1,13) 
     assert all([roll.twenty() for _ in range(100)]) in range(1,21) 
+
+# test that dice-rolls return values w/i expected ranges when modified
+def test_roll_with_modifier():
+    import mercutio as mc
+    roll = mc.Roll() # instantiate the Roll() class
+
+    assert all([roll.four(modifier=10) for _ in range(100)]) in range(1,15) 
+    assert all([roll.eight(modifier=10) for _ in range(100)]) in range(1,19) 
+    assert all([roll.ten(modifier=10) for _ in range(100)]) in range(1,21) 
+    assert all([roll.twelve(modifier=10) for _ in range(100)]) in range(1,23) 
+    assert all([roll.twenty(modifier=10) for _ in range(100)]) in range(1,31) 
 
 def test_buffs_not_empty():
     import mercutio as mc
