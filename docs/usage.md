@@ -154,5 +154,5 @@ This API is flexible and can accept arguments based on character stats using the
 
 ```python
 # proficiency check for a magic challenge that 
-roll.twenty(modifier=player.proficiencies['arcana']*2+(player.attributes['intelligence']-10)/2)
+roll.twenty(modifier=player.skill['arcana']*2+(player.attributes['intelligence']-10)/2)
 ```
