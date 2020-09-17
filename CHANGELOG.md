@@ -5,13 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Git commits will follow these conventions
-- Added
-- Removed
-- Changed
-- Fixed
-- Docs
-- Tests
-- Routine
+- Added: a new feature to the API
+- Removed: a current feature from the API
+- Changed: a current feature of the API
+- Fixed: a broken feature of the API
+- Docs: modified the API's documentation
+- Tests: modified the API's tests
+- Routine: clerical and minor changes
+- Grumble: progress not yet resulting in any changes above
 
 ## [Unreleased]
 ### Added
