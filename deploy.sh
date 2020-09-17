@@ -9,6 +9,7 @@ git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep ^Changed >> .
 git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep ^Fixed >> .commits
 git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep ^Docs >> .commits
 git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep ^Tests >> .commits
+# '^Added|^Removed|^Changed|^Fixed|^Docs|^Tests|'
 
 COMMITS=$(cat .commits)
 
