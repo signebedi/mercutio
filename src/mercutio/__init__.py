@@ -427,15 +427,15 @@ class Player:
 class Roll:
     def __init__(self):
         print('\nCreated a dice roller object')
-    def four(self):
-        return rd.randint(1,4)
-    def six(self):
-        return rd.randint(1,6)
-    def eight(self):
-        return rd.randint(1,8)
-    def ten(self):
-        return rd.randint(1,10)
-    def twelve(self):
-        return rd.randint(1,12)
-    def twenty(self):
-        return rd.randint(1,20)
+    def four(self, modifier=0):
+        return rd.randint(1,4) + modifier
+    def six(self, modifier=0):
+        return rd.randint(1,6) + modifier
+    def eight(self, modifier=0):
+        return rd.randint(1,8) + modifier
+    def ten(self, modifier=0):
+        return rd.randint(1,10) + modifier
+    def twelve(self, modifier=0):
+        return rd.randint(1,12) + modifier
+    def twenty(self, modifier=0):
+        return rd.randint(1,20) + modifier
