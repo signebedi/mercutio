@@ -150,9 +150,9 @@ roll.twelve()
 roll.twenty()
 ```
 
-This API is flexible and can accept arguments based on character stats using the ````add``` keyword:
+This API is flexible and can accept arguments based on character stats using the ````modifier``` keyword:
 
 ```python
 # proficiency check for a magic challenge that 
-roll.twenty(add=player.proficiencies['arcana']*2+(player.attributes['intelligence']-10)/2)
+roll.twenty(modifier=player.proficiencies['arcana']*2+(player.attributes['intelligence']-10)/2)
 ```
