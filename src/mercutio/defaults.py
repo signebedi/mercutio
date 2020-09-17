@@ -30,18 +30,37 @@
 
 
 buffs = [
-  
-  {  'name':'wizard', 'dimension': 'class',  'proficiencies': {},  },
-  {  'name':'fighter', 'dimension': 'class',  'proficiencies': {},  },
-  {  'name':'rogue', 'dimension': 'class',  'proficiencies': {},   },
-  {  'name':'cleric', 'dimension': 'class',  'proficiencies': {},  },
+  {  
+    'name':'wizard', 
+    'dimension': 'class',  
+    'proficiencies': {'staffs':1, 'crossbows':1, 'slings':1,},  
+    'random':{'number':2, 'choice':['arcana', 'history', 'insight', 'investigation', 'medicine', 'religion']}, 
+  },
+  {  
+    'name':'fighter', 
+    'dimension': 'class',  
+    'proficiencies': {'leather':1, 'hide':1, 'chain':1, 'scale':1, 'breastplate':1, 'halfplate':1, 'ringmail':1, 'chainmail':1, 'splint':1, 'plate':1, 'axes':1, 'bows':1, 'brawling':1, 'staffs':1, 'crossbows':1, 'flails':1, 'maces':1, 'blades':1, 'polearms':1, 'shields':1, 'spears':1, 'slings':1, }, 
+    'random': {'number':2, 'choice':['acrobatics', 'animal-handling', 'athletics', 'history', 'insight', 'intimidation', 'perception', 'survival']}, 
+  },
+  {  
+    'name':'rogue', 
+    'dimension': 'class',  
+    'proficiencies': {'axes':1, 'brawling':1, 'staffs':1, 'flails':1, 'maces':1, 'spears':1, 'slings':1, 'leather':1, 'hide':1, 'chain':1, },   
+    'random':{'number':4, 'choice':['acrobatics', 'athletics', 'deception', 'insight', 'intimidation', 'investigation', 'perception', 'performance', 'persuasion', 'sleight', 'stealth']}, 
+  },
+  {
+    'name':'cleric', 
+    'dimension': 'class',  
+    'proficiencies': {'leather':1, 'hide':1, 'chain':1, 'scale':1, 'breastplate':1, 'axes':1, 'brawling':1, 'staffs':1, 'flails':1, 'maces':1, 'shields':1, 'spears':1, 'slings':1,}, 
+    'random':{'number':2, 'choice':['history', 'insight', 'medicine', 'persuasion', 'religion']}, 
+  },
   {  'name':'human', 'dimension': 'race',  'proficiencies': {'strength':1,'dexterity':1,'constitution':1,'intelligence':1,'wisdom':1,'charisma':1,},  },
   {  'name':'elf', 'dimension': 'race',  'proficiencies': {'dexterity':2,},  },
-  {  'name':'wood elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'wisdom':1,},  },
-  {  'name':'high elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'intelligence':1,},  },
-  {  'name':'dark elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'charisma':1,},  },
+  {  'name':'wood elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'wisdom':1, 'bows':1, 'blades':1,},  },
+  {  'name':'high elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'intelligence':1, 'bows':1, 'blades':1,},  },
+  {  'name':'dark elf', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'charisma':1, 'bows':1, 'blades':1,},  },
   {  'name':'dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2,},  },
-  {  'name':'hill dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2, 'wisdom':1,},  },
+  {  'name':'hill dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2, 'wisdom':1,'leather':1, 'hide':1, 'chain':1, 'scale':1, 'breastplate':1, },  },
   {  'name':'mountain dwarf', 'dimension': 'race',  'proficiencies': {'constitution':2, 'strength':2,},  },
   {  'name':'halfling', 'dimension': 'race',  'proficiencies': {'dexterity':2,},  },
   {  'name':'stout halfling', 'dimension': 'race',  'proficiencies': {'dexterity':2, 'constitution':1,},  },
@@ -85,7 +104,6 @@ buffs = [
 
 ]
 
-### still need to add weapon, armor, tool proficiencies
 proficiencies = [
 
     {'name': 'athletics', 'dimension': 'skill'},
@@ -136,3 +154,6 @@ proficiencies = [
     {'name': 'plate', 'dimension': 'armor'},
 
 ]
+
+# 'random':['number':4, 'choice':{['acrobatics', 'athletics', 'deception', 'insight', 'intimidation', 'investigation', 'perception', 'performance', 'persuasion', 'sleight', 'stealth']}]
+# 'random':[{'number':2, 'choice':['arcana', 'history', 'insight', 'investigation', 'medicine', 'religion']}]
