@@ -36,3 +36,6 @@ Mercutio provides a number of features that may prove useful for:
 
 To see intended future features and developments, see the changelog. You can always add a [Github issue](https://github.com/signebedi/mercutio/issues) if there are features that might be useful to additional audiences.
 
+## Dedication
+
+This project is dedicated to Pat Blaine.
