@@ -21,12 +21,13 @@ Git commits will follow these conventions
 - leveling bonuses for skills and attributes
 - proficiencies for tools, if there is demand for this feature
 - support for multiclassing, if there is demand for this feature
+- randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
+- support for multiple languages
 
 ## [0.9.3] - 2020-09-17
 ### Added
-- support for multiple languages
-- proficiency buffs for classes and backgrounds
-- randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
+- proficiency buffs for classes, races and backgrounds
+
 ### Fixed
 - ```mc.Player.mod()``` problems when name was not set
 - tests by moving test_customize_overwrite() to the end because of how it impacts the defaults list
