@@ -11,7 +11,7 @@ Git commits will follow these conventions
 - Fixed: a broken feature of the API
 - Docs: modified the API's documentation
 - Tests: modified the API's tests
-- Routine: clerical and minor changes
+- Routine: clerical and minor changes or refactors not affecting the API
 - Grumble: progress not yet resulting in any changes above
 
 ## [Unreleased]
