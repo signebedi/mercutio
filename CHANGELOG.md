@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Git commits will follow these conventions
 - Added
+- Removed
 - Changed
 - Fixed
 - Docs
