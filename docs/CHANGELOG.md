@@ -4,13 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Git commits will follow these conventions
-- Added: a new feature to the API
-- Removed: a current feature from the API
-- Changed: a current feature of the API
-- Fixed: a broken feature of the API
-- Docs: modified the API's documentation
-- Tests: modified the API's tests
+Git commits will follow these conventions (with major convetions bolded):
+
+- **Added**: a new feature to the API
+- **Removed**: a current feature from the API
+- **Changed**: a current feature of the API
+- **Fixed**: a broken feature of the API
+- **Docs**: modified the API's documentation
+- **Tests**: modified the API's tests
 - Routine: clerical and minor changes or refactors not affecting the API
 - Grumble: progress not yet resulting in any changes above
 
@@ -29,6 +30,9 @@ Git commits will follow these conventions
 ## [0.9.4] - 2020-09-17
 ### Added
 - randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
+
+### Changed
+- Changelog moved to docs/
 
 ## [0.9.3] - 2020-09-17
 ### Added
