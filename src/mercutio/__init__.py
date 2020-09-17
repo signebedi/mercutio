@@ -362,9 +362,39 @@ class Player:
                 # print(f'\nUnable to find an appropriate for the player {dimension} called {name}')
 
 
-    def distribute(self, dimension):
-        if dimension == '':
-            pass
+    def distribute(self, dimension=None):
+        break_var = 0
+        if dimension=='skills':
+            for key in self.skills:
+                while self.skills[key] > 1:
+                    test = rd.choice(self.skills_options)
+                    if self.skills[test] == 0:
+                        self.skills[test] += 1
+                        self.skills[key] -= 1
+                    else: break_var += 1
+                    
+                    if break_var == 100: break
+
+        if dimension=='armor':
+            for key in self.armor:
+                while self.armor[key] > 1:
+                    test = rd.choice(self.armor_options)
+                    if self.armor[test] == 0:
+                        self.armor[test] += 1
+                        self.armor[key] -= 1
+                    else: break_var += 1
+                    if break_var == 100: break
+
+        if dimension=='weapons':
+            for key in self.weapons:
+                while self.weapons[key] > 1:
+                    test = rd.choice(self.weapons_options)
+                    if self.weapons[test] == 0:
+                        self.weapons[test] += 1
+                        self.weapons[key] -= 1
+                    else: break_var += 1
+                    if break_var == 100: break
+
         else:
             pass
 
