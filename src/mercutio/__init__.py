@@ -319,7 +319,7 @@ class Player:
             for item in self.buff_options:
                 if item['name'] == name and item['dimension'] == dimension:
                     if bool(item):
-                        for attribute in item['proficiencies'].keys():
+                        for attribute in item['proficiencies']:
                             try: 
                                 self.attributes[attribute] -= item['proficiencies'][attribute]
                             except:
@@ -341,7 +341,7 @@ class Player:
             for item in self.buff_options:
                 if item['name'] == name and item['dimension'] == dimension:
                     if bool(item):
-                        for attribute in item['proficiencies'].keys():
+                        for attribute in item['proficiencies']:
                             try: 
                                 self.attributes[attribute] += item['proficiencies'][attribute]
                             except:
