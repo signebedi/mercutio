@@ -172,7 +172,8 @@ Git commits will follow these conventions (with major convetions bolded):
 - generate player using ```mc.Player.gen()```
 - standard player dimensions for class, attributes, race, religion, language, and special
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.10.0...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.10.1...HEAD
+[0.10.1]: https://github.com/signebedi/mercutio/compare/0.10.0...0.10.1
 [0.10.0]: https://github.com/signebedi/mercutio/compare/0.9.4...0.10.0
 [0.9.4]: https://github.com/signebedi/mercutio/compare/0.9.3...0.9.4
 [0.9.3]: https://github.com/signebedi/mercutio/compare/0.9.2...0.9.3
