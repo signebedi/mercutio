@@ -23,6 +23,10 @@ Git commits will follow these conventions (with major convetions bolded):
 - support for multiclassing, if there is demand for this feature
 - support for multiple languages, if there is demand for this feature
 
+## [0.10.1] - 2020-09-17
+### Fixed
+- deployment script to pull from origin after each Github release
+
 ## [0.10.0] - 2020-09-17
 ### Added
 - enable support dice roll modifiers
