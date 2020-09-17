@@ -13,9 +13,9 @@ COMMITS=$(cat .commits)
 
 # set a standard, simple message -- in the future, summarize from CHANGELOG
 M=$(printf $'Release of version %s\n%s' $VERSION "$COMMITS")
-MESSAGE="${M//[\n]/<br/>}"
+# sed command brought to you by https://stackoverflow.com/a/1252191
+MESSAGE=`echo "$M" | sed ':a;N;$!ba;s/\n/<br/>/g'`
 
-echo "$MESSAGE"
 # remove the temporary file
 rm .commits
 
