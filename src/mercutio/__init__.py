@@ -361,7 +361,6 @@ class Player:
 class Roll:
     def __init__(self):
         print('\nCreated a dice roller object')
-        pass
     def four(self):
         return rd.randint(1,4)
     def six(self):

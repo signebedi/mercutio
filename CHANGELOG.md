@@ -16,7 +16,7 @@ Git commits will follow these conventions
 
 ## [Unreleased]
 ### Added
-- enable support to add buffs to dice rolls
+- enable support to add buffs to dice rolls through a wrapper function
 - support for exp, hp, size, speed, spells, attacks
 - leveling bonuses for skills and attributes
 - proficiencies for tools, if there is demand for this feature
