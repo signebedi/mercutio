@@ -50,6 +50,15 @@ Modify an existing player using the mod() method:
 player.mod(name='beringor barthenon, guardian of bradley gardens')
 ```
 
+Sometimes, a situation may arise where your character gains double proficiencies in a skill, weapon, or armor proficiency -- that is, any individual value is greater than two. In accordance with the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead" (PHB, pg. 125), these scores can be distributed:
+
+```python
+# player's leather armor proficiency is two
+player.distribute(dimension='armor')
+```
+
+You can also apply this method to skill, weapon, and armor proficiencies simultaneously by simply calling ```player.distribute()``` without passing any arguments. 
+
 ## Saving Players
 
 Write your character details to a pickle file using the save() method. Note, this will save your character under their designated name and may experience errors if you used certain characters based on your system requirements:
