@@ -25,7 +25,7 @@ Git commits will follow these conventions (with major convetions bolded):
 
 ## [0.10.0] - 2020-09-17
 ### Added
-- enable support to add buffs to dice rolls through a wrapper function
+- enable support dice roll modifiers
 
 ## [0.9.4] - 2020-09-17
 ### Added
