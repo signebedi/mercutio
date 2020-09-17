@@ -29,7 +29,7 @@ Git commits will follow these conventions (with major convetions bolded):
 
 ## [0.9.4] - 2020-09-17
 ### Added
-- randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
+- ```Player.distribute()``` method based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
 
 ### Changed
 - Changelog moved to docs/
