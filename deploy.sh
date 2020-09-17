@@ -3,7 +3,7 @@ REGEX="[0-9]*\.[0-9]*\.[0-9]*"
 VERSION=`grep -o "$REGEX" src/mercutio/_version.py`
 
 # pull relevant commit messages from the git log and write to a temporary file
-COMMITS=`git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep -E '^Added|^Removed|^Changed|^Fixed|^Docs|^Tests|'`
+COMMITS=`git log $(git describe --tags --abbrev=0)..HEAD --pretty=%B | grep -E '^Added|^Removed|^Changed|^Fixed|^Docs|^Tests'`
 
 # set a standard, simple message -- in the future, summarize from CHANGELOG
 M=$(printf $'Release of version %s\n%s' $VERSION "$COMMITS")
