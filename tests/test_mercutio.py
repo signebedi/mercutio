@@ -78,6 +78,28 @@ def test_buffs_empty():
 
     assert player.attributes['strength'] == attribute_check - 1 # and check that the LACK of any buff successfully passed
 
+# test the distribute method when we know it will succeed in distributing the additional values
+def test_distribute_success():
+    import mercutio as mc
+    player = mc.Player()
+
+    player.gen(player_class='wizard')
+    player.armor['leather']=2
+    player.distribute()
+
+    assert player.armor['leather'] == 1
+
+# test the distribute method when we know it will fail in distributing the additional values
+def test_distribute_failure():
+    import mercutio as mc
+    player = mc.Player()
+
+    player.gen(player_class='wizard')
+    player.armor['leather']=50
+    player.distribute()
+
+    assert player.armor['leather'] != 1
+
 
 # test that appending to player dimensions works as expected 
 def test_customize_append():
