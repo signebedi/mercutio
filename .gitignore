@@ -134,3 +134,7 @@ dmypy.json
 # deployment configuration files
 .pypirc
 .github_token
+
+# test deployment scripts
+temp.sh
+test.sh
