@@ -14,37 +14,6 @@ def test_gen():
     assert isinstance(player.attributes, (dict))
     assert isinstance(player.skills, (dict))
 
-# test that appending to player dimensions works as expected 
-def test_customize_append():
-    import mercutio as mc
-    player = mc.Player()
-    class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
-
-    buffs = [
-        { 'name':'wizard', 'dimension':'class'},
-        { 'name':'general', 'dimension':'class'},
-        { 'name':'edain','dimension':'class'},
-    ]
-
-    player.customize(how='append', buffs=buffs)
-
-    assert len(player.player_class_options) == class_len + 3 # assert that this has increased the length of the class list by three
-
-# test that overwriting player dimensions works as expected 
-def test_customize_overwrite():
-    import mercutio as mc
-    player = mc.Player()
-
-    buffs = [
-        { 'name':'wizard', 'dimension':'class' },
-        { 'name':'general', 'dimension':'class'},
-        { 'name':'edain','dimension':'class'   },
-    ]
-
-    player.customize(how='overwrite', buffs=buffs)
-
-    assert len(player.player_class_options) == 3
-
 # test that modifications to player stats work as expected
 def test_mod():
     import mercutio as mc
@@ -108,3 +77,35 @@ def test_buffs_empty():
     player.buff(name=buffs[0]['name'], dimension='race') # then we buff the character with an empty proficiency buff
 
     assert player.attributes['strength'] == attribute_check - 1 # and check that the LACK of any buff successfully passed
+
+
+# test that appending to player dimensions works as expected 
+def test_customize_append():
+    import mercutio as mc
+    player = mc.Player()
+    class_len = len(player.player_class_options) # create a snapshot of the length of the list of class options
+
+    buffs = [
+        { 'name':'wizard', 'dimension':'class'},
+        { 'name':'general', 'dimension':'class'},
+        { 'name':'edain','dimension':'class'},
+    ]
+
+    player.customize(how='append', buffs=buffs)
+
+    assert len(player.player_class_options) == class_len + 3 # assert that this has increased the length of the class list by three
+
+# test that overwriting player dimensions works as expected 
+def test_customize_overwrite():
+    import mercutio as mc
+    player = mc.Player()
+
+    buffs = [
+        { 'name':'wizard', 'dimension':'class' },
+        { 'name':'general', 'dimension':'class'},
+        { 'name':'edain','dimension':'class'   },
+    ]
+
+    player.customize(how='overwrite', buffs=buffs)
+
+    assert len(player.player_class_options) == 3

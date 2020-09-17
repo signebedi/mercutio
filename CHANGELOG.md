@@ -29,6 +29,7 @@ Git commits will follow these conventions
 - randomized proficiencies based on the rule that "if a character would gain the same proficiency from two different sources, he or she can choose a different proficiency of the same kind (skill or tool) instead. (PHB, pg. 125)"
 ### Fixed
 - ```mc.Player.mod()``` problems when name was not set
+- tests by moving test_customize_overwrite() to the end because of how it impacts the defaults list
 
 ## [0.9.2] - 2020-09-16
 ### Added

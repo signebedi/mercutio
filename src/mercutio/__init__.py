@@ -184,19 +184,6 @@ class Player:
         # if hasattr(self, 'background'): 
         #     self.buff(name=self.background, dimension='background')
 
-        # now we just set all the temporary variables to none
-        player_class=None
-        attributes=None
-        race=None
-        religion=None
-        language=None
-        skills=None
-        background=None
-        armor=None
-        weapons=None
-        name=None
-        level=None
-
         print(f'\nSuccessfully created player: \nname: {self.name}\nclass: {self.player_class}\nrace: {self.race}\nbackground: {self.background}\nlanguage: {self.language}\nreligion: {self.religion}\nattributes: {self.attributes}\nskills: {self.skills}\narmour: {self.armor}\nweapons: {self.weapons}\n')
 
     def customize(self, how='append', proficiencies=None, buffs=None):
@@ -328,18 +315,6 @@ class Player:
         else: 
             print('\nNo player has been loaded or generated.\nPlease gen() or load() before modifying your player')
 
-        # now we just set all the temporary variables to none
-        player_class=None
-        attributes=None
-        race=None
-        religion=None
-        language=None
-        skills=None
-        background=None
-        armor=None
-        weapons=None
-        name=None
-        level=None
 
     def buff(self, name, dimension, remove=None):
         if remove:
