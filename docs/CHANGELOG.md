@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Git commits will follow these conventions (with major convetions bolded):
+Git commits will follow these conventions (with major conventions bolded):
 
 - **Added**: a new feature to the API
 - **Removed**: a current feature from the API
