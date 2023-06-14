@@ -1,4 +1,4 @@
-name: Python application test with pytest
+name: tests
 
 on:
   push:
