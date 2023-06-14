@@ -23,6 +23,13 @@ Git commits will follow these conventions (with major conventions bolded):
 - support for multiclassing, if there is demand for this feature
 - support for multiple languages, if there is demand for this feature
 
+
+## [0.10.2] - 2023-06-13
+### Fixed
+- a number of broken README links
+- obsolete requirements
+- a broken test suite
+
 ## [0.10.1] - 2020-09-17
 ### Fixed
 - deployment script to pull from origin after each Github release
@@ -172,7 +179,8 @@ Git commits will follow these conventions (with major conventions bolded):
 - generate player using ```mc.Player.gen()```
 - standard player dimensions for class, attributes, race, religion, language, and special
 
-[Unreleased]: https://github.com/signebedi/mercutio/compare/0.10.1...HEAD
+[Unreleased]: https://github.com/signebedi/mercutio/compare/0.10.2...HEAD
+[0.10.1]: https://github.com/signebedi/mercutio/compare/0.10.1...0.10.2
 [0.10.1]: https://github.com/signebedi/mercutio/compare/0.10.0...0.10.1
 [0.10.0]: https://github.com/signebedi/mercutio/compare/0.9.4...0.10.0
 [0.9.4]: https://github.com/signebedi/mercutio/compare/0.9.3...0.9.4
