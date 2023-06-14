@@ -13,4 +13,4 @@ yet another character creation engine
 Read the docs at [mercutio.readthedocs.io/en/latest/](https://mercutio.readthedocs.io/en/latest/).
 
 ---
-Copyright (c) 2020 Signe Janoska-Bedi
+Copyright (c) 2020-23 Signe Janoska-Bedi
